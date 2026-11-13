@@ -112,7 +112,6 @@
             <directory>modules/identity-core/tests/Feature/Auth</directory>
             <directory>modules/integrations/tests/Feature/Saml</directory>
             <directory>modules/integrations/tests/Feature/Sso</directory>
-            <directory>modules/module-manager/tests/Feature/Modules</directory>
             <directory>modules/organizations-teams/tests/Feature/Teams</directory>
             <directory>modules/roles-permissions/tests/Feature/Permissions</directory>
             <directory>modules/scheduler-queues/tests/Feature/Console</directory>
