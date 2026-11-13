@@ -433,11 +433,11 @@
   },
   "liberusoftware/integrations": {
     "path": "modules/integrations",
-    "reference": "9b9ce32441b6cd4e6a68c7c07031ca9d9f297b4d",
+    "reference": "3dbbd7e7c141b183c54ae6e71202efcfc7fa5505",
     "repository": "https://github.com/liberusoftware/module-integrations",
-    "source_signature": "2cb40cf29a5f3b795e3e319c0379523f46c144de566ae5b6bc6270b310219856",
-    "source_tree": "5ff06c3bab68fbe44c525427d5e4f2ff2d737262",
-    "version": "1.8.0"
+    "source_signature": "383c97852b87c8948fb9dcf8fa28fb1047ed5dcf4a331ad6a68d41277cf924e3",
+    "source_tree": "8da533fc0280016938f6aa470f51c1757722ac67",
+    "version": "1.8.1"
   },
   "liberusoftware/integrations-api": {
     "path": "modules/integrations-api",
@@ -1537,11 +1537,11 @@
   },
   "liberusoftware/module-crm-customer-self-service": {
     "path": "modules/crm-customer-self-service",
-    "reference": "42568c6ede2e4982cf6971d638d1457e53b2f787",
+    "reference": "3d1e731676a67181f50e1b8176c299308fba9ac7",
     "repository": "https://github.com/liberusoftware/module-crm-customer-self-service",
-    "source_signature": "388f0bb48c3ae1b12c78eb5b21abf0e9db1e6186ecaeb5d20e817fdd7bb63829",
-    "source_tree": "8c23f698c96327e6d7b0149ff05d5bbe5bc4a4cb",
-    "version": "1.1.0"
+    "source_signature": "6499a1674ac6871bc8b0a6d693ecc03fae3722a8464382552e0d35599ca6a758",
+    "source_tree": "d7057ef55392caed8c5d40eab0684e6acbc444b4",
+    "version": "1.1.1"
   },
   "liberusoftware/module-crm-customer-self-service-api": {
     "path": "modules/module-crm-customer-self-service-api",
@@ -3681,11 +3681,11 @@
   },
   "liberusoftware/organizations-teams": {
     "path": "modules/organizations-teams",
-    "reference": "b57f654ab6967958b28dc5dea3bc5cc1429b87d4",
+    "reference": "9d4b8c819ef6874ae8864403dcbb2545f4315efc",
     "repository": "https://github.com/liberusoftware/module-organizations-teams",
-    "source_signature": "beb552a5493deab509edee681316e7f9e307cff57a64d23d4872fa99062a8de5",
-    "source_tree": "cba64064c2b71cac5e712391794e0f3bfbf4edf4",
-    "version": "1.10.0"
+    "source_signature": "dcf8407e271e207817465a38444dce50db4877d9f71ed4265866e13aec1d2fd2",
+    "source_tree": "ec910e12379c84d8627cd0f357968a20c133944e",
+    "version": "1.10.1"
   },
   "liberusoftware/organizations-teams-api": {
     "path": "modules/organizations-teams-api",
@@ -3905,11 +3905,11 @@
   },
   "liberusoftware/tenancy": {
     "path": "modules/tenancy",
-    "reference": "32cdb9096690f29205255f2eafee4b2b2847fcaa",
+    "reference": "5c079502cf9c82c304f37eab141c8c7d5a77b2b7",
     "repository": "https://github.com/liberusoftware/module-tenancy",
-    "source_signature": "ee0fe468adef9cab22c285b554e35807cceb4a6e2e0dcf81a23a69ed39dcfe74",
-    "source_tree": "c9c9a1bb887b98e67db718633f7c50f40638bb54",
-    "version": "1.0.1"
+    "source_signature": "d469d350ee02b7822a5fa89a3d1bcf1bbd06fa4f8e46fc06e6644ffc88c0b8e5",
+    "source_tree": "04f69949afdcdb6c12817d536fee1706df06aa5d",
+    "version": "1.2.2"
   },
   "liberusoftware/theme-base": {
     "path": "themes/base",
