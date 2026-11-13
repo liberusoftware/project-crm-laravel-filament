@@ -19,6 +19,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 
@@ -47,11 +48,13 @@ class TicketResource extends Resource
      * ticket could not route to any staff. Gates the button and the create route.
      */
     #[\Override]
-    public static function canCreate(): bool
+    public static function getCreateAuthorizationResponse(): Response
     {
         $user = Auth::user();
 
-        return $user instanceof User && filled($user->getAttribute('current_team_id'));
+        return $user instanceof User && filled($user->getAttribute('current_team_id'))
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny('A team is required to create a support ticket.');
     }
 
     #[\Override]

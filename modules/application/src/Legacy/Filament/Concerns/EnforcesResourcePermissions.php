@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Filament\Concerns;
 
 use App\Models\User;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -54,31 +55,73 @@ trait EnforcesResourcePermissions
 
     public static function canViewAny(): bool
     {
-        return static::userHasPermission('view') && parent::canViewAny();
+        return static::userHasPermission('view') && parent::getViewAnyAuthorizationResponse()->allowed();
+    }
+
+    public static function getViewAnyAuthorizationResponse(): Response
+    {
+        return static::canViewAny()
+            ? parent::getViewAnyAuthorizationResponse()
+            : Response::deny();
     }
 
     public static function canView(Model $record): bool
     {
-        return static::userHasPermission('view') && parent::canView($record);
+        return static::userHasPermission('view') && parent::getViewAuthorizationResponse($record)->allowed();
+    }
+
+    public static function getViewAuthorizationResponse(Model $record): Response
+    {
+        return static::canView($record)
+            ? parent::getViewAuthorizationResponse($record)
+            : Response::deny();
     }
 
     public static function canCreate(): bool
     {
-        return static::userHasPermission('create') && parent::canCreate();
+        return static::userHasPermission('create') && parent::getCreateAuthorizationResponse()->allowed();
+    }
+
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return static::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
     }
 
     public static function canEdit(Model $record): bool
     {
-        return static::userHasPermission('update') && parent::canEdit($record);
+        return static::userHasPermission('update') && parent::getEditAuthorizationResponse($record)->allowed();
+    }
+
+    public static function getEditAuthorizationResponse(Model $record): Response
+    {
+        return static::canEdit($record)
+            ? parent::getEditAuthorizationResponse($record)
+            : Response::deny();
     }
 
     public static function canDelete(Model $record): bool
     {
-        return static::userHasPermission('delete') && parent::canDelete($record);
+        return static::userHasPermission('delete') && parent::getDeleteAuthorizationResponse($record)->allowed();
+    }
+
+    public static function getDeleteAuthorizationResponse(Model $record): Response
+    {
+        return static::canDelete($record)
+            ? parent::getDeleteAuthorizationResponse($record)
+            : Response::deny();
     }
 
     public static function canDeleteAny(): bool
     {
-        return static::userHasPermission('delete') && parent::canDeleteAny();
+        return static::userHasPermission('delete') && parent::getDeleteAnyAuthorizationResponse()->allowed();
+    }
+
+    public static function getDeleteAnyAuthorizationResponse(): Response
+    {
+        return static::canDeleteAny()
+            ? parent::getDeleteAnyAuthorizationResponse()
+            : Response::deny();
     }
 }

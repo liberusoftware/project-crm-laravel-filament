@@ -16,6 +16,7 @@ use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 
@@ -46,6 +47,14 @@ class KnowledgeBaseArticleResource extends Resource
     public static function canCreate(): bool
     {
         return false;
+    }
+
+    #[\Override]
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return static::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
     }
 
     #[\Override]

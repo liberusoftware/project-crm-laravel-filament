@@ -50,6 +50,7 @@ return [
     ],
 
     'stripe' => [
+        'api_version' => env('STRIPE_API_VERSION', '2026-08-26.dahlia'),
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
         'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),

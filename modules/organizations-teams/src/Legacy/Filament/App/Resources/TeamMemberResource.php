@@ -19,6 +19,7 @@ use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
@@ -45,6 +46,14 @@ class TeamMemberResource extends Resource
         $team = TeamRoleResource::team();
 
         return $actor instanceof User && $team !== null && app(RoleConfigurationService::class)->canManageTeam($actor, $team);
+    }
+
+    #[\Override]
+    public static function getViewAnyAuthorizationResponse(): Response
+    {
+        return static::canViewAny()
+            ? parent::getViewAnyAuthorizationResponse()
+            : Response::deny();
     }
 
     protected static ?string $model = User::class;
