@@ -2191,16 +2191,16 @@
         },
         {
             "name": "liberusoftware/theme-support",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liberusoftware/module-theme-support.git",
-                "reference": "2dfc10e87a6eba4dee2356e2742535a37af4b6ac"
+                "reference": "2054ff4ca044b5fae23c7d8ad62e30f3103cbcd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liberusoftware/module-theme-support/zipball/2dfc10e87a6eba4dee2356e2742535a37af4b6ac",
-                "reference": "2dfc10e87a6eba4dee2356e2742535a37af4b6ac",
+                "url": "https://api.github.com/repos/liberusoftware/module-theme-support/zipball/2054ff4ca044b5fae23c7d8ad62e30f3103cbcd2",
+                "reference": "2054ff4ca044b5fae23c7d8ad62e30f3103cbcd2",
                 "shasum": ""
             },
             "require": {
@@ -2235,9 +2235,9 @@
             "description": "Theme discovery and host presentation support for Liberu applications.",
             "support": {
                 "issues": "https://github.com/liberusoftware/module-theme-support/issues",
-                "source": "https://github.com/liberusoftware/module-theme-support/tree/v1.8.1"
+                "source": "https://github.com/liberusoftware/module-theme-support/tree/v1.8.2"
             },
-            "time": "2026-11-02T17:37:47+00:00"
+            "time": "2026-11-13T13:39:55+00:00"
         },
         {
             "name": "monolog/monolog",

@@ -110,9 +110,7 @@ class RoleResource extends Resource
 
     public static function getDeleteAnyAuthorizationResponse(): Response
     {
-        return static::canDeleteAny()
-            ? parent::getDeleteAnyAuthorizationResponse()
-            : Response::deny();
+        return Response::deny();
     }
 
     public static function getEloquentQuery(): Builder
