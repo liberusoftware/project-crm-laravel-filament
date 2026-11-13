@@ -17,6 +17,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Permission\Models\Role as SpatieRole;
@@ -47,9 +48,23 @@ class RoleResource extends Resource
         return self::canAccess();
     }
 
+    public static function getViewAnyAuthorizationResponse(): Response
+    {
+        return static::canViewAny()
+            ? parent::getViewAnyAuthorizationResponse()
+            : Response::deny();
+    }
+
     public static function canCreate(): bool
     {
         return self::canAccess();
+    }
+
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return static::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
     }
 
     public static function canView(Model $record): bool
@@ -57,9 +72,23 @@ class RoleResource extends Resource
         return self::canAccess() && $record->getAttribute('team_id') === null && $record->getAttribute('guard_name') === 'web';
     }
 
+    public static function getViewAuthorizationResponse(Model $record): Response
+    {
+        return static::canView($record)
+            ? parent::getViewAuthorizationResponse($record)
+            : Response::deny();
+    }
+
     public static function canEdit(Model $record): bool
     {
         return self::canView($record) && mb_strtolower($record->getAttribute('name')) !== Role::SuperAdmin->value;
+    }
+
+    public static function getEditAuthorizationResponse(Model $record): Response
+    {
+        return static::canEdit($record)
+            ? parent::getEditAuthorizationResponse($record)
+            : Response::deny();
     }
 
     public static function canDelete(Model $record): bool
@@ -67,9 +96,23 @@ class RoleResource extends Resource
         return self::canView($record) && ! in_array(mb_strtolower($record->getAttribute('name')), Role::values(), true);
     }
 
+    public static function getDeleteAuthorizationResponse(Model $record): Response
+    {
+        return static::canDelete($record)
+            ? parent::getDeleteAuthorizationResponse($record)
+            : Response::deny();
+    }
+
     public static function canDeleteAny(): bool
     {
         return false;
+    }
+
+    public static function getDeleteAnyAuthorizationResponse(): Response
+    {
+        return static::canDeleteAny()
+            ? parent::getDeleteAnyAuthorizationResponse()
+            : Response::deny();
     }
 
     public static function getEloquentQuery(): Builder

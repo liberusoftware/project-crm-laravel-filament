@@ -10,6 +10,7 @@ use App\Models\AuditLog;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
@@ -42,6 +43,14 @@ class PortalAccessLogResource extends Resource
     public static function canCreate(): bool
     {
         return false;
+    }
+
+    #[\Override]
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return static::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
     }
 
     #[\Override]

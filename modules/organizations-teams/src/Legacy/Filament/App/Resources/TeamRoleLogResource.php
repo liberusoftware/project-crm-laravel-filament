@@ -11,6 +11,7 @@ use App\Models\AuditLog;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
@@ -33,6 +34,13 @@ class TeamRoleLogResource extends Resource
         return self::canAccess();
     }
 
+    public static function getViewAnyAuthorizationResponse(): Response
+    {
+        return static::canViewAny()
+            ? parent::getViewAnyAuthorizationResponse()
+            : Response::deny();
+    }
+
     public static function permissionResource(): string
     {
         return 'team_role_log';
@@ -52,6 +60,14 @@ class TeamRoleLogResource extends Resource
     public static function canCreate(): bool
     {
         return false;
+    }
+
+    #[\Override]
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return static::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
     }
 
     #[\Override]
