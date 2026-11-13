@@ -36,11 +36,13 @@ use Illuminate\Database\Console\WipeCommand;
 use Illuminate\Foundation\Console\KeyGenerateCommand;
 use Illuminate\Foundation\Console\PackageDiscoverCommand;
 use Illuminate\Foundation\Console\VendorPublishCommand;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
 use Liberu\Foundation\ModuleManager\ModuleDiscovery;
 use Liberu\Foundation\ModuleManager\ModuleManagerServiceProvider;
 use Liberu\Foundation\ModuleManager\ModuleRegistry;
+use Liberu\Foundation\ModuleManagerFilament\Pages\ModuleManagement;
 use Liberu\Foundation\Observability\ObservabilityServiceProvider;
 use Liberu\Foundation\Search\SearchServiceProvider;
 use Liberu\Foundation\Settings\SettingsServiceProvider;
@@ -95,6 +97,8 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Gate::define(ModuleManagement::ABILITY, fn ($user): bool => method_exists($user, 'isAdmin') && $user->isAdmin());
+
         Jetstream::useTeamModel(Team::class);
 
         if ($this->app->runningInConsole()) {

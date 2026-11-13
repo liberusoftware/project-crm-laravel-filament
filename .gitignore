@@ -26,3 +26,6 @@ public/build/manifest.json
 public/build/assets/*
 .idea
 .idea/CRM.iml
+# Installed from Packagist, not carried here.
+/modules/module-manager/
+/modules/module-manager-filament/

@@ -466,9 +466,7 @@
                     "liberusoftware/localization-core-filament": "1.0.1",
                     "liberusoftware/localization-core-livewire": "1.4.1",
                     "liberusoftware/localization-mymemory": "1.4.1",
-                    "liberusoftware/module-manager": "1.4.2",
                     "liberusoftware/module-manager-api": "1.0.0",
-                    "liberusoftware/module-manager-filament": "1.4.1",
                     "liberusoftware/module-manager-livewire": "1.0.1",
                     "liberusoftware/notifications": "1.4.1",
                     "liberusoftware/notifications-api": "1.0.0",
@@ -519,6 +517,8 @@
                 }
             },
             "exclude": [
+                "liberusoftware/module-manager",
+                "liberusoftware/module-manager-filament",
                 "liberusoftware/tenancy"
             ]
         },
@@ -988,7 +988,6 @@
                     "liberusoftware/localization-mymemory": "1.4.1",
                     "liberusoftware/module-manager-api": "1.0.0",
                     "liberusoftware/observability": "1.4.1",
-                    "liberusoftware/module-manager-filament": "1.4.1",
                     "liberusoftware/module-manager-livewire": "1.0.1",
                     "liberusoftware/roles-permissions": "1.4.1",
                     "liberusoftware/notifications-filament": "1.0.1",
@@ -1038,11 +1037,12 @@
                     "liberusoftware/currency-context": "1.4.1",
                     "liberusoftware/theme-support": "1.5.0",
                     "liberusoftware/api-access": "1.4.1",
-                    "liberusoftware/identity-core": "1.4.1",
-                    "liberusoftware/module-manager": "1.4.2"
+                    "liberusoftware/identity-core": "1.4.1"
                 }
             },
             "exclude": [
+                "liberusoftware/module-manager",
+                "liberusoftware/module-manager-filament",
                 "liberusoftware/tenancy"
             ]
         },
@@ -1530,9 +1530,9 @@
         "liberusoftware/module-crm-work-management-api": "^1.0.0",
         "liberusoftware/module-crm-work-management-filament": "^1.0.0",
         "liberusoftware/module-crm-work-management-livewire": "^1.0.0",
-        "liberusoftware/module-manager": "^1.0",
+        "liberusoftware/module-manager": "^1.9",
         "liberusoftware/module-manager-api": "^1.0",
-        "liberusoftware/module-manager-filament": "^1.0",
+        "liberusoftware/module-manager-filament": "^1.11",
         "liberusoftware/module-manager-livewire": "^1.0",
         "liberusoftware/notifications": "^1.0",
         "liberusoftware/notifications-api": "^1.0",
