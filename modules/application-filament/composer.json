@@ -21,7 +21,7 @@
       "source": "https://github.com/liberusoftware/module-application-filament"
     }
   },
-  "version": "1.0.1",
+  "version": "1.1.1",
   "autoload-dev": {
     "psr-4": {
       "Liberu\\Foundation\\ApplicationFilament\\Tests\\": "tests/"

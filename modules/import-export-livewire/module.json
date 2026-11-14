@@ -3,7 +3,7 @@
   "name": "import-export-livewire",
   "display_name": "Import and Export Livewire",
   "description": "Import and Export livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ImportExportLivewire\\ImportExportLivewireServiceProvider",
   "requires": {

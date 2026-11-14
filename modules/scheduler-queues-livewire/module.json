@@ -3,7 +3,7 @@
   "name": "scheduler-queues-livewire",
   "display_name": "Scheduler and Queues Livewire",
   "description": "Scheduler and Queues livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\SchedulerQueuesLivewire\\SchedulerQueuesLivewireServiceProvider",
   "requires": {

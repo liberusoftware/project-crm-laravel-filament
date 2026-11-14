@@ -21,7 +21,7 @@
       "source": "https://github.com/liberusoftware/module-notifications-filament"
     }
   },
-  "version": "1.0.1",
+  "version": "1.1.2",
   "autoload-dev": {
     "psr-4": {
       "Liberu\\Foundation\\NotificationsFilament\\Tests\\": "tests/"

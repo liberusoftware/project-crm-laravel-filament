@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Support;
 
 use App\Traits\IsTenantModel;
+use Illuminate\Container\Container;
 use ReflectionClass;
 
 /**
@@ -12,7 +13,7 @@ use ReflectionClass;
  *
  * Discovers every instantiable legacy model in the module-owned model paths
  * that uses IsTenantModel.
- * Path-relative (not container-dependent) so it works both at runtime and at
+ * Uses the running host when available, with a package-relative fallback at
  * PHPUnit collection time, before the app boots. CrossTenantLeakageTest and
  * TeamBackupService both consume this — so the test that proves no model
  * escapes the tenant scope also proves the backup covers every model.
@@ -24,7 +25,9 @@ class TenantModels
      */
     public static function all(): array
     {
-        $projectRoot = dirname(__DIR__, 5);
+        $container = Container::getInstance();
+        $hostRoot = $container->bound('path.base') ? $container->make('path.base') : null;
+        $projectRoot = is_string($hostRoot) && $hostRoot !== '' ? $hostRoot : dirname(__DIR__, 5);
         $files = glob($projectRoot.'/app/Models/*.php') ?: [];
 
         foreach (glob($projectRoot.'/modules/*/src/Legacy/Models/*.php') ?: [] as $file) {

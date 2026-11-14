@@ -3,7 +3,7 @@
   "name": "jetstream-bridge-filament",
   "display_name": "Jetstream Bridge Filament",
   "description": "Jetstream Bridge filament presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\JetstreamBridgeFilament\\JetstreamBridgeFilamentServiceProvider",
   "requires": {

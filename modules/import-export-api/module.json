@@ -3,7 +3,7 @@
   "name": "import-export-api",
   "display_name": "Import and Export Api",
   "description": "Import and Export api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ImportExportApi\\ImportExportApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

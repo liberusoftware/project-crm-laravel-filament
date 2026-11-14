@@ -122,6 +122,7 @@
     <source>
         <include>
             <directory>app</directory>
+            <directory>modules/*/src</directory>
         </include>
     </source>
     <php>

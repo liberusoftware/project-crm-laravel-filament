@@ -3,7 +3,7 @@
   "name": "search-livewire",
   "display_name": "Search Livewire",
   "description": "Search livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\SearchLivewire\\SearchLivewireServiceProvider",
   "requires": {

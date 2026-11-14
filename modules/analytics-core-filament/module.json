@@ -3,7 +3,7 @@
   "name": "analytics-core-filament",
   "display_name": "Analytics Core Filament",
   "description": "Analytics Core filament presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.2.1",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\AnalyticsCoreFilament\\AnalyticsCoreFilamentServiceProvider",
   "requires": {

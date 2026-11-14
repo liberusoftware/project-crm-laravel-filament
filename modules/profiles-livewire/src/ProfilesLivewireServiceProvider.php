@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Liberu\Foundation\ProfilesLivewire;
 
 use Illuminate\Support\ServiceProvider;
+use Liberu\Foundation\ProfilesLivewire\Livewire\Overview;
 use Livewire\Livewire;
 
 final class ProfilesLivewireServiceProvider extends ServiceProvider
@@ -12,6 +13,6 @@ final class ProfilesLivewireServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'profiles-livewire');
-        Livewire::component('profiles-livewire-overview', Liberu\Foundation\ProfilesLivewire\Livewire\Overview::class);
+        Livewire::component('profiles-livewire-overview', Overview::class);
     }
 }

@@ -3,7 +3,7 @@
   "name": "observability-livewire",
   "display_name": "Observability Livewire",
   "description": "Observability livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ObservabilityLivewire\\ObservabilityLivewireServiceProvider",
   "requires": {

@@ -3,7 +3,7 @@
   "name": "feature-flags-api",
   "display_name": "Feature Flags Api",
   "description": "Feature Flags api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\FeatureFlagsApi\\FeatureFlagsApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

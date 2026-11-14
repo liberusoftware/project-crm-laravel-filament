@@ -3,7 +3,7 @@
   "name": "audit-api",
   "display_name": "Audit Api",
   "description": "Audit api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\AuditApi\\AuditApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

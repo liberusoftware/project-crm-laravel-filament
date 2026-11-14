@@ -3,7 +3,7 @@
   "name": "module-manager-livewire",
   "display_name": "Module Manager Livewire",
   "description": "Module Manager livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ModuleManagerLivewire\\ModuleManagerLivewireServiceProvider",
   "requires": {

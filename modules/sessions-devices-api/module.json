@@ -3,7 +3,7 @@
   "name": "sessions-devices-api",
   "display_name": "Sessions and Devices Api",
   "description": "Sessions and Devices api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\SessionsDevicesApi\\SessionsDevicesApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

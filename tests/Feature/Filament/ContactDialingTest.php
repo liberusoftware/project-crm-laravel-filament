@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Feature\Filament;
 
 use App\Filament\App\Resources\ContactResource\Pages\ListContacts;
+use App\Filament\App\Resources\LeadResource\Pages\ListLeads;
 use App\Filament\App\Resources\LeadResource\Pages\ViewLead;
 use App\Models\CallLog;
 use App\Models\Contact;
@@ -13,6 +14,7 @@ use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Http;
 use Liberu\CRM\DialerAndOutreach\Actions\QueueDialerCall;
 use Liberu\CRM\DialerAndOutreach\Actions\StartContactDialing;
@@ -155,5 +157,40 @@ class ContactDialingTest extends TestCase
         $contact = Contact::factory()->create(['team_id' => $other->current_team_id]);
         $this->expectException(HttpException::class);
         app(StartContactDialing::class)->execute($user, [$contact->id], $this->input());
+    }
+
+    public function test_quick_call_reports_a_recently_called_contact_as_skipped(): void
+    {
+        $user = $this->viewer();
+        Http::preventStrayRequests();
+        $contact = Contact::factory()->create(['team_id' => $user->current_team_id, 'phone_number' => '+15551234569']);
+        $this->callLog($contact, 0);
+        $lead = Lead::factory()->create(['team_id' => $user->current_team_id, 'user_id' => $user->id, 'contact_id' => $contact->id]);
+        Livewire::test(ViewLead::class, ['record' => $lead->id])->callAction('makeCall', data: $this->input())
+            ->assertHasNoActionErrors()->assertNotified('Contact skipped');
+        Http::assertNothingSent();
+    }
+
+    public function test_quick_call_reports_uncertain_delivery_without_starting_a_second_call(): void
+    {
+        $user = $this->viewer();
+        Http::fake(['api.twilio.com/*' => fn () => throw new ConnectionException('Provider timeout')]);
+        $contact = Contact::factory()->create(['team_id' => $user->current_team_id, 'phone_number' => '+15551234569']);
+        $lead = Lead::factory()->create(['team_id' => $user->current_team_id, 'user_id' => $user->id, 'contact_id' => $contact->id]);
+        Livewire::test(ViewLead::class, ['record' => $lead->id])->callAction('makeCall', data: $this->input())
+            ->assertHasNoActionErrors()->assertNotified('Call could not be confirmed');
+        $this->assertDatabaseHas('crm_dialer_calls', ['contact_id' => $contact->id, 'status' => 'dispatch_unknown']);
+    }
+
+    public function test_lead_history_filter_uses_the_linked_contacts_call_history(): void
+    {
+        $user = $this->viewer();
+        $recent = Contact::factory()->create(['team_id' => $user->current_team_id]);
+        $never = Contact::factory()->create(['team_id' => $user->current_team_id]);
+        $this->callLog($recent, 0);
+        $recentLead = Lead::factory()->create(['team_id' => $user->current_team_id, 'user_id' => $user->id, 'contact_id' => $recent->id]);
+        $neverLead = Lead::factory()->create(['team_id' => $user->current_team_id, 'user_id' => $user->id, 'contact_id' => $never->id]);
+        Livewire::test(ListLeads::class)->filterTable('last_called', '7')
+            ->assertCanSeeTableRecords([$neverLead])->assertCanNotSeeTableRecords([$recentLead]);
     }
 }

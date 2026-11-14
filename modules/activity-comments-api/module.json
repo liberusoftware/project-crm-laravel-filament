@@ -3,7 +3,7 @@
   "name": "activity-comments-api",
   "display_name": "Activity and Comments Api",
   "description": "Activity and Comments api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ActivityCommentsApi\\ActivityCommentsApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

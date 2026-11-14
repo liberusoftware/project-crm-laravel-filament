@@ -3,7 +3,7 @@
   "name": "roles-permissions-api",
   "display_name": "Roles and Permissions Api",
   "description": "Roles and Permissions api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\RolesPermissionsApi\\RolesPermissionsApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

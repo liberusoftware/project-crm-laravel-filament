@@ -3,7 +3,7 @@
   "name": "integrations-api",
   "display_name": "Integrations Api",
   "description": "Integrations api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\IntegrationsApi\\IntegrationsApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

@@ -3,7 +3,7 @@
   "name": "developer-experience-api",
   "display_name": "Developer Experience Api",
   "description": "Developer Experience api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\DeveloperExperienceApi\\DeveloperExperienceApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

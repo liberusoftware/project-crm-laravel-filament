@@ -13,9 +13,22 @@
       "Liberu\\CRM\\Core\\": "src/"
     }
   },
-  "extra": {"liberu": {"name": "crm-core"}},
-  "version": "1.0.0",
-  "autoload-dev": {"psr-4": {"Liberu\\CRM\\Core\\Tests\\": "tests/"}},
-  "require-dev": {"liberusoftware/package-testbench": "^1.5", "pestphp/pest": "^5.3.3"},
-  "scripts": {"test": "pest"}
+  "extra": {
+    "liberu": {
+      "name": "crm-core"
+    }
+  },
+  "version": "1.2.0",
+  "autoload-dev": {
+    "psr-4": {
+      "Liberu\\CRM\\Core\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "liberusoftware/package-testbench": "^1.5",
+    "pestphp/pest": "^5.3.3"
+  },
+  "scripts": {
+    "test": "pest"
+  }
 }

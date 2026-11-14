@@ -3,7 +3,7 @@
   "name": "feature-flags-livewire",
   "display_name": "Feature Flags Livewire",
   "description": "Feature Flags livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\FeatureFlagsLivewire\\FeatureFlagsLivewireServiceProvider",
   "requires": {

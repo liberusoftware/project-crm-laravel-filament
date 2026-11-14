@@ -15,7 +15,10 @@ return new class() extends Migration
 {
     public function up(): void
     {
-        PermissionCatalog::sync();
+        $catalog = config('permission.catalog', PermissionCatalog::class);
+        if (is_string($catalog) && class_exists($catalog)) {
+            $catalog::sync();
+        }
     }
 
     public function down(): void

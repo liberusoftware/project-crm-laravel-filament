@@ -3,7 +3,7 @@
   "name": "analytics-google-filament",
   "display_name": "Google Analytics Filament",
   "description": "Google Analytics filament presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.2.1",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\AnalyticsGoogleFilament\\AnalyticsGoogleFilamentServiceProvider",
   "requires": {

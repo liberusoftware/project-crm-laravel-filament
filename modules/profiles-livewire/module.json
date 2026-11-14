@@ -3,7 +3,7 @@
   "name": "profiles-livewire",
   "display_name": "Profiles Livewire",
   "description": "Profiles livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ProfilesLivewire\\ProfilesLivewireServiceProvider",
   "requires": {

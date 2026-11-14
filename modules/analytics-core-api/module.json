@@ -3,7 +3,7 @@
   "name": "analytics-core-api",
   "display_name": "Analytics Core Api",
   "description": "Analytics Core api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\AnalyticsCoreApi\\AnalyticsCoreApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

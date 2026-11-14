@@ -3,7 +3,7 @@
   "name": "notifications-livewire",
   "display_name": "Notifications Livewire",
   "description": "Notifications livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\NotificationsLivewire\\NotificationsLivewireServiceProvider",
   "requires": {

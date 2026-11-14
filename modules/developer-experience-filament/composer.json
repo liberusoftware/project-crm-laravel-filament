@@ -21,7 +21,7 @@
       "source": "https://github.com/liberusoftware/module-developer-experience-filament"
     }
   },
-  "version": "1.0.1",
+  "version": "1.0.5",
   "autoload-dev": {
     "psr-4": {
       "Liberu\\Foundation\\DeveloperExperienceFilament\\Tests\\": "tests/"
