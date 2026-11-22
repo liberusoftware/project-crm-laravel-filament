@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\Admin\Resources\RoleResource;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Auth\Access\AuthorizationException;

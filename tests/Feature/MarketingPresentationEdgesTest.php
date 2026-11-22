@@ -1,10 +1,10 @@
 <?php
 
-use App\Filament\App\Pages\ContentCalendar;
-use App\Models\MarketingPlatformSettings;
+use Liberu\CRM\MarketingResourcesFilament\Pages\ContentCalendar;
+use Liberu\CRM\MarketingResources\Models\MarketingPlatformSettings;
 use App\Models\SocialMediaPost;
 use App\Models\User;
-use App\Services\Marketing\ContentAssistant;
+use Liberu\CRM\MarketingAgent\Services\ContentAssistant;
 use Filament\Auth\Http\Responses\Contracts\LoginResponse;
 use Filament\Facades\Filament;
 use Illuminate\Http\Client\ConnectionException;

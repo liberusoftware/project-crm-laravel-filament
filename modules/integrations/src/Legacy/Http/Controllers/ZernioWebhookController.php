@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Team;
-use App\Services\Marketing\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Liberu\CRM\UnifiedConversations\Actions\SyncExternalConversation;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Console\Commands;
 
 use App\Models\SocialMediaPost;
-use App\Services\Marketing\PostPublisher;
+use Liberu\CRM\MarketingResources\Services\PostPublisher;
 use Illuminate\Console\Command;
 
 class PublishScheduledPosts extends Command

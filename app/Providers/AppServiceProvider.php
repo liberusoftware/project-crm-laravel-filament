@@ -8,9 +8,6 @@ use App\Console\Commands\BackupTeam;
 use App\Console\Commands\CloneTeam;
 use App\Console\Commands\FreshDatabaseCommand;
 use App\Console\Commands\ImportTeam;
-use App\Console\Commands\MakeModuleCommand;
-use App\Console\Commands\ModuleAutoloadCommand;
-use App\Console\Commands\ModuleCommand;
 use App\Console\Commands\NotifyOverdueTasks;
 use App\Console\Commands\PublishScheduledPosts;
 use App\Console\Commands\RestoreTeam;
@@ -23,8 +20,6 @@ use App\Models\Lead;
 use App\Models\Opportunity;
 use App\Models\Task;
 use App\Models\Team;
-use App\Modules\ModuleManager;
-use App\Modules\ModuleServiceProvider;
 use App\Observers\AuditObserver;
 use App\Support\SsoLogoutState;
 use Filament\Auth\Http\Responses\Contracts\LoginResponse;
@@ -72,9 +67,6 @@ class AppServiceProvider extends ServiceProvider
                 BackupTeam::class,
                 CloneTeam::class,
                 ImportTeam::class,
-                MakeModuleCommand::class,
-                ModuleAutoloadCommand::class,
-                ModuleCommand::class,
                 NotifyOverdueTasks::class,
                 PublishScheduledPosts::class,
                 RestoreTeam::class,
@@ -83,11 +75,9 @@ class AppServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->app->singleton(ModuleManager::class, fn (): ModuleManager => new ModuleManager());
         // Request-scoped holder for the SSO single-logout redirect URL.
         $this->app->singleton(SsoLogoutState::class);
         $this->app->singleton(ModuleRegistry::class, fn (): ModuleRegistry => (new ModuleDiscovery())->discover([base_path('modules')]));
-        $this->app->register(ModuleServiceProvider::class);
         $this->app->register(ModuleManagerServiceProvider::class);
         $this->app->register(SettingsServiceProvider::class);
         $this->app->register(SearchServiceProvider::class);

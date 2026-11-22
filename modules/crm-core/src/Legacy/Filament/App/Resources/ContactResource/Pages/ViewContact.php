@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\App\Resources\ContactResource\Pages;
 
-use App\Filament\Actions\ContactDialingActions;
+use Liberu\CRM\DialerAndOutreachFilament\Actions\ContactDialingActions;
 use App\Filament\App\Resources\ContactResource;
 use App\Models\Contact;
 use Filament\Actions\EditAction;

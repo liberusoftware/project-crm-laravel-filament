@@ -3,7 +3,7 @@
 use App\Models\OAuthConfiguration;
 use App\Models\SocialMediaPost;
 use App\Models\User;
-use App\Services\Marketing\DirectPostPublisher;
+use Liberu\CRM\MarketingResources\Services\DirectPostPublisher;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 

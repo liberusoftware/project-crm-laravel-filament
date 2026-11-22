@@ -2,7 +2,7 @@
 
 namespace App\Filament\App\Resources;
 
-use App\Filament\App\Pages\MarketingConnections;
+use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
 use App\Filament\App\Resources\AdvertisingAccountResource\Pages\CreateAdvertisingAccount;
 use App\Filament\App\Resources\AdvertisingAccountResource\Pages\EditAdvertisingAccount;
 use App\Filament\App\Resources\AdvertisingAccountResource\Pages\ListAdvertisingAccounts;
@@ -12,7 +12,7 @@ use App\Filament\App\Resources\AdvertisingAccountResource\RelationManagers\AdsRe
 use App\Filament\App\Resources\AdvertisingAccountResource\RelationManagers\CampaignsRelationManager;
 use App\Filament\Concerns\EnforcesResourcePermissions;
 use App\Models\AdvertisingAccount;
-use App\Services\Marketing\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
 use App\Services\Zernio\ZernioTenantService;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;

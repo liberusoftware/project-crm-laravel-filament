@@ -2,9 +2,9 @@
 
 use App\Models\SocialMediaPost;
 use App\Models\User;
-use App\Services\Marketing\PostPublisher;
-use App\Services\Marketing\PostTargets;
-use App\Services\Marketing\PostWorkflow;
+use Liberu\CRM\MarketingResources\Services\PostPublisher;
+use Liberu\CRM\MarketingResources\Services\PostTargets;
+use Liberu\CRM\MarketingResources\Services\PostWorkflow;
 use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\ValidationException;

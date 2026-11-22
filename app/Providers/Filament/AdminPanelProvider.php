@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace App\Providers\Filament;
 
 use App\Filament\Admin\Pages\ManageGeneralSettings;
-use App\Filament\Admin\Pages\SetupWizard;
-use App\Filament\Admin\Resources\RoleResource;
 use App\Filament\App\Pages;
 use App\Filament\App\Resources\TeamRoleResource;
 use App\Filament\ModulePlugins;
@@ -32,10 +30,12 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Jetstream\Jetstream;
+use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as SetupWizard;
 use Liberu\Foundation\IdentityFilament\Resources\UserResource as FoundationUserResource;
 use Liberu\Foundation\Localization\Http\Middleware\SetLocale;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\OrganizationsFilament\Resources\TeamResource as FoundationTeamResource;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
 use Liberu\Foundation\SettingsFilament\SettingsFilamentPlugin;
 
 class AdminPanelProvider extends PanelProvider

@@ -8,7 +8,7 @@ use App\Enums\Role;
 use App\Filament\App\Resources\TeamRoleResource\Pages\CreateTeamRole;
 use App\Filament\App\Resources\TeamRoleResource\Pages\EditTeamRole;
 use App\Filament\App\Resources\TeamRoleResource\Pages\ListTeamRoles;
-use App\Filament\Forms\RolePermissionBuilder;
+use Liberu\Foundation\RolesPermissionsFilament\Forms\RolePermissionBuilder;
 use App\Models\Team;
 use App\Models\User;
 use App\Services\RoleConfigurationService;

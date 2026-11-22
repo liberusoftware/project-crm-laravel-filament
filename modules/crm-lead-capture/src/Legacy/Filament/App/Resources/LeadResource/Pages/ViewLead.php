@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\App\Resources\LeadResource\Pages;
 
-use App\Filament\Actions\ContactDialingActions;
+use Liberu\CRM\DialerAndOutreachFilament\Actions\ContactDialingActions;
 use App\Filament\App\Resources\LeadResource;
 use App\Models\Lead;
 use App\Support\AccessContext;

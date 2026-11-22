@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Feature\Filament;
 
 use App\Enums\Role;
-use App\Filament\Admin\Resources\RoleResource;
-use App\Filament\Admin\Resources\RoleResource\Pages\EditRole;
-use App\Filament\Admin\Resources\RoleResource\Pages\ListRoles;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\EditRole;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\ListRoles;
 use App\Filament\App\Resources\TeamRoleLogResource\Pages\ListTeamRoleLogs;
 use App\Filament\App\Resources\TeamRoleResource;
 use App\Filament\App\Resources\TeamRoleResource\Pages\CreateTeamRole;

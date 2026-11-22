@@ -10,7 +10,8 @@
       "crm-client-onboarding"
     ],
     "packages": {
-      "liberusoftware/module-crm-client-onboarding": "^1.0.0"
+      "liberusoftware/module-crm-client-onboarding": "^1.0.0",
+      "liberusoftware/module-crm-marketing-resources": "^1.0.0"
     }
   },
   "suggests": [],

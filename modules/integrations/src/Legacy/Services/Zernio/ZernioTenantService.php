@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services\Zernio;
 
-use App\Services\Marketing\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Log;

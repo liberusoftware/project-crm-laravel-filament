@@ -6,7 +6,7 @@ namespace App\Services\Zernio;
 
 use App\Models\SocialMediaPost;
 use App\Models\Team;
-use App\Services\Marketing\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
 use Illuminate\Support\Facades\Storage;
 
 final class ZernioPublisher

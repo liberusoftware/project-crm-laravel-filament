@@ -1,1 +1,24 @@
-{"name":"liberusoftware/module-crm-marketing-resources-filament","type":"liberu-module","autoload":{"psr-4":{"Liberu\\CRM\\MarketingResourcesFilament\\":"src/"}},"extra":{"laravel":{"providers":["Liberu\\CRM\\MarketingResourcesFilament\\MarketingResourcesFilamentServiceProvider"]},"liberu":{"name":"crm-marketing-resources-filament"}},"description":"Filament resource for governed marketing assets","license":"MIT"}
+{
+    "name": "liberusoftware/module-crm-marketing-resources-filament",
+    "type": "liberu-module",
+    "autoload": {
+        "psr-4": {
+            "Liberu\\CRM\\MarketingResourcesFilament\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liberu\\CRM\\MarketingResourcesFilament\\MarketingResourcesFilamentServiceProvider"
+            ]
+        },
+        "liberu": {
+            "name": "crm-marketing-resources-filament"
+        }
+    },
+    "description": "Filament resource for governed marketing assets",
+    "license": "MIT",
+    "require": {
+        "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+    }
+}

@@ -6,9 +6,9 @@ namespace App\Filament\App\Pages;
 
 use App\Models\Team;
 use App\Models\User;
-use App\Services\Marketing\PlatformConfiguration;
-use App\Services\Marketing\WorkspaceAccess;
-use App\Services\Marketing\WorkspaceOnboarding;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\WorkspaceAccess;
+use Liberu\CRM\ClientOnboarding\Services\WorkspaceOnboarding;
 use App\Services\Zernio\ZernioTenantService;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\CheckboxList;

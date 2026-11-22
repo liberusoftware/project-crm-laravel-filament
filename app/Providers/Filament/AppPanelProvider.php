@@ -36,6 +36,8 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 use Laravel\Jetstream\Features;
 use Laravel\Jetstream\Jetstream;
+use Liberu\CRM\MarketingResourcesFilament\Pages\ContentCalendar;
+use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
 use Liberu\Foundation\Localization\Http\Middleware\SetLocale;
 
 class AppPanelProvider extends PanelProvider
@@ -75,8 +77,8 @@ class AppPanelProvider extends PanelProvider
             ->pages([
                 Dashboard::class,
                 EditProfile::class,
-                Pages\MarketingConnections::class,
-                Pages\ContentCalendar::class,
+                MarketingConnections::class,
+                ContentCalendar::class,
             ])
             ->widgets([
                 Widgets\AccountWidget::class,

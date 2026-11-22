@@ -6,7 +6,9 @@
   "category": "capability",
   "provider": "Liberu\\CRM\\Advertising\\AdvertisingServiceProvider",
   "requires": {
-    "packages": {}
+    "packages": {
+      "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+    }
   },
   "suggests": [],
   "default_enabled": true,

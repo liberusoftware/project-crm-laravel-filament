@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Services\Social;
 
 use App\Models\OAuthConfiguration;
-use App\Services\Marketing\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use RuntimeException;

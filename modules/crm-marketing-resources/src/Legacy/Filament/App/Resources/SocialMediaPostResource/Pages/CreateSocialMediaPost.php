@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Filament\App\Resources\SocialMediaPostResource\Pages;
 
 use App\Filament\App\Resources\SocialMediaPostResource;
-use App\Services\Marketing\PostWorkflow;
+use Liberu\CRM\MarketingResources\Services\PostWorkflow;
 use Filament\Facades\Filament;
 use Filament\Resources\Pages\CreateRecord;
 

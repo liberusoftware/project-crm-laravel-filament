@@ -5,7 +5,7 @@ namespace App\Filament\App\Resources;
 use App\Actions\Portal\InvitePortalCustomer;
 use App\Actions\Portal\RevokePortalCustomer;
 use App\Exceptions\PortalOnboardingException;
-use App\Filament\Actions\ContactDialingActions;
+use Liberu\CRM\DialerAndOutreachFilament\Actions\ContactDialingActions;
 use App\Filament\App\Resources\ContactResource\Pages\CreateContact;
 use App\Filament\App\Resources\ContactResource\Pages\EditContact;
 use App\Filament\App\Resources\ContactResource\Pages\ListContacts;

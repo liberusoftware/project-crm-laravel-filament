@@ -1,1 +1,24 @@
-{"name":"liberusoftware/module-crm-marketing-agent","type":"liberu-module","autoload":{"psr-4":{"Liberu\\CRM\\MarketingAgent\\":"src/"}},"extra":{"laravel":{"providers":["Liberu\\CRM\\MarketingAgent\\MarketingAgentServiceProvider"]},"liberu":{"name":"crm-marketing-agent"}},"description":"Marketing assistance, variations, recommendations, governance checks, experiments and approvals","license":"MIT"}
+{
+    "name": "liberusoftware/module-crm-marketing-agent",
+    "type": "liberu-module",
+    "autoload": {
+        "psr-4": {
+            "Liberu\\CRM\\MarketingAgent\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liberu\\CRM\\MarketingAgent\\MarketingAgentServiceProvider"
+            ]
+        },
+        "liberu": {
+            "name": "crm-marketing-agent"
+        }
+    },
+    "description": "Marketing assistance, variations, recommendations, governance checks, experiments and approvals",
+    "license": "MIT",
+    "require": {
+        "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+    }
+}

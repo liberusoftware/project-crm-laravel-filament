@@ -6,7 +6,7 @@ namespace App\Filament\App\Resources\SocialMediaPostResource\Pages;
 
 use App\Filament\App\Resources\SocialMediaPostResource;
 use App\Models\SocialMediaPost;
-use App\Services\Marketing\PostWorkflow;
+use Liberu\CRM\MarketingResources\Services\PostWorkflow;
 use Filament\Actions\DeleteAction;
 use Filament\Facades\Filament;
 use Filament\Resources\Pages\EditRecord;

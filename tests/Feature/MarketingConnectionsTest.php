@@ -1,6 +1,6 @@
 <?php
 
-use App\Filament\App\Pages\MarketingConnections;
+use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
 use App\Models\OAuthConfiguration;
 use App\Models\User;
 use Filament\Facades\Filament;

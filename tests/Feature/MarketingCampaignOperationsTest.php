@@ -3,7 +3,7 @@
 use App\Models\AdvertisingAccount;
 use App\Models\Campaign;
 use App\Models\User;
-use App\Services\Marketing\AdvertisingManager;
+use Liberu\CRM\Advertising\Services\AdvertisingManager;
 use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {

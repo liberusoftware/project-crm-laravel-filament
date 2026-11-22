@@ -4,7 +4,7 @@ use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\DealController;
 use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\LeadImportController;
-use App\Http\Controllers\Api\MarketingController;
+use Liberu\CRM\MarketingResourcesApi\Http\Controllers\MarketingController;
 use App\Http\Controllers\Api\TaskController;
 use App\Http\Controllers\Api\WebhookController;
 use App\Http\Controllers\WorkflowController;

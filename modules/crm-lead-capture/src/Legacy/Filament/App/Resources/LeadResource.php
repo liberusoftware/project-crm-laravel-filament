@@ -2,7 +2,7 @@
 
 namespace App\Filament\App\Resources;
 
-use App\Filament\Actions\ContactDialingActions;
+use Liberu\CRM\DialerAndOutreachFilament\Actions\ContactDialingActions;
 use App\Filament\App\Resources\LeadResource\Pages;
 use App\Filament\App\Resources\LeadResource\Pages\LeadQualityReport;
 use App\Filament\App\Resources\LeadResource\Pages\ViewLead;

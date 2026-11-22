@@ -10,10 +10,10 @@ use App\Filament\App\Resources\SocialMediaPostResource\Pages\ViewSocialMediaPost
 use App\Filament\Concerns\EnforcesResourcePermissions;
 use App\Models\SocialMediaPost;
 use App\Models\Team;
-use App\Services\Marketing\ContentAssistant;
-use App\Services\Marketing\PostTargets;
-use App\Services\Marketing\PostWorkflow;
-use App\Services\Marketing\WorkspaceAccess;
+use Liberu\CRM\MarketingAgent\Services\ContentAssistant;
+use Liberu\CRM\MarketingResources\Services\PostTargets;
+use Liberu\CRM\MarketingResources\Services\PostWorkflow;
+use Liberu\CRM\MarketingResources\Services\WorkspaceAccess;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;

@@ -1,10 +1,10 @@
 <?php
 
-use App\Filament\Admin\Pages\SetupWizard;
-use App\Filament\Admin\Resources\RoleResource;
-use App\Filament\Admin\Resources\RoleResource\Pages\CreateRole;
-use App\Filament\Admin\Resources\RoleResource\Pages\EditRole;
-use App\Filament\Admin\Resources\RoleResource\Pages\ListRoles;
+use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as SetupWizard;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\CreateRole;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\EditRole;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\ListRoles;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Actions\DeleteAction;
