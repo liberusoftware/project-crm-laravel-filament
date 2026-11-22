@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Models\Contact;
-use App\Models\Lead;
-use App\Models\Task;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

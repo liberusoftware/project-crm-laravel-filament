@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\AdvertisingAccount;
-use App\Models\Campaign;
+use Liberu\CRM\Advertising\Models\AdvertisingAccount;
+use Liberu\CRM\Advertising\Models\Campaign;
 use App\Models\User;
 use Liberu\CRM\Advertising\Services\AdvertisingManager;
 use Illuminate\Support\Facades\Http;

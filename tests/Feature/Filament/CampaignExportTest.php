@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\CampaignResource;
-use App\Filament\App\Resources\CampaignResource\Pages\ListCampaigns;
-use App\Filament\Exports\CampaignExporter;
+use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource;
+use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource\Pages\ListCampaigns;
+use Liberu\Foundation\ImportExportFilament\Exports\CampaignExporter;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

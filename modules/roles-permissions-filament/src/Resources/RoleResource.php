@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\RolesPermissionsFilament\Resources;
 
-use App\Enums\Role;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
 use App\Models\User;
-use App\Services\RoleConfigurationService;
+use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Resources\Resource;

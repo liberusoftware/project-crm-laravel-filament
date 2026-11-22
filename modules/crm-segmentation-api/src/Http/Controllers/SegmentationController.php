@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\SegmentationApi\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Liberu\CRM\Core\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Liberu\CRM\Segmentation\Actions\CreateAudience;
 use Liberu\CRM\Segmentation\Actions\RecordBehaviorEvent;

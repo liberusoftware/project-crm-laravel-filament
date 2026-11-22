@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Console;
 
-use App\Events\TaskOverdue;
-use App\Models\Task;
-use App\Models\Team;
+use Liberu\CRM\Core\Events\TaskOverdue;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;

@@ -96,7 +96,7 @@
             <directory>modules/crm-sales-engagement/tests/Feature/SalesEngagement</directory>
             <directory>modules/crm-sales-pipelines/tests/Feature/SalesPipelines</directory>
             <directory>modules/crm-sales-workspace/tests/Feature/SalesWorkspace</directory>
-            <directory>modules/crm-sandbox-release/tests/Feature/SandboxRelease</directory>
+            <directory>modules/crm-sandbox-and-release-management/tests/Feature/SandboxRelease</directory>
             <directory>modules/crm-scheduling/tests/Feature/Scheduling</directory>
             <directory>modules/crm-search/tests/Feature/CrmSearch</directory>
             <directory>modules/crm-segmentation/tests/Feature/Segmentation</directory>
@@ -104,7 +104,7 @@
             <directory>modules/crm-service-analytics/tests/Feature/ServiceAnalytics</directory>
             <directory>modules/crm-sla-and-entitlements/tests/Feature/SlaAndEntitlements</directory>
             <directory>modules/crm-telephony/tests/Feature/Telephony</directory>
-            <directory>modules/crm-template-snapshots/tests/Feature/TemplatesSnapshots</directory>
+            <directory>modules/crm-templates-and-snapshots/tests/Feature/TemplatesSnapshots</directory>
             <directory>modules/crm-usage-wallet-and-rebilling/tests/Feature/UsageWallet</directory>
             <directory>modules/crm-web-intent/tests/Feature/WebIntent</directory>
             <directory>modules/crm-white-label/tests/Feature/WhiteLabel</directory>

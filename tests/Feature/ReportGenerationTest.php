@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Services\MailChimpService;
-use App\Services\ReportingService;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
+use Liberu\CRM\SalesWorkspace\Services\ReportingService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
 use Mockery;

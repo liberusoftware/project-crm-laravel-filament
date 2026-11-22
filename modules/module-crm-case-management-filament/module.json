@@ -2,7 +2,7 @@
   "name": "module-crm-case-management-filament",
   "display_name": "CRM Case Management Filament",
   "description": "Case management Filament resources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\CaseManagementFilament\\CaseManagementFilamentServiceProvider",
   "requires": {

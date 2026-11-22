@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\OAuthConfiguration;
-use App\Models\SocialMediaPost;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
 use App\Models\User;
 use Liberu\CRM\MarketingResources\Services\DirectPostPublisher;
 use Illuminate\Support\Facades\Http;

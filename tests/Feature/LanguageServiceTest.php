@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use App\Services\LanguageService;
+use Liberu\Foundation\Settings\Services\LanguageService;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use InvalidArgumentException;

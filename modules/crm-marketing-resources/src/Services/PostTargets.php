@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingResources\Services;
 
-use App\Enums\SocialPlatform;
-use App\Models\Team;
-use App\Services\Zernio\ZernioTenantService;
+use Liberu\Foundation\Integrations\Enums\SocialPlatform;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioTenantService;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;

@@ -7,7 +7,7 @@ declare(strict_types=1);
 | App-panel permission catalog + system-role matrix
 |--------------------------------------------------------------------------
 |
-| Single source of truth for App\Support\PermissionCatalog::sync(), which both
+| Single source of truth for Liberu\Foundation\RolesPermissions\Support\PermissionCatalog::sync(), which both
 | the PermissionsSeeder (fresh installs) and the seed-role-permissions migration
 | (existing deploys) call. Permission names are `{action}_{resource}` in
 | snake_case; `resource` matches the token the EnforcesResourcePermissions trait

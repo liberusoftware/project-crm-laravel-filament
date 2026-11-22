@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\ClientOnboarding\Services;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Services\Zernio\ZernioTenantService;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioTenantService;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;

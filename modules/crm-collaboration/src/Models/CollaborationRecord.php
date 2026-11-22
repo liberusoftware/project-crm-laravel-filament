@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\Collaboration\Models;
 
-use App\Traits\IsTenantModel;
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
 use Illuminate\Database\Eloquent\Model;
 
 /** @property int $team_id @property string $record_key @property string $kind @property string $status @property array<int,mixed>|null $mentions */

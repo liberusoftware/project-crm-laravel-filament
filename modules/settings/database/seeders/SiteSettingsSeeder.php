@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Settings\GeneralSettings;
+use Liberu\Foundation\Settings\Settings\GeneralSettings;
 use Illuminate\Database\Seeder;
 
 class SiteSettingsSeeder extends Seeder

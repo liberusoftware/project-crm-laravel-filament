@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Teams;
 
-use App\Models\Contact;
-use App\Models\Lead;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use App\Models\User;
-use App\Services\TeamBackupService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Storage;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Services\TeamBackupService;
 use Tests\TestCase;
 use ZipArchive;
 

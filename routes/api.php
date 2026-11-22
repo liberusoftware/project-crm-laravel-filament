@@ -1,14 +1,14 @@
 <?php
 
-use App\Http\Controllers\Api\ContactController;
-use App\Http\Controllers\Api\DealController;
-use App\Http\Controllers\Api\LeadController;
-use App\Http\Controllers\Api\LeadImportController;
+use Liberu\CRM\Core\Api\Http\Controllers\ContactController;
+use Liberu\CRM\SalesWorkspaceApi\Http\Controllers\DealController;
+use Liberu\CRM\Core\Api\Http\Controllers\LeadController;
+use Liberu\CRM\LeadCaptureApi\Http\Controllers\LeadImportController;
 use Liberu\CRM\MarketingResourcesApi\Http\Controllers\MarketingController;
-use App\Http\Controllers\Api\TaskController;
-use App\Http\Controllers\Api\WebhookController;
-use App\Http\Controllers\WorkflowController;
-use App\Models\Webhook;
+use Liberu\CRM\Activities\Api\Http\Controllers\TaskController;
+use Liberu\Foundation\Integrations\Http\Controllers\Api\WebhookController;
+use Liberu\CRM\AutomationPack\Http\Controllers\WorkflowController;
+use Liberu\Foundation\Integrations\Models\Webhook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

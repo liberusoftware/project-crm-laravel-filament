@@ -2,7 +2,7 @@
   "name": "module-crm-analytics-filament",
   "display_name": "CRM Analytics Filament",
   "description": "CRM Analytics Filament resources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\AnalyticsFilament\\AnalyticsFilamentServiceProvider",
   "requires": {

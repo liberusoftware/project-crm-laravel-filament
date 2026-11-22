@@ -2,7 +2,7 @@
 
 use Liberu\CRM\MarketingResourcesFilament\Pages\ContentCalendar;
 use Liberu\CRM\MarketingResources\Models\MarketingPlatformSettings;
-use App\Models\SocialMediaPost;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
 use App\Models\User;
 use Liberu\CRM\MarketingAgent\Services\ContentAssistant;
 use Filament\Auth\Http\Responses\Contracts\LoginResponse;

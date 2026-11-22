@@ -2,16 +2,16 @@
 
 namespace Tests\Unit;
 
-use App\Events\MessageReplySent;
-use App\Events\NewMessageReceived;
-use App\Models\OAuthConfiguration;
-use App\Services\FacebookMessengerService;
-use App\Services\GmailService;
-use App\Services\ImapService;
-use App\Services\OutlookService;
-use App\Services\Pop3Service;
-use App\Services\UnifiedHelpDeskService;
-use App\Services\WhatsAppBusinessService;
+use Liberu\CRM\ServiceAgent\Events\MessageReplySent;
+use Liberu\CRM\ServiceAgent\Events\NewMessageReceived;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\CRM\ChannelGateway\Services\Social\FacebookMessengerService;
+use Liberu\CRM\EmailProductivity\Services\GmailService;
+use Liberu\CRM\EmailProductivity\Services\ImapService;
+use Liberu\CRM\EmailProductivity\Services\OutlookService;
+use Liberu\CRM\EmailProductivity\Services\Pop3Service;
+use Liberu\CRM\ServiceAgent\Services\UnifiedHelpDeskService;
+use Liberu\CRM\MobileMessaging\Services\WhatsAppBusinessService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
 use Mockery;

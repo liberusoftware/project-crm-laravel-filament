@@ -1,22 +1,22 @@
 {
-  "name": "crm-marketing-agent",
-  "display_name": "CRM Marketing Agent",
-  "description": "Marketing assistance, variations, recommendations, governance checks, experiments and approvals",
-  "version": "1.0.0",
-  "category": "capability",
-  "provider": "Liberu\\CRM\\MarketingAgent\\MarketingAgentServiceProvider",
-  "requires": {
-    "packages": {
-      "liberusoftware/module-crm-marketing-resources": "^1.0.0"
-    }
-  },
-  "suggests": [],
-  "default_enabled": true,
-  "capabilities": [
-    "crm.marketing-agent"
-  ],
-  "features": [
-    "Audience, campaign and content assistance",
-    "Variations, journeys, consent checks, experiments and approvals"
-  ]
+    "name": "crm-marketing-agent",
+    "display_name": "CRM Marketing Agent",
+    "description": "Marketing assistance, variations, recommendations, governance checks, experiments and approvals",
+    "version": "1.1.0",
+    "category": "capability",
+    "provider": "Liberu\\CRM\\MarketingAgent\\MarketingAgentServiceProvider",
+    "requires": {
+        "packages": {
+            "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+        }
+    },
+    "suggests": [],
+    "default_enabled": true,
+    "capabilities": [
+        "crm.marketing-agent"
+    ],
+    "features": [
+        "Audience, campaign and content assistance",
+        "Variations, journeys, consent checks, experiments and approvals"
+    ]
 }

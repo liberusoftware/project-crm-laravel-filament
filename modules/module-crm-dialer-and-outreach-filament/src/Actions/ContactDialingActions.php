@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\DialerAndOutreachFilament\Actions;
 
-use App\Models\Contact;
-use App\Models\Lead;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use Filament\Actions\Action;
 use Filament\Actions\BulkAction;
 use Filament\Forms\Components\Select;

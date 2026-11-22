@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\OpportunityResource\Pages\ListOpportunities;
-use App\Filament\Exports\OpportunityExporter;
+use Liberu\CRM\SalesWorkspace\Filament\App\Resources\OpportunityResource\Pages\ListOpportunities;
+use Liberu\Foundation\ImportExportFilament\Exports\OpportunityExporter;
 use App\Models\User;
-use App\Support\AccessContext;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;

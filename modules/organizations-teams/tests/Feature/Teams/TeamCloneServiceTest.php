@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Teams;
 
-use App\Models\Contact;
-use App\Models\Menu;
-use App\Models\Pipeline;
-use App\Models\Stage;
-use App\Models\Tag;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Settings\Models\Menu;
+use Liberu\CRM\SalesPipelines\Models\Pipeline;
+use Liberu\CRM\SalesPipelines\Models\Stage;
+use Liberu\CRM\Core\Models\CrmTag as Tag;
 use App\Models\User;
-use App\Services\TeamCloneService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Services\TeamCloneService;
 use Tests\TestCase;
 
 class TeamCloneServiceTest extends TestCase

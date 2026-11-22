@@ -2,7 +2,7 @@
   "name": "module-crm-chat-and-bots-filament",
   "display_name": "CRM Chat and Bots Filament",
   "description": "Chat and bots Filament resources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\ChatAndBotsFilament\\ChatAndBotsFilamentServiceProvider",
   "requires": {

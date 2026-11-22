@@ -2,14 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\Models\Contact;
-use App\Models\Task;
-use App\Models\Workflow;
-use App\Models\WorkflowAction;
-use App\Models\WorkflowCondition;
-use App\Models\WorkflowExecution;
-use App\Models\WorkflowTrigger;
-use App\Services\WorkflowAutomationService;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\AutomationPack\Models\Workflow;
+use Liberu\CRM\AutomationPack\Models\WorkflowAction;
+use Liberu\CRM\AutomationPack\Models\WorkflowCondition;
+use Liberu\CRM\AutomationPack\Models\WorkflowExecution;
+use Liberu\CRM\AutomationPack\Models\WorkflowTrigger;
+use Liberu\CRM\AutomationPack\Services\WorkflowAutomationService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

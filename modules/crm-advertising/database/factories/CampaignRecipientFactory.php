@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\CampaignRecipient;
-use App\Models\Contact;
-use App\Models\MarketingCampaign;
-use App\Models\Team;
+use Liberu\CRM\Advertising\Models\CampaignRecipient;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\MarketingResources\Models\MarketingCampaign;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CampaignRecipientFactory extends Factory

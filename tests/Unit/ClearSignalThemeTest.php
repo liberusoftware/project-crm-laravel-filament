@@ -1,6 +1,6 @@
 <?php
 
-use App\Support\ThemeColors;
+use Liberu\Foundation\Settings\Support\ThemeColors;
 use Filament\Support\Colors\Color;
 use Liberu\Foundation\Theme\Services\ThemeManager;
 

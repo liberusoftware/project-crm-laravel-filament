@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\PartnerRelationshipManagementApi\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Liberu\CRM\Core\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Liberu\CRM\PartnerRelationshipManagement\Actions\AddPartnerContact;
 use Liberu\CRM\PartnerRelationshipManagement\Actions\ChangePartnerStatus;

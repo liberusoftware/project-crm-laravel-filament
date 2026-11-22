@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Tenancy;
 
-use App\Models\Company;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\Company;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Support\AccessContext;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

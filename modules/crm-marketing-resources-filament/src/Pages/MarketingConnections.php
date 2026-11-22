@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingResourcesFilament\Pages;
 
-use App\Models\OAuthConfiguration;
-use App\Models\Team;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Services\Zernio\ZernioTenantService;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioTenantService;
 use Filament\Facades\Filament;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;

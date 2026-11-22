@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Security;
 
-use App\Rules\ContentMimeType;
+use Liberu\CRM\Documents\Rules\ContentMimeType;
 use Illuminate\Http\UploadedFile;
 use Tests\TestCase;
 

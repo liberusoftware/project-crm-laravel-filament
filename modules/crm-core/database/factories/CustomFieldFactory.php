@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Contact;
-use App\Models\CustomField;
-use App\Models\Deal;
-use App\Models\Lead;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Models\CustomField;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CustomFieldFactory extends Factory

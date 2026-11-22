@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\SalesEngagement;
 
-use App\Models\Contact;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;

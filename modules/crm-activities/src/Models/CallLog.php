@@ -1,0 +1,27 @@
+<?php
+
+namespace Liberu\CRM\Activities\Models;
+
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class CallLog extends Model
+{
+    use HasFactory, IsTenantModel;
+
+    protected $fillable = [
+        'call_sid',
+        'contact_id',
+        'direction',
+        'duration',
+        'status',
+        'team_id',
+        'notes',
+    ];
+
+    protected $casts = [
+        'contact_id' => 'integer',
+        'duration' => 'integer',
+    ];
+}

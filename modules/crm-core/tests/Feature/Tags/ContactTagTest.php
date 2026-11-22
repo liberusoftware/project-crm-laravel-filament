@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Tags;
 
-use App\Models\Contact;
-use App\Models\Tag;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Models\CrmTag as Tag;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

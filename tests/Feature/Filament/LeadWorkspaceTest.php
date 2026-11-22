@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\LeadResource\Pages\ListLeads;
-use App\Models\Contact;
-use App\Models\Lead;
+use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ListLeads;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

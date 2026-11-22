@@ -1,7 +1,7 @@
 <?php
 
 use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
-use App\Models\OAuthConfiguration;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Http;

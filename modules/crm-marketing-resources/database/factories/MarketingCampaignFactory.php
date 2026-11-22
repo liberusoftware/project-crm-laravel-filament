@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\MarketingCampaign;
-use App\Models\Team;
+use Liberu\CRM\MarketingResources\Models\MarketingCampaign;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class MarketingCampaignFactory extends Factory

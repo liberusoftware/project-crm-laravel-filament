@@ -2,7 +2,7 @@
   "name": "module-crm-ai-reception-and-conversation-filament",
   "display_name": "CRM AI Reception and Conversation Filament",
   "description": "Filament presentation for governed AI reception operations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\AIReceptionAndConversationFilament\\AIReceptionAndConversationFilamentServiceProvider",
   "requires": {

@@ -1,8 +1,8 @@
 <?php
 
-use App\Models\Contact;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use App\Models\User;
-use App\Support\TenantContext;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 
 it('does not expose contact details to guests through browser listing routes', function () {
     $owner = User::factory()->withPersonalTeam()->create();

@@ -2,7 +2,7 @@
   "name": "crm-activities-filament",
   "display_name": "CRM Activities Filament",
   "description": "Filament administration for CRM activities and goals.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "category": "presentation",
   "provider": "Liberu\\CRM\\Activities\\Filament\\ActivitiesFilamentServiceProvider",
   "requires": {

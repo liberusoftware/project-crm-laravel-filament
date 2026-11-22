@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Services;
 
-use App\Services\MailChimpService;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use MailchimpMarketing\ApiClient;
 use Mockery;
 use Tests\TestCase;

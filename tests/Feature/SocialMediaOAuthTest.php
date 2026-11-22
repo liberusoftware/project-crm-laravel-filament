@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\Http\Controllers\OAuthConfigurationController;
-use App\Models\OAuthConfiguration;
+use Liberu\Foundation\Integrations\Http\Controllers\OAuthConfigurationController;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;

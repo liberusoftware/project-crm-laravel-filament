@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Ad;
-use App\Models\AdSet;
-use App\Models\AdvertisingAccount;
-use App\Models\Campaign;
-use App\Models\Team;
+use Liberu\CRM\Advertising\Models\Ad;
+use Liberu\CRM\Advertising\Models\AdSet;
+use Liberu\CRM\Advertising\Models\AdvertisingAccount;
+use Liberu\CRM\Advertising\Models\Campaign;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

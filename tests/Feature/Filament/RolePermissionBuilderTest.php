@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Enums\Role;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
 use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\EditRole;
 use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\ListRoles;
-use App\Filament\App\Resources\TeamRoleLogResource\Pages\ListTeamRoleLogs;
-use App\Filament\App\Resources\TeamRoleResource;
-use App\Filament\App\Resources\TeamRoleResource\Pages\CreateTeamRole;
-use App\Filament\App\Resources\TeamRoleResource\Pages\EditTeamRole;
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleLogResource\Pages\ListTeamRoleLogs;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource\Pages\CreateTeamRole;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource\Pages\EditTeamRole;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Services\RoleConfigurationService;
-use App\Services\TeamManagementService;
-use App\Support\RolePermissionCatalog;
+use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;
+use Liberu\Foundation\Organizations\Services\TeamManagementService;
+use Liberu\Foundation\RolesPermissions\Support\RolePermissionCatalog;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;

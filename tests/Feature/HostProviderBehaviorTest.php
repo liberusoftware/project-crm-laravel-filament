@@ -2,14 +2,14 @@
 
 use App\Console\Kernel;
 use App\Exceptions\Handler;
-use App\Filament\App\Resources\ContactResource;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource;
 use App\Filament\CrmNavigation;
-use App\Models\OAuthConfiguration;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use App\Models\User;
 use App\Providers\BroadcastServiceProvider;
 use App\Providers\Filament\AppPanelProvider;
 use App\Providers\FilamentServiceProvider;
-use App\Providers\SocialstreamServiceProvider;
+use Liberu\Foundation\Identity\Socialstream\Providers\SocialstreamServiceProvider;
 use Filament\Facades\Filament;
 use Filament\Panel;
 use Illuminate\Auth\Events\Logout;

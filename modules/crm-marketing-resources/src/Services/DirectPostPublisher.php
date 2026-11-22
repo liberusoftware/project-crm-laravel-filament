@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingResources\Services;
 
-use App\Models\OAuthConfiguration;
-use App\Models\SocialMediaPost;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use RuntimeException;

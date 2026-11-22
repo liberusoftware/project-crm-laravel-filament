@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Saml;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 use DOMDocument;
 use RobRichards\XMLSecLibs\XMLSecurityDSig;
 use RobRichards\XMLSecLibs\XMLSecurityKey;

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\KnowledgeBaseArticle;
-use App\Models\Team;
+use Liberu\CRM\Knowledge\Models\KnowledgeBaseArticle;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class KnowledgeBaseArticleFactory extends Factory

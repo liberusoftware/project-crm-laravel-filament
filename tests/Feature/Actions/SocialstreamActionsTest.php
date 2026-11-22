@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Actions;
 
-use App\Actions\Socialstream\CreateConnectedAccount;
-use App\Actions\Socialstream\CreateUserWithTeamsFromProvider;
-use App\Actions\Socialstream\HandleInvalidState;
-use App\Actions\Socialstream\SetUserPassword;
-use App\Actions\Socialstream\UpdateConnectedAccount;
-use App\Models\ConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Actions\CreateConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Actions\CreateUserFromProvider as CreateUserWithTeamsFromProvider;
+use Liberu\Foundation\Identity\Socialstream\Actions\HandleInvalidState;
+use Liberu\Foundation\Identity\Socialstream\Actions\SetUserPassword;
+use Liberu\Foundation\Identity\Socialstream\Actions\UpdateConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;

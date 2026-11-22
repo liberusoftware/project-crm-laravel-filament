@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Services;
 
-use App\Services\SiteSettingsService;
+use Liberu\Foundation\Settings\Services\SiteSettingsService;
 use Illuminate\Support\Facades\Cache;
 use Tests\TestCase;
 

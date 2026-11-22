@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Factories;
 
-use App\Models\Note;
-use App\Models\OAuthConfiguration;
-use App\Models\SocialMediaPost;
-use App\Models\WhatsAppNumber;
+use Liberu\CRM\Core\Models\CrmNote as Note;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\CRM\MobileMessaging\Models\WhatsAppNumber;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

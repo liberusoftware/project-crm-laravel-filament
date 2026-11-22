@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages;
 
 use App\Models\User;
-use App\Services\RoleConfigurationService;
+use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\ValidationException;

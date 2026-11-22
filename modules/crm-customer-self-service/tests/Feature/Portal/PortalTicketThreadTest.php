@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Portal;
 
-use App\Models\Message;
-use App\Models\Team;
-use App\Models\Ticket;
+use Liberu\CRM\EmailProductivity\Models\Message;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\ServiceAgent\Models\Ticket;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

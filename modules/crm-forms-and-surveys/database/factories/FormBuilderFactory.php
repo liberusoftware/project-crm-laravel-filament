@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\FormBuilder;
-use App\Models\Team;
+use Liberu\CRM\FormsAndSurveys\Models\FormBuilder;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class FormBuilderFactory extends Factory

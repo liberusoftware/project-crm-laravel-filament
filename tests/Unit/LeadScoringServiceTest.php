@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Models\Contact;
-use App\Models\Lead;
-use App\Services\LeadScoringService;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\Core\Services\LeadScoringService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Tests\TestCase;

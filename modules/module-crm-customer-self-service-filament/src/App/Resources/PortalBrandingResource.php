@@ -1,0 +1,113 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\CRM\CustomerSelfServiceFilament\App\Resources;
+
+use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalBrandingResource\Pages\EditPortalBranding;
+use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalBrandingResource\Pages\ListPortalBranding;
+use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
+use Liberu\Foundation\Organizations\Models\Team;
+use Filament\Actions\EditAction;
+use Filament\Facades\Filament;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TextInput;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
+use Illuminate\Database\Eloquent\Builder;
+
+/**
+ * A team admin edits their own team's customer-portal branding (name + logo).
+ * Model is Team (which has no `team` ownership relationship), so it opts out of
+ * the app panel's automatic tenancy and scopes to the current tenant manually.
+ */
+class PortalBrandingResource extends Resource
+{
+    use EnforcesResourcePermissions;
+
+    public static function permissionResource(): string
+    {
+        return 'portal_branding';
+    }
+
+    protected static ?string $model = Team::class;
+
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-swatch';
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Team';
+
+    protected static ?string $navigationLabel = 'Portal branding';
+
+    protected static ?string $slug = 'portal-branding';
+
+    protected static bool $isScopedToTenant = false;
+
+    #[\Override]
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    #[\Override]
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return static::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
+    }
+
+    #[\Override]
+    public static function getEloquentQuery(): Builder
+    {
+        $tenant = Filament::getTenant();
+
+        return parent::getEloquentQuery()->whereKey($tenant instanceof Team ? $tenant->getKey() : 0);
+    }
+
+    #[\Override]
+    public static function form(Schema $schema): Schema
+    {
+        return $schema->components([
+            TextInput::make('portal_brand_name')
+                ->label('Portal brand name')
+                ->placeholder(config('portal.brand_name'))
+                ->maxLength(255),
+            FileUpload::make('portal_logo_path')
+                ->label('Portal logo (upload)')
+                ->image()
+                ->disk('public')
+                ->directory('portal-logos')
+                ->maxSize(1024)
+                ->helperText('Overrides the URL below.'),
+            TextInput::make('portal_logo_url')
+                ->label('Portal logo URL')
+                ->url()
+                ->maxLength(2048),
+        ]);
+    }
+
+    #[\Override]
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('name')->label('Team'),
+                TextColumn::make('portal_brand_name')->label('Brand')->placeholder('(default)'),
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ]);
+    }
+
+    #[\Override]
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListPortalBranding::route('/'),
+            'edit' => EditPortalBranding::route('/{record}/edit'),
+        ];
+    }
+}

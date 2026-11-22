@@ -2,7 +2,7 @@
   "name": "module-crm-channel-sales-filament",
   "display_name": "CRM Channel Sales Filament",
   "description": "Channel sales Filament resources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\ChannelSalesFilament\\ChannelSalesFilamentServiceProvider",
   "requires": {

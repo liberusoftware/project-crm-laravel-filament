@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Middleware\Authenticate;
-use App\Http\Middleware\EnsureBillingAccess;
-use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Http\Middleware\SecurityHeaders;
-use App\Http\Middleware\SetPermissionsTeamContext;
-use App\Http\Middleware\SetTenantContext;
-use App\Http\Middleware\VerifyTwilioRequest;
+use Liberu\CRM\Core\Http\Middleware\Authenticate;
+use Liberu\CRM\SaasPackaging\Http\Middleware\EnsureBillingAccess;
+use Liberu\CRM\Core\Http\Middleware\RedirectIfAuthenticated;
+use Liberu\Foundation\ApplicationCore\Http\Middleware\SecurityHeaders;
+use Liberu\Foundation\Organizations\Http\Middleware\SetPermissionsTeamContext;
+use Liberu\Foundation\Organizations\Http\Middleware\SetTenantContext;
+use Liberu\CRM\Telephony\Http\Middleware\VerifyTwilioRequest;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -25,7 +25,7 @@ return Application::configure(basePath: dirname(__DIR__))
         },
     )
     ->withCommands([
-        ...glob(__DIR__.'/../modules/*/src/Legacy/Console/Commands') ?: [],
+        ...glob(__DIR__.'/../modules/*/src/Console/Commands') ?: [],
     ])
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([

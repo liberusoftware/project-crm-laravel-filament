@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Pipeline;
+use Liberu\CRM\SalesPipelines\Models\Pipeline;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PipelineFactory extends Factory

@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\DashboardWidget;
+use Liberu\Analytics\Core\Models\DashboardWidget;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;

@@ -1,7 +1,7 @@
 {
     "name": "liberusoftware/crm-laravel",
     "type": "project",
-    "description": "Liberu CRM \u2014 an open-source, multi-tenant customer relationship management application for managing contacts, companies, leads, opportunities, deals, tasks, communications, campaigns, and support work.",
+    "description": "Liberu CRM — an open-source, multi-tenant customer relationship management application for managing contacts, companies, leads, opportunities, deals, tasks, communications, campaigns, and support work.",
     "keywords": [
         "laravel",
         "crm",
@@ -576,7 +576,9 @@
             "Liberu\\Themes\\DefaultTheme\\": "themes/default/src/",
             "Liberu\\Themes\\Crm\\": "themes/theme-crm/src/",
             "Liberu\\CRM\\UnifiedConversations\\": "modules/crm-unified-conversations/src/",
-            "Liberu\\CRM\\AIReceptionAndConversation\\": "modules/crm-ai-reception-and-conversation/src/"
+            "Liberu\\CRM\\AIReceptionAndConversation\\": "modules/crm-ai-reception-and-conversation/src/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
         },
         "classmap": [
             "modules/*/src",

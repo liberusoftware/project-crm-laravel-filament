@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingAgent\Services;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Services\Zernio\ZernioTenantService;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioTenantService;
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;

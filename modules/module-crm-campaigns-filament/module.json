@@ -2,7 +2,7 @@
   "name": "module-crm-campaigns-filament",
   "display_name": "CRM Campaigns Filament",
   "description": "Campaigns Filament resources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\CampaignsFilament\\CampaignsFilamentServiceProvider",
   "requires": {

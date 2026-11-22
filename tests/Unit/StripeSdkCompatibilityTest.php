@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Team;
-use App\Services\StripeService;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Integrations\Services\StripeService;
 use Stripe\ApiRequestor;
 use Stripe\HttpClient\ClientInterface;
 

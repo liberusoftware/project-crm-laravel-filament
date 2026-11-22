@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\RolesPermissionsFilament\Forms;
 
-use App\Enums\Role;
-use App\Support\RolePermissionCatalog;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
+use Liberu\Foundation\RolesPermissions\Support\RolePermissionCatalog;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Select;

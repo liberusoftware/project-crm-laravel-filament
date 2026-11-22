@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Support\Str;
 

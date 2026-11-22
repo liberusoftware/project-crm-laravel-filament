@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Models\Task;
+use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
-use App\Services\GoogleCalendarService;
-use App\Services\OutlookCalendarService;
+use Liberu\CRM\Scheduling\Services\GoogleCalendarService;
+use Liberu\CRM\Scheduling\Services\OutlookCalendarService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Tests\TestCase;

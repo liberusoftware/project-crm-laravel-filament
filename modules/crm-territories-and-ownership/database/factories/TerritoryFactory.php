@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Team;
-use App\Models\Territory;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TerritoryFactory extends Factory

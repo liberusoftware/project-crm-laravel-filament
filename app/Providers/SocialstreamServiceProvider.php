@@ -2,15 +2,15 @@
 
 namespace App\Providers;
 
-use App\Actions\Socialstream\CreateConnectedAccount;
-use App\Actions\Socialstream\CreateUserWithTeamsFromProvider;
-use App\Actions\Socialstream\GenerateRedirectForProvider;
-use App\Actions\Socialstream\HandleInvalidState;
-use App\Actions\Socialstream\ResolveSocialiteUser;
-use App\Actions\Socialstream\UpdateConnectedAccount;
-use App\Models\ConnectedAccount;
-use App\Models\OAuthConfiguration;
-use App\Services\OAuth\TwilioProvider;
+use Liberu\Foundation\Identity\Socialstream\Actions\CreateConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Actions\CreateUserFromProvider as CreateUserWithTeamsFromProvider;
+use Liberu\Foundation\Identity\Socialstream\Actions\GenerateRedirectForProvider;
+use Liberu\Foundation\Identity\Socialstream\Actions\HandleInvalidState;
+use Liberu\Foundation\Identity\Socialstream\Actions\ResolveSocialiteUser;
+use Liberu\Foundation\Identity\Socialstream\Actions\UpdateConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\CRM\Telephony\Services\OAuth\TwilioProvider;
 use Illuminate\Support\ServiceProvider;
 use JoelButcher\Socialstream\Socialstream;
 use Laravel\Socialite\Facades\Socialite;

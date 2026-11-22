@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Opportunity;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class OpportunityFactory extends Factory

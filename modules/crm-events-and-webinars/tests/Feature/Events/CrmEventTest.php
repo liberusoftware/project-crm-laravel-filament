@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Events;
 
-use App\Events\DealClosed;
-use App\Events\NewLead;
-use App\Models\Deal;
-use App\Models\Lead;
-use App\Models\Team;
+use Liberu\CRM\Core\Events\DealClosed;
+use Liberu\CRM\Core\Events\NewLead;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Notifications\CRMEventNotification;
+use Liberu\Foundation\Notifications\Notifications\CRMEventNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Notification;

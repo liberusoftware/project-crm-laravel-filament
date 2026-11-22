@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Middleware;
 
-use App\Http\Middleware\TeamsPermission;
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Http\Middleware\TeamsPermission;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;

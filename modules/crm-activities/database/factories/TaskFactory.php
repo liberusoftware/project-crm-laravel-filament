@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Company;
-use App\Models\Contact;
-use App\Models\Lead;
-use App\Models\Opportunity;
-use App\Models\Task;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\Company;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

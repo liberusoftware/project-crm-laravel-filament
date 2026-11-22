@@ -3,7 +3,7 @@
 namespace Tests\Unit\Notifications;
 
 use App\Models\User;
-use App\Notifications\CRMEventNotification;
+use Liberu\Foundation\Notifications\Notifications\CRMEventNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

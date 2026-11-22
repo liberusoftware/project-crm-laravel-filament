@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Policies;
 
-use App\Models\ConnectedAccount;
-use App\Models\Team;
+use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

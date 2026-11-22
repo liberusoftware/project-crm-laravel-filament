@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\SamlConnection;
-use App\Models\Team;
+use Liberu\Foundation\Integrations\Models\SamlConnection;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Tests\Feature\Saml\SignsSamlResponses;

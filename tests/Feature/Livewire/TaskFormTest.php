@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Livewire;
 
-use App\Livewire\TaskForm;
-use App\Models\Task;
+use Liberu\CRM\Activities\Livewire\TaskForm;
+use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;

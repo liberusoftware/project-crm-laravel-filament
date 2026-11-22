@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Sso;
 
-use App\Enums\Role;
-use App\Models\SsoConnection;
-use App\Models\Team;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
+use Liberu\Foundation\Integrations\Models\SsoConnection;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;

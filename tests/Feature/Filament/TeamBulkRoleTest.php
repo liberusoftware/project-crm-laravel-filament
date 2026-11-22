@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Enums\Role;
-use App\Filament\App\Resources\TeamMemberResource\Pages\ListTeamMembers;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamMemberResource\Pages\ListTeamMembers;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

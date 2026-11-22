@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\OmnichannelService\Models;
 
-use App\Traits\IsTenantModel;
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
 use Illuminate\Database\Eloquent\Model;
 
 /** @property string $direction @property string $body @property int $team_id */

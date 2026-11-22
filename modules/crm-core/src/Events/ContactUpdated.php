@@ -1,0 +1,43 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\CRM\Core\Events;
+
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
+
+class ContactUpdated implements ShouldBroadcast
+{
+    use Dispatchable, InteractsWithSockets, SerializesModels;
+
+    /**
+     * @var Contact
+     */
+    public $contact;
+
+    public function __construct(Contact $contact)
+    {
+        $this->contact = $contact;
+    }
+
+    public function broadcastOn()
+    {
+        return new PrivateChannel('contact.'.$this->contact->id);
+    }
+
+    public function broadcastWith(): array
+    {
+        return [
+            'id' => $this->contact->id,
+            'name' => $this->contact->name,
+            'email' => $this->contact->email,
+            'phone_number' => $this->contact->phone_number,
+            'status' => $this->contact->status,
+        ];
+    }
+}

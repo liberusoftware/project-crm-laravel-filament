@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Deal;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class DealFactory extends Factory

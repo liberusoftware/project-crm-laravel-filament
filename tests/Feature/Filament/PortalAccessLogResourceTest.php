@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\PortalAccessLogResource;
-use App\Filament\App\Resources\PortalAccessLogResource\Pages\ListPortalAccessLogs;
-use App\Models\AuditLog;
-use App\Models\Team;
+use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalAccessLogResource;
+use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalAccessLogResource\Pages\ListPortalAccessLogs;
+use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

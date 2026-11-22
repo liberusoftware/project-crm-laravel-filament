@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Portal;
 
-use App\Actions\Portal\InvitePortalCustomer;
-use App\Actions\Portal\RevokePortalCustomer;
-use App\Exceptions\PortalOnboardingException;
-use App\Filament\App\Resources\ContactResource\Pages\ListContacts;
-use App\Models\Contact;
-use App\Models\Team;
+use Liberu\CRM\CustomerSelfService\Actions\Portal\InvitePortalCustomer;
+use Liberu\CRM\CustomerSelfService\Actions\Portal\RevokePortalCustomer;
+use Liberu\CRM\CustomerSelfService\Exceptions\PortalOnboardingException;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\ListContacts;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

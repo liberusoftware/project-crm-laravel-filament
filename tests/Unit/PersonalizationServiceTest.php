@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use App\Models\LandingPage;
-use App\Services\PersonalizationService;
+use Liberu\CRM\MarketingResources\Models\LandingPage;
+use Liberu\CRM\Core\Services\PersonalizationService;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 

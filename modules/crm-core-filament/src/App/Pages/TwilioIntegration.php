@@ -1,0 +1,187 @@
+<?php
+
+namespace Liberu\CRM\Core\Filament\App\Pages;
+
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\CRM\Telephony\Services\TwilioService;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
+use Filament\Pages\Page;
+use Filament\Schemas\Schema;
+use Illuminate\Support\Facades\Config;
+use Twilio\Exceptions\RestException;
+
+class TwilioIntegration extends Page
+{
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-phone';
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Communication';
+
+    protected string $view = 'filament.app.pages.twilio-integration';
+
+    public ?string $to = null;
+
+    public ?string $message = null;
+
+    public ?string $sid = null;
+
+    public ?string $auth_token = null;
+
+    public ?string $phone_number = null;
+
+    public function form(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                TextInput::make('to')
+                    ->label('To')
+                    ->tel()
+                    ->required(),
+                Textarea::make('message')
+                    ->label('Message')
+                    ->required(),
+            ]);
+    }
+
+    public function sendSMS(): void
+    {
+        $this->validate();
+
+        try {
+            $twilioService = app(TwilioService::class);
+            $result = $twilioService->sendSMS($this->to, $this->message);
+
+            if ($result) {
+                Notification::make()
+                    ->title('SMS sent successfully')
+                    ->success()
+                    ->send();
+                $this->dispatch('notify', title: 'SMS sent successfully', color: 'success');
+            } else {
+                $this->addError('twilio', 'Failed to send SMS');
+            }
+        } catch (RestException $e) {
+            $this->addError('twilio', $e->getMessage());
+        }
+    }
+
+    public function bulkSendSMS(array $contactIds): void
+    {
+        $this->validate([
+            'message' => 'required|string',
+        ]);
+
+        $twilioService = app(TwilioService::class);
+        $failCount = 0;
+
+        $contacts = Contact::whereIn('id', $contactIds)->get();
+
+        foreach ($contacts as $contact) {
+            if (! $contact->phone_number) {
+                continue;
+            }
+            try {
+                $twilioService->sendSMS($contact->phone_number, $this->message);
+            } catch (RestException) {
+                $failCount++;
+            }
+        }
+
+        if ($failCount > 0) {
+            $this->addError('twilio', 'Failed to send some or all bulk SMS messages');
+        } else {
+            Notification::make()
+                ->title('Bulk SMS sent successfully')
+                ->success()
+                ->send();
+            $this->dispatch('notify', title: 'Bulk SMS sent successfully', color: 'success');
+        }
+    }
+
+    public function makeCall(): void
+    {
+        $this->validate([
+            'to' => 'required',
+        ]);
+
+        try {
+            $twilioService = app(TwilioService::class);
+            $result = $twilioService->makeCall($this->to, route('twilio.twiml.outbound'));
+
+            if ($result) {
+                Notification::make()
+                    ->title('Call initiated successfully')
+                    ->success()
+                    ->send();
+                $this->dispatch('notify', title: 'Call initiated successfully', color: 'success');
+            } else {
+                $this->addError('twilio', 'Failed to initiate call');
+            }
+        } catch (RestException $e) {
+            $this->addError('twilio', $e->getMessage());
+        }
+    }
+
+    public function bulkMakeCall(array $leadIds): void
+    {
+        $twilioService = app(TwilioService::class);
+        $failCount = 0;
+
+        $leads = Lead::with('contact')->whereIn('id', $leadIds)->get();
+
+        foreach ($leads as $lead) {
+            $phone = optional($lead->contact)->phone_number;
+            if (! $phone) {
+                continue;
+            }
+            try {
+                $twilioService->makeCall($phone, route('twilio.twiml.outbound'));
+            } catch (RestException) {
+                $failCount++;
+            }
+        }
+
+        if ($failCount > 0) {
+            $this->addError('twilio', 'Failed to initiate some or all bulk calls');
+        } else {
+            Notification::make()
+                ->title('Bulk calls initiated successfully')
+                ->success()
+                ->send();
+            $this->dispatch('notify', title: 'Bulk calls initiated successfully', color: 'success');
+        }
+    }
+
+    public function submit(): void
+    {
+        $this->validate([
+            'sid' => 'required|string|min:1',
+            'auth_token' => 'required|string|min:1',
+            'phone_number' => 'required|regex:/^\+[1-9]\d{1,14}$/',
+        ]);
+
+        OAuthConfiguration::query()->updateOrCreate(
+            ['service_name' => 'twilio'],
+            [
+                'user_id' => auth()->id(),
+                'client_id' => $this->sid,
+                'client_secret' => $this->auth_token,
+                'additional_settings' => ['phone_number' => $this->phone_number],
+                'is_active' => true,
+            ],
+        );
+
+        Config::set('services.twilio.sid', $this->sid);
+        Config::set('services.twilio.auth_token', $this->auth_token);
+        Config::set('services.twilio.phone_number', $this->phone_number);
+
+        Notification::make()
+            ->title('Twilio settings updated')
+            ->success()
+            ->send();
+        $this->dispatch('notify', title: 'Twilio settings updated', color: 'success');
+    }
+}

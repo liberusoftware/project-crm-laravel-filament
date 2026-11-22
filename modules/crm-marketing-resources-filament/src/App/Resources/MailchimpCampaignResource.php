@@ -1,0 +1,137 @@
+<?php
+
+namespace Liberu\CRM\MarketingResourcesFilament\App\Resources;
+
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MailchimpCampaignResource\Pages\CreateMailchimpCampaign;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MailchimpCampaignResource\Pages\ListMailchimpCampaigns;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MailchimpCampaignResource\Pages\ViewABTestResults;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MailchimpCampaignResource\Pages\ViewMailchimpCampaign;
+use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
+use Liberu\CRM\MarketingResources\Models\MailchimpCampaign;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
+use Filament\Actions\Action;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+
+class MailchimpCampaignResource extends Resource
+{
+    use EnforcesResourcePermissions;
+
+    protected static ?string $model = MailchimpCampaign::class;
+
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Marketing';
+
+    protected static ?int $navigationSort = 5;
+
+    #[\Override]
+    public static function form(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Select::make('type')
+                    ->options([
+                        'regular' => 'Regular',
+                        'abtest' => 'A/B Test',
+                    ])
+                    ->required()
+                    ->live(),
+                TextInput::make('subject_line')
+                    ->required()
+                    ->maxLength(255)
+                    ->visible(fn (callable $get): bool => $get('type') === 'regular'),
+                TextInput::make('subject_line_a')
+                    ->required()
+                    ->maxLength(255)
+                    ->visible(fn (callable $get): bool => $get('type') === 'abtest'),
+                TextInput::make('subject_line_b')
+                    ->required()
+                    ->maxLength(255)
+                    ->visible(fn (callable $get): bool => $get('type') === 'abtest'),
+                Select::make('status')
+                    ->options([
+                        'save' => 'Save',
+                        'paused' => 'Paused',
+                        'schedule' => 'Schedule',
+                        'sending' => 'Sending',
+                        'sent' => 'Sent',
+                    ])
+                    ->required(),
+                Select::make('winner_criteria')
+                    ->options([
+                        'opens' => 'Opens',
+                        'clicks' => 'Clicks',
+                        'manual' => 'Manual',
+                    ])
+                    ->required()
+                    ->visible(fn (callable $get): bool => $get('type') === 'abtest'),
+                TextInput::make('test_size')
+                    ->numeric()
+                    ->minValue(1)
+                    ->maxValue(100)
+                    ->default(50)
+                    ->suffix('%')
+                    ->required()
+                    ->visible(fn (callable $get): bool => $get('type') === 'abtest'),
+            ]);
+    }
+
+    #[\Override]
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('name'),
+                TextColumn::make('subject_line'),
+                TextColumn::make('type'),
+                TextColumn::make('status'),
+            ])
+            ->filters([
+                //
+            ])
+            ->recordActions([
+                ViewAction::make(),
+                Action::make('send')
+                    ->action(fn (MailChimpService $service, MailchimpCampaign $record) => $service->sendCampaign($record->id))
+                    ->requiresConfirmation(),
+                Action::make('view_ab_results')
+                    ->action(fn (MailChimpService $service, MailchimpCampaign $record) => redirect()->route('filament.app.resources.mailchimp-campaigns.ab-test-results', ['record' => $record->id]))
+                    ->visible(fn (MailchimpCampaign $record): bool => $record->type === 'abtest' && $record->status === 'sent'),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+
+    #[\Override]
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    #[\Override]
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListMailchimpCampaigns::route('/'),
+            'create' => CreateMailchimpCampaign::route('/create'),
+            'view' => ViewMailchimpCampaign::route('/{record}'),
+            'ab-test-results' => ViewABTestResults::route('/{record}/ab-test-results'),
+        ];
+    }
+}

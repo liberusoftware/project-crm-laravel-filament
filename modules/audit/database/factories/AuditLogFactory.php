@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\AuditLog;
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Models\Lead;
-use App\Models\Team;
+use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

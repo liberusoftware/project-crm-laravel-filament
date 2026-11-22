@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Models\Activity;
-use App\Models\Contact;
-use App\Models\Deal;
+use Liberu\CRM\Activities\Models\CrmActivity as Activity;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

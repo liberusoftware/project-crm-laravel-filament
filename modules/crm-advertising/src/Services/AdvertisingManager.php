@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\Advertising\Services;
 
-use App\Models\Campaign;
-use App\Models\Team;
+use Liberu\CRM\Advertising\Models\Campaign;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Services\Zernio\ZernioClient;
-use App\Services\Zernio\ZernioTenantService;
-use App\Support\AccessContext;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioClient;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioTenantService;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;

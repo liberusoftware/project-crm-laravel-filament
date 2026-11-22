@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Api;
 
-use App\Models\Company;
-use App\Models\Contact;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\Company;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;

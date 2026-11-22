@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Portal;
 
-use App\Filament\App\Resources\PortalBrandingResource\Pages\EditPortalBranding;
-use App\Models\Team;
+use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalBrandingResource\Pages\EditPortalBranding;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Support\PortalBranding;
+use Liberu\CRM\CustomerSelfService\Support\PortalBranding;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;

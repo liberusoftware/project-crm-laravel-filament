@@ -1,23 +1,23 @@
 <?php
 
-use App\Filament\App\Resources\AnalyticsDashboardResource;
-use App\Filament\App\Resources\AnalyticsDashboardResource\Pages\EditAnalyticsDashboard;
-use App\Filament\App\Resources\AnalyticsDashboardResource\Pages\ListAnalyticsDashboards;
-use App\Filament\App\Resources\AnalyticsDashboardResource\Pages\ViewAnalyticsDashboard;
-use App\Filament\App\Widgets\SocialLinksWidget;
-use App\Filament\Widgets\AdPerformanceWidget;
-use App\Http\Controllers\ReportController;
-use App\Livewire\Dashboard;
-use App\Livewire\ReportCustomizer;
-use App\Livewire\Widgets\Stats;
-use App\Livewire\Widgets\Tasks;
-use App\Models\AdvertisingAccount;
-use App\Models\DashboardWidget;
-use App\Models\ReportBuilder;
+use Liberu\Foundation\AnalyticsCoreFilament\App\Resources\AnalyticsDashboardResource;
+use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\EditAnalyticsDashboard;
+use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\ListAnalyticsDashboards;
+use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\ViewAnalyticsDashboard;
+use Liberu\Foundation\AnalyticsCoreFilament\App\Widgets\SocialLinksWidget;
+use Liberu\Foundation\AnalyticsCoreFilament\Widgets\AdPerformanceWidget;
+use Liberu\Analytics\Core\Http\Controllers\ReportController;
+use Liberu\Foundation\AnalyticsCoreLivewire\Dashboard;
+use Liberu\Foundation\AnalyticsCoreLivewire\ReportCustomizer;
+use Liberu\Foundation\AnalyticsCoreLivewire\Widgets\Stats;
+use Liberu\Foundation\AnalyticsCoreLivewire\Widgets\Tasks;
+use Liberu\CRM\Advertising\Models\AdvertisingAccount;
+use Liberu\Analytics\Core\Models\DashboardWidget;
+use Liberu\Analytics\Core\Models\ReportBuilder;
 use App\Models\User;
-use App\Services\MailChimpService;
-use App\Services\ReportingService;
-use App\Settings\GeneralSettings;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
+use Liberu\CRM\SalesWorkspace\Services\ReportingService;
+use Liberu\Foundation\Settings\Settings\GeneralSettings;
 use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Illuminate\Contracts\View\View as ViewContract;
@@ -74,7 +74,7 @@ it('builds legacy report chart payloads and passes the same data to its view', f
     $component->updatedDateRange();
     expect($component->filters)->toBe(['date_range' => 'last-90-days']);
 })->with([
-    'previous namespace' => App\Http\Livewire\ReportCustomizer::class,
+    'previous namespace' => Liberu\Analytics\Core\Http\Livewire\ReportCustomizer::class,
     'current namespace' => ReportCustomizer::class,
 ])->with([
     'contacts' => ['contact-interactions', 'getContactInteractionsData', 'pie', 'name', 'activities_count'],
@@ -101,7 +101,7 @@ it('persists widget creation ordering and removal through both dashboard namespa
     expect($component->widgets->modelKeys())->toBe([$first->id, $created->id]);
     $this->assertDatabaseMissing('dashboard_widgets', ['id' => $second->id]);
     expect($component->render()->name())->toBe('livewire.dashboard');
-})->with([App\Http\Livewire\Dashboard::class, Dashboard::class]);
+})->with([Liberu\Analytics\Core\Http\Livewire\Dashboard::class, Dashboard::class]);
 
 it('renders the shipped stats and task widget views through both namespaces', function (string $componentClass, string $text): void {
     $component = new $componentClass();
@@ -109,8 +109,8 @@ it('renders the shipped stats and task widget views through both namespaces', fu
 
     expect($component->render()->render())->toContain($text);
 })->with([
-    [App\Http\Livewire\Widgets\Stats::class, 'Stats Widget'],
-    [App\Http\Livewire\Widgets\Tasks::class, 'Tasks Widget'],
+    [Liberu\Analytics\Core\Http\Livewire\Widgets\Stats::class, 'Stats Widget'],
+    [Liberu\Analytics\Core\Http\Livewire\Widgets\Tasks::class, 'Tasks Widget'],
     [Stats::class, 'Stats Widget'],
     [Tasks::class, 'Tasks Widget'],
 ]);
@@ -198,7 +198,7 @@ it('exports report rows as CSV and leaves empty reports without a file', functio
     $originalStorage = storage_path();
     app()->useStoragePath($directory);
     try {
-        $page = new App\Filament\Pages\ReportCustomizer();
+        $page = new Liberu\Foundation\AnalyticsCoreFilament\Pages\ReportCustomizer();
         $page->exportCsv();
         $path = $directory.'/app/public/reports/contact-interactions_'.now()->format('Y-m-d').'.csv';
         expect(file_exists($path))->toBe(! $empty);

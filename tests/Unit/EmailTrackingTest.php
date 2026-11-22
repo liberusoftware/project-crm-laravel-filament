@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Services\GmailService;
-use App\Services\MailChimpService;
+use Liberu\CRM\EmailProductivity\Services\GmailService;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use Google_Service_Gmail_Message;
 use Google_Service_Gmail_MessagePart;
 use Google_Service_Gmail_MessagePartHeader;

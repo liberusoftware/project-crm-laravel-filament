@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Tenancy;
 
-use App\Support\TenantContext;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 use Composer\InstalledVersions;
 use Liberu\Foundation\Tenancy\TenantContext as SharedTenantContext;
 use Liberu\Foundation\Tenancy\TenantState;

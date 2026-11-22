@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\AuditLogResource\Pages\ViewAuditLog;
-use App\Models\AuditLog;
+use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource\Pages\ViewAuditLog;
+use Liberu\Foundation\Audit\Models\AuditLog;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Teams;
 
-use App\Models\Pipeline;
-use App\Models\Team;
+use Liberu\CRM\SalesPipelines\Models\Pipeline;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 class CloneTeamCommandTest extends TestCase

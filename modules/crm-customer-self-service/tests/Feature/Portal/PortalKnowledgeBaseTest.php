@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Portal;
 
-use App\Filament\Portal\Resources\KnowledgeBaseArticleResource\Pages\ListArticles;
-use App\Filament\Portal\Resources\KnowledgeBaseArticleResource\Pages\ViewArticle;
-use App\Models\KnowledgeBaseArticle;
-use App\Models\Team;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\KnowledgeBaseArticleResource\Pages\ListArticles;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\KnowledgeBaseArticleResource\Pages\ViewArticle;
+use Liberu\CRM\Knowledge\Models\KnowledgeBaseArticle;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

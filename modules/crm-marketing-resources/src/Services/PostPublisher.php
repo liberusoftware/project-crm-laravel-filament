@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingResources\Services;
 
-use App\Models\SocialMediaPost;
-use App\Models\Team;
-use App\Services\Zernio\ZernioClient;
-use App\Services\Zernio\ZernioPublisher;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioClient;
+use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioPublisher;
 use Illuminate\Support\Facades\Validator;
 use RuntimeException;
 use Throwable;

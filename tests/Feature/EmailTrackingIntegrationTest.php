@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Models\Email;
-use App\Services\GmailService;
-use App\Services\MailChimpService;
+use Liberu\CRM\EmailProductivity\Models\Email;
+use Liberu\CRM\EmailProductivity\Services\GmailService;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Tests\TestCase;

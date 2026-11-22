@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\LeadResource\Pages\ViewLead;
-use App\Models\Lead;
+use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ViewLead;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

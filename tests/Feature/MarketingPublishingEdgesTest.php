@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\SocialMediaPost;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
 use App\Models\User;
 use Liberu\CRM\MarketingResources\Services\PostPublisher;
 use Liberu\CRM\MarketingResources\Services\PostTargets;

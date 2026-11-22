@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Policies;
 
-use App\Models\Deal;
-use App\Models\Lead;
-use App\Models\Opportunity;
-use App\Models\Task;
-use App\Models\Team;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\RefreshDatabase;

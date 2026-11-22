@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Telephony;
 
-use App\Models\CallLog;
-use App\Services\TwilioService;
+use Liberu\CRM\Activities\Models\CallLog;
+use Liberu\CRM\Telephony\Services\TwilioService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Tests\TestCase;

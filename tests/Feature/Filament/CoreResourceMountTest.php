@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\ActivationResource;
-use App\Filament\App\Resources\CompanyResource;
-use App\Filament\App\Resources\LeadResource;
-use App\Filament\App\Resources\NoteResource;
-use App\Filament\App\Resources\OpportunityResource;
-use App\Filament\App\Resources\TaskResource;
-use App\Models\Team;
+use Liberu\CRM\Core\Filament\App\Resources\ActivationResource;
+use Liberu\CRM\Core\Filament\App\Resources\CompanyResource;
+use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource;
+use Liberu\CRM\Core\Filament\App\Resources\NoteResource;
+use Liberu\CRM\SalesWorkspace\Filament\App\Resources\OpportunityResource;
+use Liberu\CRM\Activities\Filament\App\Resources\TaskResource;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Spatie\Permission\Models\Role;

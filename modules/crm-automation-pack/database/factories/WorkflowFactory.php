@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Workflow;
+use Liberu\CRM\AutomationPack\Models\Workflow;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class WorkflowFactory extends Factory

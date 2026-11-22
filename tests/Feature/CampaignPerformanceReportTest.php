@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Services\MailChimpService;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Tests\TestCase;

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\MarketingCampaignResource\Pages\ViewMarketingCampaign;
-use App\Models\MarketingCampaign;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MarketingCampaignResource\Pages\ViewMarketingCampaign;
+use Liberu\CRM\MarketingResources\Models\MarketingCampaign;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Portal;
 
-use App\Actions\Portal\ShareDocumentWithContact;
-use App\Models\Contact;
-use App\Models\Team;
+use Liberu\CRM\CustomerSelfService\Actions\Portal\ShareDocumentWithContact;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Notifications\DocumentSharedNotification;
-use App\Services\DocumentService;
+use Liberu\Foundation\Notifications\Notifications\DocumentSharedNotification;
+use Liberu\CRM\Documents\Services\DocumentService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;

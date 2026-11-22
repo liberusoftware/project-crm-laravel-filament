@@ -1,21 +1,21 @@
 {
-  "name": "crm-marketing-resources-filament",
-  "display_name": "CRM Marketing Resources Filament",
-  "description": "Filament resource for governed marketing assets",
-  "version": "1.0.1",
-  "category": "presentation",
-  "provider": "Liberu\\CRM\\MarketingResourcesFilament\\MarketingResourcesFilamentServiceProvider",
-  "requires": {
-    "packages": {
-      "liberusoftware/module-crm-marketing-resources": "^1.0.0"
-    }
-  },
-  "suggests": [],
-  "default_enabled": true,
-  "capabilities": [
-    "crm.marketing-resources.filament"
-  ],
-  "features": [
-    "Marketing resource governance workspace"
-  ]
+    "name": "crm-marketing-resources-filament",
+    "display_name": "CRM Marketing Resources Filament",
+    "description": "Filament resource for governed marketing assets",
+    "version": "1.1.0",
+    "category": "presentation",
+    "provider": "Liberu\\CRM\\MarketingResourcesFilament\\MarketingResourcesFilamentServiceProvider",
+    "requires": {
+        "packages": {
+            "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+        }
+    },
+    "suggests": [],
+    "default_enabled": true,
+    "capabilities": [
+        "crm.marketing-resources.filament"
+    ],
+    "features": [
+        "Marketing resource governance workspace"
+    ]
 }

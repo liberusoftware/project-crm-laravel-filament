@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use App\Support\AccessContext;
-use App\Support\TenantContext;
+use Liberu\Foundation\Organizations\Support\AccessContext;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Carbon;
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Memberships;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Memberships\Actions\ChangeGrantStatus;

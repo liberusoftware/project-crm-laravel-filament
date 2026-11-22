@@ -1,0 +1,42 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\CRM\ServiceAgent\Models;
+
+
+use Liberu\CRM\EmailProductivity\Models\Message;
+use App\Models\User;
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Ticket extends Model
+{
+    use HasFactory;
+    use IsTenantModel;
+
+    protected $fillable = [
+        'subject',
+        'body',
+        'status',
+        'priority',
+        'user_id',
+        'email_id',
+        'source',
+        'source_id',
+        'account_id',
+        'team_id',
+        'attachment',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'ticket_id');
+    }
+}

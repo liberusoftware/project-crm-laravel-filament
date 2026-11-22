@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\Services\WhatsAppBusinessService;
+use Liberu\CRM\MobileMessaging\Services\WhatsAppBusinessService;
 use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 

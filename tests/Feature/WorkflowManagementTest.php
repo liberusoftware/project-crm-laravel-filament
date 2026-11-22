@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\Workflow;
+use Liberu\CRM\AutomationPack\Models\Workflow;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

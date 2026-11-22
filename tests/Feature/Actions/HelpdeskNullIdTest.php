@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Actions;
 
-use App\Actions\Helpdesk\CreateTicketFromEmail;
-use App\Actions\Helpdesk\CreateTicketFromWhatsApp;
-use App\Models\Ticket;
+use Liberu\CRM\ServiceAgent\Actions\Helpdesk\CreateTicketFromEmail;
+use Liberu\CRM\ServiceAgent\Actions\Helpdesk\CreateTicketFromWhatsApp;
+use Liberu\CRM\ServiceAgent\Models\Ticket;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

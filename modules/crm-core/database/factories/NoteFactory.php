@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Contact;
-use App\Models\Note;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Models\CrmNote as Note;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class NoteFactory extends Factory

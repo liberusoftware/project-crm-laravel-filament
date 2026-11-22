@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\ContactResource\Pages\ViewContact;
-use App\Models\Contact;
-use App\Models\Territory;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\ViewContact;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

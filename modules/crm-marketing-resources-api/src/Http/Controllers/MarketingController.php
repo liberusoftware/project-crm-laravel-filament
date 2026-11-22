@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingResourcesApi\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Campaign;
-use App\Models\SocialMediaPost;
-use App\Models\Team;
+use Liberu\CRM\Core\Http\Controllers\Controller;
+use Liberu\CRM\Advertising\Models\Campaign;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;

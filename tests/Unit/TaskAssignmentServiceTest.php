@@ -2,10 +2,10 @@
 
 namespace Tests\Unit;
 
-use App\Models\Task;
+use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
-use App\Notifications\TaskAssignedNotification;
-use App\Services\TaskAssignmentService;
+use Liberu\Foundation\Notifications\Notifications\TaskAssignedNotification;
+use Liberu\CRM\Activities\Services\TaskAssignmentService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
 use Tests\TestCase;

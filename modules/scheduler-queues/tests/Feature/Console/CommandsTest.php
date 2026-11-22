@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Console;
 
-use App\Models\OAuthConfiguration;
-use App\Models\SocialMediaPost;
-use App\Models\Task;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
-use App\Notifications\TaskReminderNotification;
-use App\Services\FacebookService;
+use Liberu\Foundation\Notifications\Notifications\TaskReminderNotification;
+use Liberu\CRM\ChannelGateway\Services\Social\FacebookService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;

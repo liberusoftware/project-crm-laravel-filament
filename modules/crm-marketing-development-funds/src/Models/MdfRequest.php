@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingDevelopmentFunds\Models;
 
-use App\Traits\IsTenantModel;
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
 use Illuminate\Database\Eloquent\Model;
 
 /** @property int $team_id @property string $status @property float $amount @property float $reimbursed @property float $attributed_revenue */

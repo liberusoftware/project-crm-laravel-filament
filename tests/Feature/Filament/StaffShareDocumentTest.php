@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Actions\Portal\ShareDocumentWithContact;
-use App\Filament\App\Resources\ContactResource\Pages\EditContact;
-use App\Filament\App\Resources\ContactResource\RelationManagers\DocumentsRelationManager;
-use App\Filament\Portal\Resources\DocumentResource as PortalDocumentResource;
-use App\Models\Contact;
-use App\Models\Document;
-use App\Models\Team;
+use Liberu\CRM\CustomerSelfService\Actions\Portal\ShareDocumentWithContact;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\EditContact;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\RelationManagers\DocumentsRelationManager;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\DocumentResource as PortalDocumentResource;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Documents\Models\Document;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Services\DocumentService;
+use Liberu\CRM\Documents\Services\DocumentService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;

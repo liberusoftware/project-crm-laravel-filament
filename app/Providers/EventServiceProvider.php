@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Events\ContactUpdated;
-use App\Listeners\AssignDefaultTeamRole;
-use App\Listeners\BuildSamlLogoutRedirect;
-use App\Listeners\BuildSsoLogoutRedirect;
-use App\Listeners\LogFailedLogin;
-use App\Listeners\LogPasswordReset;
-use App\Listeners\LogSsoLogout;
-use App\Listeners\LogSuccessfulLogin;
-use App\Listeners\NotifyTeamMembers;
-use App\Listeners\ProvisionZernioProfile;
-use App\Listeners\SendCRMEventNotification;
-use App\Models\Task;
-use App\Observers\TaskObserver;
-use App\Services\AuditLogService;
+use Liberu\CRM\Core\Events\ContactUpdated;
+use Liberu\Foundation\Organizations\Listeners\AssignDefaultTeamRole;
+use Liberu\Foundation\Integrations\Listeners\BuildSamlLogoutRedirect;
+use Liberu\Foundation\Integrations\Listeners\BuildSsoLogoutRedirect;
+use Liberu\Foundation\Identity\Listeners\LogFailedLogin;
+use Liberu\Foundation\Identity\Listeners\LogPasswordReset;
+use Liberu\Foundation\Integrations\Listeners\LogSsoLogout;
+use Liberu\Foundation\Identity\Listeners\LogSuccessfulLogin;
+use Liberu\Foundation\Organizations\Listeners\NotifyTeamMembers;
+use Liberu\CRM\ChannelGateway\Listeners\ProvisionZernioProfile;
+use Liberu\Foundation\Notifications\Listeners\SendCRMEventNotification;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\Activities\Observers\TaskObserver;
+use Liberu\Foundation\Audit\Services\AuditLogService;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
@@ -64,22 +64,22 @@ class EventServiceProvider extends ServiceProvider
             BuildSamlLogoutRedirect::class,
         ],
         // Add CRM event listeners
-        'App\Events\NewLead' => [
+        'Liberu\CRM\Core\Events\NewLead' => [
             SendCRMEventNotification::class,
         ],
-        'App\Events\DealClosed' => [
+        'Liberu\CRM\Core\Events\DealClosed' => [
             SendCRMEventNotification::class,
         ],
-        'App\Events\TaskOverdue' => [
+        'Liberu\CRM\Core\Events\TaskOverdue' => [
             SendCRMEventNotification::class,
         ],
-        'App\Events\NewComment' => [
+        'Liberu\CRM\Core\Events\NewComment' => [
             SendCRMEventNotification::class,
         ],
-        'App\Events\MeetingScheduled' => [
+        'Liberu\CRM\Core\Events\MeetingScheduled' => [
             SendCRMEventNotification::class,
         ],
-        'App\Events\NewTicket' => [
+        'Liberu\CRM\ServiceAgent\Events\NewTicket' => [
             SendCRMEventNotification::class,
         ],
     ];

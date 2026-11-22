@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Tenancy;
 
-use App\Models\Contact;
-use App\Models\Team;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use App\Support\TenantContext;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use App\Models\ChatMessage;
-use App\Models\LiveChat;
+use Liberu\CRM\ChatAndBots\Models\ChatMessage;
+use Liberu\CRM\ChatAndBots\Models\LiveChat;
 use App\Models\User;
-use App\Services\LiveChatService;
+use Liberu\CRM\ChatAndBots\Services\LiveChatService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

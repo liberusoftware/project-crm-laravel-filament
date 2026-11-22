@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\PredictiveModels\Services;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 
 final class PredictiveModelPolicy
 {

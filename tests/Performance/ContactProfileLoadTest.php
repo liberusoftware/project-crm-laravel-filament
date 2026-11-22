@@ -2,10 +2,10 @@
 
 namespace Tests\Performance;
 
-use App\Models\Activity;
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Models\Note;
+use Liberu\CRM\Activities\Models\CrmActivity as Activity;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\Core\Models\CrmNote as Note;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Tests\TestCase;

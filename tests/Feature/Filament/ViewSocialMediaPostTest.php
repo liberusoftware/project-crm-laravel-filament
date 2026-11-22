@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\SocialMediaPostResource\Pages\ViewSocialMediaPost;
-use App\Models\SocialMediaPost;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\SocialMediaPostResource\Pages\ViewSocialMediaPost;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

@@ -4,24 +4,24 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Console\Commands\BackupTeam;
-use App\Console\Commands\CloneTeam;
-use App\Console\Commands\FreshDatabaseCommand;
-use App\Console\Commands\ImportTeam;
-use App\Console\Commands\NotifyOverdueTasks;
-use App\Console\Commands\PublishScheduledPosts;
-use App\Console\Commands\RestoreTeam;
-use App\Console\Commands\SendReminders;
-use App\Console\Commands\UpdatePostAnalytics;
+use Liberu\Foundation\Organizations\Console\Commands\BackupTeam;
+use Liberu\Foundation\Organizations\Console\Commands\CloneTeam;
+use Liberu\CRM\Core\Console\Commands\FreshDatabaseCommand;
+use Liberu\Foundation\Organizations\Console\Commands\ImportTeam;
+use Liberu\CRM\Activities\Console\Commands\NotifyOverdueTasks;
+use Liberu\CRM\MarketingResources\Console\Commands\PublishScheduledPosts;
+use Liberu\Foundation\Organizations\Console\Commands\RestoreTeam;
+use Liberu\CRM\Activities\Console\Commands\SendReminders;
+use Liberu\CRM\MarketingResources\Console\Commands\UpdatePostAnalytics;
 use App\Http\Responses\PanelLoginResponse;
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Models\Lead;
-use App\Models\Opportunity;
-use App\Models\Task;
-use App\Models\Team;
-use App\Observers\AuditObserver;
-use App\Support\SsoLogoutState;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Audit\Observers\AuditObserver;
+use Liberu\Foundation\Integrations\Support\SsoLogoutState;
 use Filament\Auth\Http\Responses\Contracts\LoginResponse;
 use Illuminate\Database\Console\Migrations\InstallCommand;
 use Illuminate\Database\Console\Migrations\MigrateCommand;
@@ -31,6 +31,7 @@ use Illuminate\Database\Console\WipeCommand;
 use Illuminate\Foundation\Console\KeyGenerateCommand;
 use Illuminate\Foundation\Console\PackageDiscoverCommand;
 use Illuminate\Foundation\Console\VendorPublishCommand;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
@@ -87,6 +88,24 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Factory::guessFactoryNamesUsing(function (string $modelName): string {
+            $base = class_basename($modelName);
+            $aliases = [
+                'CrmContact' => 'ContactFactory',
+                'CrmActivity' => 'ActivityFactory',
+                'CrmNote' => 'NoteFactory',
+                'CrmTag' => 'TagFactory',
+                'MailTemplate' => 'EmailTemplateFactory',
+            ];
+            $candidate = 'Database\\Factories\\'.($aliases[$base] ?? "{$base}Factory");
+
+            if (class_exists($candidate)) {
+                return $candidate;
+            }
+
+            return 'Database\\Factories\\'.ltrim(str_replace('App\\Models\\', '', $modelName), '\\').'Factory';
+        });
+
         Gate::define(ModuleManagement::ABILITY, fn ($user): bool => method_exists($user, 'isAdmin') && $user->isAdmin());
 
         Jetstream::useTeamModel(Team::class);

@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Models\Contact;
-use App\Models\Task;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
-use App\Notifications\TaskReminderNotification;
-use App\Services\GoogleCalendarService;
-use App\Services\OutlookCalendarService;
+use Liberu\Foundation\Notifications\Notifications\TaskReminderNotification;
+use Liberu\CRM\Scheduling\Services\GoogleCalendarService;
+use Liberu\CRM\Scheduling\Services\OutlookCalendarService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
 use Mockery;

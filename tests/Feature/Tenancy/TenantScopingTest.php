@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Tenancy;
 
-use App\Models\Contact;
-use App\Models\Team;
-use App\Support\TenantContext;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

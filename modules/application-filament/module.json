@@ -3,7 +3,7 @@
   "name": "application-filament",
   "display_name": "Application Core Filament",
   "description": "Application Core filament presentation adapter.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ApplicationFilament\\ApplicationFilamentServiceProvider",
   "requires": {

@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\KnowledgeBaseArticleResource as StaffResource;
-use App\Filament\App\Resources\KnowledgeBaseArticleResource\Pages\CreateKnowledgeBaseArticle;
-use App\Filament\App\Resources\KnowledgeBaseArticleResource\Pages\EditKnowledgeBaseArticle;
-use App\Filament\App\Resources\KnowledgeBaseArticleResource\Pages\ListKnowledgeBaseArticles;
-use App\Filament\Portal\Resources\KnowledgeBaseArticleResource as PortalResource;
-use App\Models\KnowledgeBaseArticle;
-use App\Models\Team;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource as StaffResource;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\CreateKnowledgeBaseArticle;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\EditKnowledgeBaseArticle;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\ListKnowledgeBaseArticles;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\KnowledgeBaseArticleResource as PortalResource;
+use Liberu\CRM\Knowledge\Models\KnowledgeBaseArticle;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

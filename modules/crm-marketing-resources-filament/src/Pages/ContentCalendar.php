@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\MarketingResourcesFilament\Pages;
 
-use App\Models\SocialMediaPost;
-use App\Models\Team;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Carbon\CarbonInterface;
 use Filament\Facades\Filament;

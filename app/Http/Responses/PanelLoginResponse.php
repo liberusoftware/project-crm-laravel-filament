@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Responses;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Filament\Auth\Http\Responses\LoginResponse;
 use Filament\Facades\Filament;
@@ -26,7 +26,7 @@ final class PanelLoginResponse extends LoginResponse
                 return redirect(SetupWizard::getUrl(['tenant' => $team], panel: 'admin'));
             }
             if ($panel === 'app' && $team instanceof Team && ! $team->getAttribute('setup_completed_at') && app(WorkspaceAccess::class)->canManage($user, $team)) {
-                return redirect(\App\Filament\App\Pages\SetupWizard::getUrl(['tenant' => $team], panel: 'app'));
+                return redirect(\Liberu\CRM\Core\Filament\App\Pages\SetupWizard::getUrl(['tenant' => $team], panel: 'app'));
             }
         }
 

@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace App\Providers\Filament;
 
-use App\Filament\App\Pages;
-use App\Filament\App\Pages\EditProfile;
+use Liberu\CRM\Core\Filament\App\Pages;
+use Liberu\CRM\Core\Filament\App\Pages\EditProfile;
 use App\Filament\CrmNavigation;
 use App\Filament\ModulePlugins;
-use App\Http\Middleware\EnsureSsoWhenRequired;
-use App\Http\Middleware\TeamsPermission;
-use App\Listeners\CreatePersonalTeam;
-use App\Listeners\SwitchTeam;
-use App\Models\Team;
-use App\Support\ThemeColors;
+use Liberu\Foundation\Integrations\Http\Middleware\EnsureSsoWhenRequired;
+use Liberu\Foundation\Organizations\Http\Middleware\TeamsPermission;
+use Liberu\Foundation\Organizations\Listeners\CreatePersonalTeam;
+use Liberu\Foundation\Organizations\Listeners\SwitchTeam;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Settings\Support\ThemeColors;
 use Filament\Events\Auth\Registered;
 use Filament\Events\TenantSet;
 use Filament\Facades\Filament;
@@ -129,13 +129,7 @@ class AppPanelProvider extends PanelProvider
                 ]);
         }
 
-        foreach (glob(base_path('modules/*/src/Legacy/Filament/App/Resources')) ?: [] as $path) {
-            $panel->discoverResources(in: $path, for: 'App\\Filament\\App\\Resources');
-        }
-
-        foreach (glob(base_path('modules/*/src/Legacy/Filament/App/Pages')) ?: [] as $path) {
-            $panel->discoverPages(in: $path, for: 'App\\Filament\\App\\Pages');
-        }
+        app(ModulePlugins::class)->discoverForPanel($panel, 'App');
 
         app(CrmNavigation::class)->configure($panel);
 

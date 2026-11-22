@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\AdResource\Pages\ViewAd;
-use App\Models\Ad;
-use App\Models\AdSet;
-use App\Models\AdvertisingAccount;
-use App\Models\Campaign;
+use Liberu\CRM\AdvertisingFilament\Resources\AdResource\Pages\ViewAd;
+use Liberu\CRM\Advertising\Models\Ad;
+use Liberu\CRM\Advertising\Models\AdSet;
+use Liberu\CRM\Advertising\Models\AdvertisingAccount;
+use Liberu\CRM\Advertising\Models\Campaign;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

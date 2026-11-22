@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\Opportunity;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

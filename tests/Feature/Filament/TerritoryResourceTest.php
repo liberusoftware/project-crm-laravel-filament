@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\TerritoryResource;
-use App\Filament\App\Resources\TerritoryResource\Pages\CreateTerritory;
-use App\Filament\App\Resources\TerritoryResource\Pages\ListTerritories;
-use App\Models\Team;
-use App\Models\Territory;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource\Pages\CreateTerritory;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource\Pages\ListTerritories;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

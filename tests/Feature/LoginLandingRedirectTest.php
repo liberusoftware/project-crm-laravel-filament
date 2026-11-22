@@ -1,9 +1,9 @@
 <?php
 
 use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as AdminSetupWizard;
-use App\Filament\App\Pages\SetupWizard as AppSetupWizard;
+use Liberu\CRM\Core\Filament\App\Pages\SetupWizard as AppSetupWizard;
 use App\Http\Responses\PanelLoginResponse;
-use App\Http\Responses\RegisterResponse;
+use Liberu\Foundation\Identity\Http\Responses\RegisterResponse;
 use Liberu\CRM\MarketingResources\Models\MarketingPlatformSettings;
 use App\Models\User;
 use Filament\Facades\Filament;

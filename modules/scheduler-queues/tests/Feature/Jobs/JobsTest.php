@@ -2,17 +2,17 @@
 
 namespace Tests\Feature\Jobs;
 
-use App\Jobs\ExecuteWorkflowAction;
-use App\Jobs\SendMarketingCampaign;
-use App\Models\CampaignRecipient;
-use App\Models\Contact;
-use App\Models\Lead;
-use App\Models\MarketingCampaign;
-use App\Models\Team;
-use App\Services\MailChimpService;
-use App\Services\TwilioService;
-use App\Services\WhatsAppBusinessService;
-use App\Support\TenantContext;
+use Liberu\CRM\AutomationPack\Jobs\ExecuteWorkflowAction;
+use Liberu\CRM\MarketingResources\Jobs\SendMarketingCampaign;
+use Liberu\CRM\Advertising\Models\CampaignRecipient;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\MarketingResources\Models\MarketingCampaign;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
+use Liberu\CRM\Telephony\Services\TwilioService;
+use Liberu\CRM\MobileMessaging\Services\WhatsAppBusinessService;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Tests\TestCase;

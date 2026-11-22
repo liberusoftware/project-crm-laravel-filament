@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\Services\TwilioService;
+use Liberu\CRM\Telephony\Services\TwilioService;
 use Illuminate\Support\Facades\Log;
 use Mockery;
 use Tests\TestCase;

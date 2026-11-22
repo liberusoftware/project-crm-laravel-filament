@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\TaskResource\Pages\ViewTask;
-use App\Models\Task;
+use Liberu\CRM\Activities\Filament\App\Resources\TaskResource\Pages\ViewTask;
+use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

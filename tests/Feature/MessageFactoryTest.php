@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use App\Models\Message;
-use App\Models\Team;
+use Liberu\CRM\EmailProductivity\Models\Message;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Carbon;
 use Tests\TestCase;

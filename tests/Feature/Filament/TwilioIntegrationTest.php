@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Pages\TwilioIntegration;
-use App\Models\Contact;
-use App\Models\Lead;
-use App\Services\TwilioService;
+use Liberu\CRM\Core\Filament\App\Pages\TwilioIntegration;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\Telephony\Services\TwilioService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use PHPUnit\Framework\Attributes\Test;

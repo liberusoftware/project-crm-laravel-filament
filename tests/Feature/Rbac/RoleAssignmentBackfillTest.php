@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Rbac;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;

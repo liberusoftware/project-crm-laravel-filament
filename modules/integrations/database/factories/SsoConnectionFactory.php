@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\SsoConnection;
-use App\Models\Team;
+use Liberu\Foundation\Integrations\Models\SsoConnection;
+use Liberu\Foundation\Organizations\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class SsoConnectionFactory extends Factory

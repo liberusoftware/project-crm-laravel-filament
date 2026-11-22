@@ -2,7 +2,7 @@
   "name": "module-crm-business-process-management-filament",
   "display_name": "CRM Business Process Management Filament",
   "description": "Filament presentation for process design and run operations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\BusinessProcessManagementFilament\\BusinessProcessManagementFilamentServiceProvider",
   "requires": {

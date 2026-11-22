@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\Resources\TeamBackupResource;
-use App\Filament\Resources\TeamBackupResource\Pages\ListTeamBackups;
-use App\Jobs\GenerateTeamBackup;
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Filament\Resources\TeamBackupResource;
+use Liberu\Foundation\Organizations\Filament\Resources\TeamBackupResource\Pages\ListTeamBackups;
+use Liberu\Foundation\Organizations\Jobs\GenerateTeamBackup;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\Message;
-use App\Models\Team;
+use Liberu\CRM\EmailProductivity\Models\Message;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Liberu\Foundation\Organizations\Models\Team;
 
 class MessageFactory extends Factory
 {

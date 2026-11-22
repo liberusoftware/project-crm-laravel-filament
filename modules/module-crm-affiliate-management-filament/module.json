@@ -2,7 +2,7 @@
   "name": "module-crm-affiliate-management-filament",
   "display_name": "CRM Affiliate Management Filament",
   "description": "Filament presentation for affiliate operations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\AffiliateManagementFilament\\AffiliateManagementFilamentServiceProvider",
   "requires": {

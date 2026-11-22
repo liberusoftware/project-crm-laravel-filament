@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Sso;
 
-use App\Filament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
-use App\Models\SamlConnection;
+use Liberu\Foundation\Integrations\Filament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
+use Liberu\Foundation\Integrations\Models\SamlConnection;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

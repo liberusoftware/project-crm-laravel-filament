@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\SsoConnectionResource;
-use App\Filament\App\Resources\SsoConnectionResource\Pages\CreateSsoConnection;
-use App\Filament\App\Resources\SsoConnectionResource\Pages\EditSsoConnection;
-use App\Filament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
-use App\Models\SsoConnection;
-use App\Models\Team;
+use Liberu\Foundation\Integrations\Filament\App\Resources\SsoConnectionResource;
+use Liberu\Foundation\Integrations\Filament\App\Resources\SsoConnectionResource\Pages\CreateSsoConnection;
+use Liberu\Foundation\Integrations\Filament\App\Resources\SsoConnectionResource\Pages\EditSsoConnection;
+use Liberu\Foundation\Integrations\Filament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
+use Liberu\Foundation\Integrations\Models\SsoConnection;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

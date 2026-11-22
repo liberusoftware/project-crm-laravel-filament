@@ -2,7 +2,7 @@
   "name": "module-crm-collaboration-filament",
   "display_name": "CRM Collaboration Filament",
   "description": "Collaboration Filament resources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "presentation",
   "provider": "Liberu\\CRM\\CollaborationFilament\\CollaborationFilamentServiceProvider",
   "requires": {

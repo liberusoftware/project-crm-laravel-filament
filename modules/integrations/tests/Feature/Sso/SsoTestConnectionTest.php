@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Sso;
 
-use App\Filament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
-use App\Models\SsoConnection;
+use Liberu\Foundation\Integrations\Filament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
+use Liberu\Foundation\Integrations\Models\SsoConnection;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
