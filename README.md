@@ -239,3 +239,7 @@ This repository hosts **CRM with Laravel and Filament**. Relationships, sales pi
 
 Use the [presentation implementation guides](https://github.com/liberusoftware/documentation/blob/main/guides/presentation/README.md) and [product documentation](https://github.com/liberusoftware/documentation/blob/main/projects/crm/README.md) to select compatible modules, reviewed contracts and the correct deployment boundary. Laravel remains authoritative for domain rules and tenant authorization across all clients.
 <!-- presentation-family:end -->
+
+## Health check
+
+`GET /health` returns HTTP 200 with `status: ok` and `checks.application` and `checks.database` both `ok`. If the database is unavailable, it returns HTTP 503 with `status: degraded` and `checks.database: unavailable`. Database error details are not exposed. The existing `/health/live`, `/health/startup`, and `/health/ready` probes remain available.

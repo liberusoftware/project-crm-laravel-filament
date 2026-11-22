@@ -1,5 +1,5 @@
 {
-    "name": "liberu-crm/crm-laravel",
+    "name": "liberusoftware/crm-laravel",
     "type": "project",
     "description": "Liberu CRM \u2014 an open-source, multi-tenant customer relationship management application for managing contacts, companies, leads, opportunities, deals, tasks, communications, campaigns, and support work.",
     "keywords": [
@@ -838,5 +838,10 @@
                 "liberusoftware/passkeys"
             ]
         }
-    ]
+    ],
+    "homepage": "https://github.com/liberusoftware/project-crm-laravel-filament",
+    "support": {
+        "issues": "https://github.com/liberusoftware/project-crm-laravel-filament/issues",
+        "source": "https://github.com/liberusoftware/project-crm-laravel-filament"
+    }
 }
