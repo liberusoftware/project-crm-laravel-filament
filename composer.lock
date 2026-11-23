@@ -10819,16 +10819,16 @@
         },
         {
             "name": "liberusoftware/module-crm-case-management-filament",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liberusoftware/module-crm-case-management-filament.git",
-                "reference": "3ffba0eba70f50671d91b47d7da159e9967203d3"
+                "reference": "8e1ba40cae9bc28f3497e713a154b619542f6350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liberusoftware/module-crm-case-management-filament/zipball/3ffba0eba70f50671d91b47d7da159e9967203d3",
-                "reference": "3ffba0eba70f50671d91b47d7da159e9967203d3",
+                "url": "https://api.github.com/repos/liberusoftware/module-crm-case-management-filament/zipball/8e1ba40cae9bc28f3497e713a154b619542f6350",
+                "reference": "8e1ba40cae9bc28f3497e713a154b619542f6350",
                 "shasum": ""
             },
             "require": {
@@ -10857,9 +10857,9 @@
             "description": "Case management Filament resources",
             "support": {
                 "issues": "https://github.com/liberusoftware/module-crm-case-management-filament/issues",
-                "source": "https://github.com/liberusoftware/module-crm-case-management-filament/tree/v1.0.1"
+                "source": "https://github.com/liberusoftware/module-crm-case-management-filament/tree/v1.0.2"
             },
-            "time": "2026-11-02T14:52:01+00:00"
+            "time": "2026-11-14T14:29:45+00:00"
         },
         {
             "name": "liberusoftware/module-crm-case-management-livewire",
