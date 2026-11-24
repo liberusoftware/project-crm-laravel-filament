@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource;
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource\Pages\CreateSsoConnection;
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource\Pages\EditSsoConnection;
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource\Pages\CreateSsoConnection;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource\Pages\EditSsoConnection;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
 use Liberu\CRM\Core\Models\SsoConnection;
 use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;

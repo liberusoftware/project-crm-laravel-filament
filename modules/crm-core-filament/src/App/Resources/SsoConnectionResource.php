@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Liberu\CRM\CoreFilament\App\Resources;
+namespace Liberu\CRM\Core\Filament\App\Resources;
 
 use Liberu\CRM\Core\Exceptions\SsoException;
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource\Pages\CreateSsoConnection;
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource\Pages\EditSsoConnection;
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource\Pages\CreateSsoConnection;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource\Pages\EditSsoConnection;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource\Pages\ListSsoConnections;
 use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
 use Liberu\CRM\Core\Models\SsoConnection;
 use Liberu\CRM\Core\Services\Sso\OidcClient;

@@ -7,7 +7,7 @@ namespace Tests\Feature\Filament\Rbac;
 use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource;
 use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource;
 use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalAccessLogResource;
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource;
 use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;

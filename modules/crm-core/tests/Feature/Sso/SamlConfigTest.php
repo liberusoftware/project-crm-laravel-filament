@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Sso;
 
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource;
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource\Pages\CreateSamlConnection;
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource\Pages\CreateSamlConnection;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
 use Liberu\CRM\Core\Models\SamlConnection;
 use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;

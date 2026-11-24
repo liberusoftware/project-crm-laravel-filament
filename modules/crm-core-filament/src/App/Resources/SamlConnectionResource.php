@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Liberu\CRM\CoreFilament\App\Resources;
+namespace Liberu\CRM\Core\Filament\App\Resources;
 
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource\Pages\CreateSamlConnection;
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource\Pages\EditSamlConnection;
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource\Pages\CreateSamlConnection;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource\Pages\EditSamlConnection;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
 use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
 use Liberu\CRM\Core\Models\SamlConnection;
 use Filament\Actions\Action;

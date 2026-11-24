@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource\Pages;
+namespace Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource\Pages;
 
-use Liberu\CRM\CoreFilament\App\Resources\SsoConnectionResource;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateSsoConnection extends CreateRecord

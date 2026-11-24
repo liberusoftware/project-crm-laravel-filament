@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Sso;
 
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource\Pages\ListSamlConnections;
 use Liberu\CRM\Core\Models\SamlConnection;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;

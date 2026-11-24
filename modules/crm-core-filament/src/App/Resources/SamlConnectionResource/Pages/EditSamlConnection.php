@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource\Pages;
+namespace Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource\Pages;
 
-use Liberu\CRM\CoreFilament\App\Resources\SamlConnectionResource;
+use Liberu\CRM\Core\Filament\App\Resources\SamlConnectionResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
