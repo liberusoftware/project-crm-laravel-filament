@@ -1,6 +1,6 @@
 <?php
 
-use Liberu\Foundation\Integrations\Services\Sso\SamlPayloadGuard;
+use Liberu\CRM\Core\Services\Sso\SamlPayloadGuard;
 use OneLogin\Saml2\Utils;
 use RobRichards\XMLSecLibs\XMLSecurityDSig;
 use RobRichards\XMLSecLibs\XMLSecurityKey;

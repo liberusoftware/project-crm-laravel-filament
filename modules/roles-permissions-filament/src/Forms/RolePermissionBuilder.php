@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\RolesPermissionsFilament\Forms;
 
-use Liberu\Foundation\RolesPermissions\Enums\Role;
-use Liberu\Foundation\RolesPermissions\Support\RolePermissionCatalog;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Select;
@@ -13,6 +11,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
+use Liberu\Foundation\RolesPermissions\Support\RolePermissionCatalog;
 use Spatie\Permission\Models\Role as SpatieRole;
 
 final class RolePermissionBuilder

@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Listeners;
 
-use Liberu\Foundation\Identity\Listeners\LogSuccessfulLogin;
-use Liberu\Foundation\Audit\Services\AuditLogService;
+use Liberu\CRM\Core\Listeners\LogSuccessfulLogin;
+use Liberu\CRM\Core\Services\AuditLogService;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;

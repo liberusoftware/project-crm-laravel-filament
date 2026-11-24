@@ -7,7 +7,7 @@ namespace Liberu\CRM\CustomerSelfService\Actions\Portal;
 use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Liberu\CRM\CustomerSelfService\Exceptions\PortalOnboardingException;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\Foundation\Audit\Services\AuditLogService;
+use Liberu\CRM\Core\Services\AuditLogService;
 use Liberu\Foundation\Organizations\Support\PortalCustomer;
 
 /**

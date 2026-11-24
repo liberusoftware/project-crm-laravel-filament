@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\SettingsFilament\Admin\Pages;
 
-use Liberu\Foundation\Settings\Settings\GeneralSettings;
+use Liberu\CRM\WhiteLabel\Settings\GeneralSettings;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Pages\SettingsPage;

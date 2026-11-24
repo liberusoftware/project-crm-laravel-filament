@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Integrations\Filament\App\Resources;
 
-use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
+use App\Filament\Concerns\EnforcesResourcePermissions;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;

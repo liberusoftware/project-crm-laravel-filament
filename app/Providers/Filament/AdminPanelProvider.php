@@ -11,7 +11,7 @@ use App\Filament\ModulePlugins;
 use Liberu\Foundation\AnalyticsCoreFilament\Pages\ReportCustomizer;
 use Liberu\Foundation\Organizations\Filament\Resources\TeamBackupResource;
 use Liberu\Foundation\Organizations\Filament\Resources\TeamResource;
-use Liberu\Foundation\Settings\Support\ThemeColors;
+use Liberu\CRM\WhiteLabel\Support\ThemeColors;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Facades\Filament;
 use Filament\Http\Middleware\Authenticate;

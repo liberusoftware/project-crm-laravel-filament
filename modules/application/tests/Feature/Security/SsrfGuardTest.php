@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Security;
 
-use Liberu\Foundation\Integrations\Exceptions\SsoException;
+use Liberu\CRM\Core\Exceptions\SsoException;
 use Liberu\Foundation\Integrations\Support\SsrfGuard;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;

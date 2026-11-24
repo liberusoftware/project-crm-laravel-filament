@@ -6,7 +6,7 @@ namespace Tests\Feature\Filament;
 
 use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource;
 use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource\Pages\ListAuditLogs;
-use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\AuditLog;
 use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;

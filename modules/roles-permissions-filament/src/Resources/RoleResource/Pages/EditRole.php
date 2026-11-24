@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages;
 
-use App\Models\User;
-use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\ValidationException;
+use Liberu\Foundation\RolesPermissions\Contracts\PrivilegedActor;
+use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;
 use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
 use Spatie\Permission\Models\Role as SpatieRole;
 
@@ -28,7 +28,7 @@ class EditRole extends EditRecord
     protected function handleRecordUpdate(Model $record, array $data): Model
     {
         $actor = auth()->user();
-        abort_unless($actor instanceof User && $record instanceof SpatieRole, 403);
+        abort_unless($actor instanceof PrivilegedActor && $record instanceof SpatieRole, 403);
 
         try {
             return app(RoleConfigurationService::class)->save($actor, null, $data, $record);

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource\Pages;
 
 use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource;
-use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\AuditLog;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\Pages\ViewRecord;
 use Filament\Schemas\Schema;

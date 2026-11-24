@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\RolesPermissionsFilament\Resources;
 
-use Liberu\Foundation\RolesPermissions\Enums\Role;
-use App\Models\User;
-use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Resources\Resource;
@@ -16,6 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Liberu\Foundation\RolesPermissions\Contracts\PrivilegedActor;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
+use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;
 use Liberu\Foundation\RolesPermissionsFilament\Forms\RolePermissionBuilder;
 use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\CreateRole;
 use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\EditRole;
@@ -40,7 +40,7 @@ class RoleResource extends Resource
     {
         $actor = auth()->user();
 
-        return $actor instanceof User && $actor->isSuperAdmin();
+        return $actor instanceof PrivilegedActor && $actor->isSuperAdmin();
     }
 
     public static function canViewAny(): bool
@@ -134,7 +134,7 @@ class RoleResource extends Resource
             EditAction::make(),
             DeleteAction::make()->using(function (SpatieRole $record): bool {
                 $actor = auth()->user();
-                abort_unless($actor instanceof User, 403);
+                abort_unless($actor instanceof PrivilegedActor, 403);
                 app(RoleConfigurationService::class)->delete($actor, null, $record);
 
                 return true;

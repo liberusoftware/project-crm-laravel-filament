@@ -10,7 +10,7 @@ use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource\Pages\ListAud
 use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource\Pages\ViewAuditLog;
 use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
 use Liberu\Foundation\ImportExportFilament\Exports\AuditLogExporter;
-use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\AuditLog;
 use Filament\Actions\ExportAction;
 use Filament\Actions\ViewAction;
 use Filament\Resources\Resource;

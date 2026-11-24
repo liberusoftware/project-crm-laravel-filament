@@ -9,7 +9,7 @@ use Illuminate\Routing\Controller;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\Organizations\Models\TeamSubscription;
 use App\Models\User;
-use Liberu\Foundation\Integrations\Services\StripeService;
+use Liberu\CRM\SaasPackaging\Services\StripeService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;

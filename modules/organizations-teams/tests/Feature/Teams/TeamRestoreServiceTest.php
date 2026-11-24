@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Teams;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\LeadCapture\Models\Lead;
-use Liberu\CRM\Activities\Models\Task;
+use App\Models\Contact;
+use App\Models\Lead;
+use App\Models\Task;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Storage;
 use Liberu\Foundation\Organizations\Exceptions\TeamNotEmptyException;

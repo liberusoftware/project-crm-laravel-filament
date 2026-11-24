@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Integrations\Services\Social;
 
-use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
+use App\Services\Marketing\PlatformConfiguration;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Liberu\Foundation\Integrations\Models\OAuthConfiguration;

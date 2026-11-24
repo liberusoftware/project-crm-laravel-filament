@@ -6,7 +6,7 @@ namespace Liberu\CRM\CustomerSelfServiceFilament\App\Resources;
 
 use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalAccessLogResource\Pages\ListPortalAccessLogs;
 use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
-use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\AuditLog;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;

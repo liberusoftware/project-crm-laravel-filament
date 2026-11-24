@@ -2,7 +2,7 @@
 
 namespace Liberu\CRM\AutomationPack\Jobs;
 
-use Liberu\Foundation\SchedulerQueues\Jobs\TenantAware;
+use Liberu\Foundation\SchedulerQueues\Jobs\Concerns\TenantAware;
 use Liberu\CRM\LeadCapture\Models\Lead;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

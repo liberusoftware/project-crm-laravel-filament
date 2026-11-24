@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Integrations\Services;
 
-use Liberu\CRM\Activities\Models\Task;
+use App\Models\Task;
 
 interface CalendarService
 {

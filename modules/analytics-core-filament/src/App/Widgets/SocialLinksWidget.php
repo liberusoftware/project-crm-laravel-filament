@@ -2,7 +2,7 @@
 
 namespace Liberu\Foundation\AnalyticsCoreFilament\App\Widgets;
 
-use Liberu\Foundation\Settings\Settings\GeneralSettings;
+use Liberu\CRM\WhiteLabel\Settings\GeneralSettings;
 use Filament\Widgets\Widget;
 use Illuminate\Contracts\View\View;
 use Override;

@@ -9,7 +9,7 @@ use Liberu\CRM\CustomerSelfService\Exceptions\PortalOnboardingException;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
 use App\Models\User;
 use Liberu\Foundation\Notifications\Notifications\PortalInvitation;
-use Liberu\Foundation\Audit\Services\AuditLogService;
+use Liberu\CRM\Core\Services\AuditLogService;
 use Filament\Facades\Filament;
 use Illuminate\Auth\Passwords\PasswordBroker;
 use Illuminate\Support\Facades\DB;

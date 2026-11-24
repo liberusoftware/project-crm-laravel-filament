@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Liberu\Foundation\Organizations\Services;
 
 use App\Models\User;
-use Liberu\CRM\Core\Support\SchemaGraph;
+use App\Support\SchemaGraph;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;

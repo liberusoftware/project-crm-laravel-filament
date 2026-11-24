@@ -2,8 +2,8 @@
 
 namespace Liberu\Foundation\Integrations\Services;
 
-use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
-use Liberu\CRM\EmailProductivity\Models\Email;
+use App\Models\ConnectedAccount;
+use App\Models\Email;
 use Google_Client;
 use Google_Service_Gmail;
 use Google_Service_Gmail_Message;

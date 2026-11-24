@@ -1,6 +1,6 @@
 <?php
 
-use Liberu\Foundation\Integrations\Models\SamlConnection;
+use Liberu\CRM\Core\Models\SamlConnection;
 use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;

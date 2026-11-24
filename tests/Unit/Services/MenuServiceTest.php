@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Services;
 
-use Liberu\Foundation\Settings\Models\Menu;
-use Liberu\Foundation\Settings\Services\MenuService;
+use Liberu\CRM\WhiteLabel\Models\Menu;
+use Liberu\CRM\WhiteLabel\Services\MenuService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

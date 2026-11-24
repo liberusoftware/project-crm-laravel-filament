@@ -6,7 +6,7 @@ namespace Liberu\Foundation\AuditFilament\Admin\Resources;
 
 use Liberu\Foundation\AuditFilament\Resources\AuditLogResource\Pages\ListAuditLogs;
 use Liberu\Foundation\AuditFilament\Resources\AuditLogResource\Pages\ViewAuditLog;
-use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\AuditLog;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\ViewAction;
 use Filament\Forms\Components\Textarea;

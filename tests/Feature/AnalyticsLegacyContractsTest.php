@@ -17,7 +17,7 @@ use Liberu\Analytics\Core\Models\ReportBuilder;
 use App\Models\User;
 use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use Liberu\CRM\SalesWorkspace\Services\ReportingService;
-use Liberu\Foundation\Settings\Settings\GeneralSettings;
+use Liberu\CRM\WhiteLabel\Settings\GeneralSettings;
 use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Illuminate\Contracts\View\View as ViewContract;

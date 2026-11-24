@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Teams;
 
-use Liberu\CRM\SalesPipelines\Models\Pipeline;
+use App\Models\Pipeline;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\Foundation\Organizations\Models\Team;

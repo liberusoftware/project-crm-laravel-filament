@@ -6,9 +6,9 @@ use Liberu\Foundation\JetstreamBridge\Actions\Fortify\CreateNewUser as CreateNew
 use Liberu\Foundation\JetstreamBridge\Actions\Fortify\ResetUserPassword;
 use Liberu\Foundation\JetstreamBridge\Actions\Fortify\UpdateUserPassword;
 use Liberu\Foundation\JetstreamBridge\Actions\Fortify\UpdateUserProfileInformation;
-use Liberu\Foundation\Identity\Http\Responses\LoginResponse;
-use Liberu\Foundation\Identity\Http\Responses\LogoutResponse;
-use Liberu\Foundation\Identity\Http\Responses\RegisterResponse;
+use Liberu\CRM\Core\Http\Responses\LoginResponse;
+use Liberu\CRM\Core\Http\Responses\LogoutResponse;
+use Liberu\CRM\Core\Http\Responses\RegisterResponse;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;

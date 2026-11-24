@@ -13,7 +13,7 @@
         </testsuite>
         <testsuite name="Modules">
             <directory>modules/application/tests/Feature/Security</directory>
-            <directory>modules/audit/tests/Feature/Audit</directory>
+            <directory>modules/crm-core/tests/Feature/Audit</directory>
             <directory>modules/crm-account-based-marketing/tests/Feature/AccountBasedMarketing</directory>
             <directory>modules/crm-account-planning/tests/Feature/AccountPlanning</directory>
             <directory>modules/crm-activities/tests/Feature/Activities</directory>
@@ -109,13 +109,11 @@
             <directory>modules/crm-web-intent/tests/Feature/WebIntent</directory>
             <directory>modules/crm-white-label/tests/Feature/WhiteLabel</directory>
             <directory>modules/crm-work-management/tests/Feature/WorkManagement</directory>
-            <directory>modules/identity-core/tests/Feature/Auth</directory>
-            <directory>modules/integrations/tests/Feature/Saml</directory>
-            <directory>modules/integrations/tests/Feature/Sso</directory>
+            <directory>modules/crm-core/tests/Feature/Auth</directory>
+            <directory>modules/crm-core/tests/Feature/Saml</directory>
+            <directory>modules/crm-core/tests/Feature/Sso</directory>
             <directory>modules/organizations-teams/tests/Feature/Teams</directory>
             <directory>modules/roles-permissions/tests/Feature/Permissions</directory>
-            <directory>modules/scheduler-queues/tests/Feature/Console</directory>
-            <directory>modules/scheduler-queues/tests/Feature/Jobs</directory>
             <directory>modules/scheduler-queues/tests/Feature/Queue</directory>
         </testsuite>
     </testsuites>

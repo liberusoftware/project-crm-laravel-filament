@@ -2,7 +2,7 @@
 
 namespace Liberu\CRM\MarketingResources\Jobs;
 
-use Liberu\Foundation\SchedulerQueues\Jobs\TenantAware;
+use Liberu\Foundation\SchedulerQueues\Jobs\Concerns\TenantAware;
 use Liberu\CRM\MarketingResources\Models\MarketingCampaign;
 use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use Liberu\CRM\Telephony\Services\TwilioService;

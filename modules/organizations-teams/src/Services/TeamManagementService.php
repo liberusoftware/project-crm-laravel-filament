@@ -4,7 +4,7 @@ namespace Liberu\Foundation\Organizations\Services;
 
 use App\Models\Branch;
 use App\Models\User;
-use Liberu\Foundation\Audit\Services\AuditLogService;
+use App\Services\AuditLogService;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Auth;

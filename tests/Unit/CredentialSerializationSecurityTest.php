@@ -5,7 +5,7 @@ namespace Tests\Unit;
 use Liberu\CRM\Advertising\Models\AdvertisingAccount;
 use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
 use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
-use Liberu\Foundation\Integrations\Models\SsoConnection;
+use Liberu\CRM\Core\Models\SsoConnection;
 use Tests\TestCase;
 
 class CredentialSerializationSecurityTest extends TestCase

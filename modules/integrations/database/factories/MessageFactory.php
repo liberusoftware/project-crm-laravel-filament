@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use Liberu\CRM\EmailProductivity\Models\Message;
+use App\Models\Message;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Liberu\Foundation\Organizations\Models\Team;
 

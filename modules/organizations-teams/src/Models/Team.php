@@ -2,7 +2,7 @@
 
 namespace Liberu\Foundation\Organizations\Models;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
+use App\Models\Contact;
 use App\Models\User;
 use DomainException;
 use Illuminate\Database\Eloquent\Builder;

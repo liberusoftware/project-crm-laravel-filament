@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Teams;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\Activities\Models\Task;
+use App\Models\Contact;
+use App\Models\Task;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;

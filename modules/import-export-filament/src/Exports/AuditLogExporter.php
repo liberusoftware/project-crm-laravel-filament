@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\ImportExportFilament\Exports;
 
-use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\AuditLog;
 use Filament\Actions\Exports\ExportColumn;
 use Filament\Actions\Exports\Exporter;
 use Filament\Actions\Exports\Models\Export;

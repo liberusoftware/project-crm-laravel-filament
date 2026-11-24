@@ -7,7 +7,7 @@ namespace Tests\Feature\Filament;
 use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleLogResource;
 use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleLogResource\Pages\ListTeamRoleLogs;
-use Liberu\Foundation\Audit\Models\AuditLog;
+use Liberu\CRM\Core\Models\AuditLog;
 use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Liberu\Foundation\Organizations\Services\TeamManagementService;

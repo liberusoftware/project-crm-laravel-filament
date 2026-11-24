@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\Organizations\Models\TeamSubscription;
-use Liberu\Foundation\Integrations\Services\StripeService;
+use Liberu\CRM\SaasPackaging\Services\StripeService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Mockery;

@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Services;
 
-use Liberu\Foundation\Settings\Services\SiteSettingsService;
+use Liberu\CRM\WhiteLabel\Services\SiteSettingsService;
 use Illuminate\Support\Facades\Cache;
 use Tests\TestCase;
 
