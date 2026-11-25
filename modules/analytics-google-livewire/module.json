@@ -3,7 +3,7 @@
   "name": "analytics-google-livewire",
   "display_name": "Google Analytics Livewire",
   "description": "Google Analytics livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\AnalyticsGoogleLivewire\\AnalyticsGoogleLivewireServiceProvider",
   "requires": {

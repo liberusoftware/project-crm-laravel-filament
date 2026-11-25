@@ -3,7 +3,7 @@
   "name": "files-media-api",
   "display_name": "Files and Media Api",
   "description": "Files and Media api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\FilesMediaApi\\FilesMediaApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

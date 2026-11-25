@@ -1,1 +1,24 @@
-{"name":"liberusoftware/module-crm-client-onboarding","type":"liberu-module","autoload":{"psr-4":{"Liberu\\CRM\\ClientOnboarding\\":"src/"}},"extra":{"laravel":{"providers":["Liberu\\CRM\\ClientOnboarding\\ClientOnboardingServiceProvider"]},"liberu":{"name":"crm-client-onboarding"}},"description":"Intake, imports, verification, launch, training, handoff and health","license":"MIT"}
+{
+    "name": "liberusoftware/module-crm-client-onboarding",
+    "type": "liberu-module",
+    "autoload": {
+        "psr-4": {
+            "Liberu\\CRM\\ClientOnboarding\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liberu\\CRM\\ClientOnboarding\\ClientOnboardingServiceProvider"
+            ]
+        },
+        "liberu": {
+            "name": "crm-client-onboarding"
+        }
+    },
+    "description": "Intake, imports, verification, launch, training, handoff and health",
+    "license": "MIT",
+    "require": {
+        "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+    }
+}

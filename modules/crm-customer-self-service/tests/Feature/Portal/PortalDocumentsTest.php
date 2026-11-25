@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Portal;
 
-use App\Filament\Portal\Resources\DocumentResource\Pages\ListDocuments;
-use App\Models\Contact;
-use App\Models\Document;
-use App\Models\Team;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\DocumentResource\Pages\ListDocuments;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Documents\Models\Document;
+use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

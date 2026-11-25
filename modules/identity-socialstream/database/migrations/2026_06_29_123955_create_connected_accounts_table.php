@@ -41,6 +41,7 @@ return new class() extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('connected_accounts');
+        // Linked identities and credentials can be shared with the host identity module.
+        // Rolling back the adapter must retain those accounts.
     }
 };

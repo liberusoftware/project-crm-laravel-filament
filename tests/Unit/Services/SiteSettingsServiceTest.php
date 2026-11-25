@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Services;
 
-use App\Services\SiteSettingsService;
 use Illuminate\Support\Facades\Cache;
+use Liberu\CRM\WhiteLabel\Services\SiteSettingsService;
 use Tests\TestCase;
 
 class SiteSettingsServiceTest extends TestCase

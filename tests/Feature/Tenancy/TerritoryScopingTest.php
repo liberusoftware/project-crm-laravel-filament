@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Tenancy;
 
-use App\Models\Contact;
-use App\Models\Team;
-use App\Models\Territory;
 use App\Models\User;
-use App\Support\AccessContext;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Tests\TestCase;
 
 class TerritoryScopingTest extends TestCase

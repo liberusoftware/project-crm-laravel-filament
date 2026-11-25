@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Models\Lead;
 use App\Models\User;
-use App\Services\ReportingService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\SalesWorkspace\Services\ReportingService;
 use Tests\TestCase;
 
 class AnalyticsDashboardTest extends TestCase

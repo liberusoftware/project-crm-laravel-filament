@@ -1,1 +1,19 @@
-{"name":"crm-channel-gateway","display_name":"CRM Channel Gateway","description":"Provider-neutral channels, routing, templates, health and delivery","version":"1.0.0","category":"capability","provider":"Liberu\\CRM\\ChannelGateway\\ChannelGatewayServiceProvider","requires":{"packages":{}},"suggests":[],"default_enabled":true,"capabilities":["crm.channel-gateway"],"features":["Email, SMS, WhatsApp, web chat, social messaging, push, routing, templates, health and provider selection"]}
+{
+  "name": "crm-channel-gateway",
+  "display_name": "CRM Channel Gateway",
+  "description": "Provider-neutral channels, routing, templates, health and delivery",
+  "version": "1.1.0",
+  "category": "capability",
+  "provider": "Liberu\\CRM\\ChannelGateway\\ChannelGatewayServiceProvider",
+  "requires": {
+    "packages": {}
+  },
+  "suggests": [],
+  "default_enabled": true,
+  "capabilities": [
+    "crm.channel-gateway"
+  ],
+  "features": [
+    "Email, SMS, WhatsApp, web chat, social messaging, push, routing, templates, health and provider selection"
+  ]
+}

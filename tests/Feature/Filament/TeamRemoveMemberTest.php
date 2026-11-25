@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\TeamMemberResource\Pages\ListTeamMembers;
 use App\Models\User;
-use App\Services\TeamManagementService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use InvalidArgumentException;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamMemberResource\Pages\ListTeamMembers;
+use Liberu\Foundation\Organizations\Services\TeamManagementService;
 use Livewire\Livewire;
 use Tests\TestCase;
 

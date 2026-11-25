@@ -3,7 +3,7 @@
   "name": "currency-context-filament",
   "display_name": "Currency Context Filament",
   "description": "Currency Context filament presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\CurrencyContextFilament\\CurrencyContextFilamentServiceProvider",
   "requires": {

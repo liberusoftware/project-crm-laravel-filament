@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\SalesEngagement\Models;
 
-use App\Models\Contact;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;

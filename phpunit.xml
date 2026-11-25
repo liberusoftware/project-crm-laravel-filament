@@ -13,7 +13,7 @@
         </testsuite>
         <testsuite name="Modules">
             <directory>modules/application/tests/Feature/Security</directory>
-            <directory>modules/audit/tests/Feature/Audit</directory>
+            <directory>modules/crm-core/tests/Feature/Audit</directory>
             <directory>modules/crm-account-based-marketing/tests/Feature/AccountBasedMarketing</directory>
             <directory>modules/crm-account-planning/tests/Feature/AccountPlanning</directory>
             <directory>modules/crm-activities/tests/Feature/Activities</directory>
@@ -96,7 +96,7 @@
             <directory>modules/crm-sales-engagement/tests/Feature/SalesEngagement</directory>
             <directory>modules/crm-sales-pipelines/tests/Feature/SalesPipelines</directory>
             <directory>modules/crm-sales-workspace/tests/Feature/SalesWorkspace</directory>
-            <directory>modules/crm-sandbox-release/tests/Feature/SandboxRelease</directory>
+            <directory>modules/crm-sandbox-and-release-management/tests/Feature/SandboxRelease</directory>
             <directory>modules/crm-scheduling/tests/Feature/Scheduling</directory>
             <directory>modules/crm-search/tests/Feature/CrmSearch</directory>
             <directory>modules/crm-segmentation/tests/Feature/Segmentation</directory>
@@ -104,24 +104,23 @@
             <directory>modules/crm-service-analytics/tests/Feature/ServiceAnalytics</directory>
             <directory>modules/crm-sla-and-entitlements/tests/Feature/SlaAndEntitlements</directory>
             <directory>modules/crm-telephony/tests/Feature/Telephony</directory>
-            <directory>modules/crm-template-snapshots/tests/Feature/TemplatesSnapshots</directory>
+            <directory>modules/crm-templates-and-snapshots/tests/Feature/TemplatesSnapshots</directory>
             <directory>modules/crm-usage-wallet-and-rebilling/tests/Feature/UsageWallet</directory>
             <directory>modules/crm-web-intent/tests/Feature/WebIntent</directory>
             <directory>modules/crm-white-label/tests/Feature/WhiteLabel</directory>
             <directory>modules/crm-work-management/tests/Feature/WorkManagement</directory>
-            <directory>modules/identity-core/tests/Feature/Auth</directory>
-            <directory>modules/integrations/tests/Feature/Saml</directory>
-            <directory>modules/integrations/tests/Feature/Sso</directory>
+            <directory>modules/crm-core/tests/Feature/Auth</directory>
+            <directory>modules/crm-core/tests/Feature/Saml</directory>
+            <directory>modules/crm-core/tests/Feature/Sso</directory>
             <directory>modules/organizations-teams/tests/Feature/Teams</directory>
             <directory>modules/roles-permissions/tests/Feature/Permissions</directory>
-            <directory>modules/scheduler-queues/tests/Feature/Console</directory>
-            <directory>modules/scheduler-queues/tests/Feature/Jobs</directory>
             <directory>modules/scheduler-queues/tests/Feature/Queue</directory>
         </testsuite>
     </testsuites>
     <source>
         <include>
             <directory>app</directory>
+            <directory>modules/*/src</directory>
         </include>
     </source>
     <php>

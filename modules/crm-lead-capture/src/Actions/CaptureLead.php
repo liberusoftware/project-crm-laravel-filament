@@ -48,7 +48,7 @@ final class CaptureLead
     }
 
     /** @param array<string, mixed> $input */
-    public function executeLegacy(int $teamId, ?int $actorId, array $input): LeadCapture
+    public function recordCapture(int $teamId, ?int $actorId, array $input): LeadCapture
     {
         $data = Validator::make($input, [
             'kind' => ['required', 'string', 'max:100'],

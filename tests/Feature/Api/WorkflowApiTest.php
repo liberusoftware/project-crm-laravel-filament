@@ -3,9 +3,9 @@
 namespace Tests\Feature\Api;
 
 use App\Models\User;
-use App\Models\Workflow;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
+use Liberu\CRM\AutomationPack\Models\Workflow;
 use Tests\TestCase;
 
 class WorkflowApiTest extends TestCase

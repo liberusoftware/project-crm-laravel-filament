@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Services\FacebookMessengerService;
 use Facebook\Facebook;
+use Liberu\CRM\ChannelGateway\Services\Social\FacebookMessengerService;
 use Mockery;
 use Tests\TestCase;
 

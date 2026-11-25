@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\TeamRoleResource;
-use App\Filament\App\Resources\TeamRoleResource\Pages\CreateTeamRole;
-use App\Filament\App\Resources\TeamRoleResource\Pages\EditTeamRole;
-use App\Filament\App\Resources\TeamRoleResource\Pages\ListTeamRoles;
-use App\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource\Pages\CreateTeamRole;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource\Pages\EditTeamRole;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource\Pages\ListTeamRoles;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Livewire;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role as SpatieRole;

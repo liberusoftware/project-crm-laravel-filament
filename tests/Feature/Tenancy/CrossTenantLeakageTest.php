@@ -2,11 +2,11 @@
 
 namespace Tests\Feature\Tenancy;
 
-use App\Models\Team;
-use App\Support\TenantContext;
-use App\Support\TenantModels;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Support\TenantContext;
+use Liberu\Foundation\Organizations\Support\TenantModels;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
@@ -34,7 +34,7 @@ class CrossTenantLeakageTest extends TestCase
     /** @return array<string, array{class-string}> */
     public static function tenantModels(): array
     {
-        // Shared enumerator (App\Support\TenantModels) is path-relative and
+        // Shared enumerator (Liberu\Foundation\Organizations\Support\TenantModels) is path-relative and
         // container-free, so it works here at data-provider collection time —
         // before the app boots. TeamBackupService consumes the same list, so
         // this leakage proof and the backup's model set can never diverge.
@@ -81,8 +81,7 @@ class CrossTenantLeakageTest extends TestCase
         $teamB = Team::factory()->create();
         $covered = [];
 
-        foreach (array_keys(self::tenantModels()) as $basename) {
-            $class = 'App\\Models\\'.$basename;
+        foreach (self::tenantModels() as $basename => [$class]) {
 
             try {
                 $a = $class::factory()->create(['team_id' => $teamA->id]);

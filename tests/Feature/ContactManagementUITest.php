@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Livewire\ContactCollaboration;
-use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Livewire\ContactCollaboration;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Livewire\Livewire;
 use Tests\TestCase;
 

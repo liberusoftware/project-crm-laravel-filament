@@ -22,7 +22,7 @@
       "source": "https://github.com/liberusoftware/module-developer-experience-api"
     }
   },
-  "version": "1.0.0",
+  "version": "1.0.3",
   "autoload-dev": {
     "psr-4": {
       "Liberu\\Foundation\\DeveloperExperienceApi\\Tests\\": "tests/"
@@ -33,7 +33,8 @@
     "pestphp/pest": "^5.3.3"
   },
   "scripts": {
-    "test": "pest"
+    "test": "pest",
+    "test:coverage": "pest --coverage --min=100"
   },
   "config": {
     "allow-plugins": {
@@ -41,4 +42,3 @@
     }
   }
 }
-

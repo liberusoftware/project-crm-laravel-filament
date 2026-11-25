@@ -21,7 +21,7 @@
       "source": "https://github.com/liberusoftware/module-roles-permissions-livewire"
     }
   },
-  "version": "1.0.1",
+  "version": "1.1.1",
   "autoload-dev": {
     "psr-4": {
       "Liberu\\Foundation\\RolesPermissionsLivewire\\Tests\\": "tests/"
@@ -32,7 +32,8 @@
     "pestphp/pest": "^5.3.3"
   },
   "scripts": {
-    "test": "pest"
+    "test": "pest",
+    "test:coverage": "pest --coverage --min=100"
   },
   "config": {
     "allow-plugins": {

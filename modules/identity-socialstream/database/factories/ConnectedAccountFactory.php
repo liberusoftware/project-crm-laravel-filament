@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Liberu\Foundation\Identity\Socialstream\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;

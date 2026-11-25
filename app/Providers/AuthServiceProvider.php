@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Models\Team;
 use App\Models\User;
-use App\Policies\TeamPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Policies\TeamPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {

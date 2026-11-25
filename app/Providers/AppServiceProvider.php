@@ -4,46 +4,42 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Console\Commands\BackupTeam;
-use App\Console\Commands\CloneTeam;
-use App\Console\Commands\FreshDatabaseCommand;
-use App\Console\Commands\ImportTeam;
-use App\Console\Commands\MakeModuleCommand;
-use App\Console\Commands\ModuleAutoloadCommand;
-use App\Console\Commands\ModuleCommand;
-use App\Console\Commands\NotifyOverdueTasks;
-use App\Console\Commands\PublishScheduledPosts;
-use App\Console\Commands\RestoreTeam;
-use App\Console\Commands\SendReminders;
-use App\Console\Commands\UpdatePostAnalytics;
 use App\Http\Responses\PanelLoginResponse;
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Models\Lead;
-use App\Models\Opportunity;
-use App\Models\Task;
-use App\Models\Team;
-use App\Modules\ModuleManager;
-use App\Modules\ModuleServiceProvider;
-use App\Observers\AuditObserver;
-use App\Support\SsoLogoutState;
 use Filament\Auth\Http\Responses\Contracts\LoginResponse;
 use Illuminate\Database\Console\Migrations\InstallCommand;
 use Illuminate\Database\Console\Migrations\MigrateCommand;
 use Illuminate\Database\Console\Migrations\StatusCommand;
 use Illuminate\Database\Console\Seeds\SeedCommand;
 use Illuminate\Database\Console\WipeCommand;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Console\KeyGenerateCommand;
 use Illuminate\Foundation\Console\PackageDiscoverCommand;
 use Illuminate\Foundation\Console\VendorPublishCommand;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
+use Liberu\CRM\Activities\Console\Commands\NotifyOverdueTasks;
+use Liberu\CRM\Activities\Console\Commands\SendReminders;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\Core\Console\Commands\FreshDatabaseCommand;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Observers\AuditObserver;
+use Liberu\CRM\Core\Support\SsoLogoutState;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\MarketingResources\Console\Commands\PublishScheduledPosts;
+use Liberu\CRM\MarketingResources\Console\Commands\UpdatePostAnalytics;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
 use Liberu\Foundation\ModuleManager\ModuleDiscovery;
 use Liberu\Foundation\ModuleManager\ModuleManagerServiceProvider;
 use Liberu\Foundation\ModuleManager\ModuleRegistry;
 use Liberu\Foundation\ModuleManagerFilament\Pages\ModuleManagement;
 use Liberu\Foundation\Observability\ObservabilityServiceProvider;
+use Liberu\Foundation\Organizations\Console\Commands\BackupTeam;
+use Liberu\Foundation\Organizations\Console\Commands\CloneTeam;
+use Liberu\Foundation\Organizations\Console\Commands\ImportTeam;
+use Liberu\Foundation\Organizations\Console\Commands\RestoreTeam;
+use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\Search\SearchServiceProvider;
 use Liberu\Foundation\Settings\SettingsServiceProvider;
 use Liberu\Foundation\Theme\Providers\ThemeServiceProvider;
@@ -72,9 +68,6 @@ class AppServiceProvider extends ServiceProvider
                 BackupTeam::class,
                 CloneTeam::class,
                 ImportTeam::class,
-                MakeModuleCommand::class,
-                ModuleAutoloadCommand::class,
-                ModuleCommand::class,
                 NotifyOverdueTasks::class,
                 PublishScheduledPosts::class,
                 RestoreTeam::class,
@@ -83,11 +76,9 @@ class AppServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->app->singleton(ModuleManager::class, fn (): ModuleManager => new ModuleManager());
         // Request-scoped holder for the SSO single-logout redirect URL.
         $this->app->singleton(SsoLogoutState::class);
         $this->app->singleton(ModuleRegistry::class, fn (): ModuleRegistry => (new ModuleDiscovery())->discover([base_path('modules')]));
-        $this->app->register(ModuleServiceProvider::class);
         $this->app->register(ModuleManagerServiceProvider::class);
         $this->app->register(SettingsServiceProvider::class);
         $this->app->register(SearchServiceProvider::class);
@@ -97,6 +88,24 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Factory::guessFactoryNamesUsing(function (string $modelName): string {
+            $base = class_basename($modelName);
+            $aliases = [
+                'CrmContact' => 'ContactFactory',
+                'CrmActivity' => 'ActivityFactory',
+                'CrmNote' => 'NoteFactory',
+                'CrmTag' => 'TagFactory',
+                'MailTemplate' => 'EmailTemplateFactory',
+            ];
+            $candidate = 'Database\\Factories\\'.($aliases[$base] ?? "{$base}Factory");
+
+            if (class_exists($candidate)) {
+                return $candidate;
+            }
+
+            return 'Database\\Factories\\'.ltrim(str_replace('App\\Models\\', '', $modelName), '\\').'Factory';
+        });
+
         Gate::define(ModuleManagement::ABILITY, fn ($user): bool => method_exists($user, 'isAdmin') && $user->isAdmin());
 
         Jetstream::useTeamModel(Team::class);

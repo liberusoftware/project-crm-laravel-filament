@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Support\PiiEncryptionBackfill;
+use Liberu\CRM\Core\Support\PiiEncryptionBackfill;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Schema;
 /**
  * Encrypt Contact.phone_number + Company.phone_number at rest. Neither is looked
  * up by value (no equality queries / indexes), so no blind index — just widen to
- * text and encrypt existing rows in place. See App\Support\PiiEncryptionBackfill.
+ * text and encrypt existing rows in place. See Liberu\CRM\Core\Support\PiiEncryptionBackfill.
  */
 return new class() extends Migration
 {

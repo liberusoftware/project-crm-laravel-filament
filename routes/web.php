@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\AIReceptionTwilioController;
-use App\Http\Controllers\BillingController;
-use App\Http\Controllers\ContactListController;
-use App\Http\Controllers\EmailTrackingController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\KnowledgeBaseController;
-use App\Http\Controllers\LeadFormController;
-use App\Http\Controllers\OAuthConfigurationController;
-use App\Http\Controllers\QuoteRequestController;
-use App\Http\Controllers\SamlLoginController;
-use App\Http\Controllers\SamlMetadataController;
-use App\Http\Controllers\SsoLoginController;
-use App\Http\Controllers\TeamInvitationController;
-use App\Http\Controllers\TicketController;
-use App\Http\Controllers\TwilioController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\TeamInvitationController as JetstreamTeamInvitationController;
+use Liberu\CRM\AIReceptionAndConversation\Http\Controllers\AIReceptionTwilioController;
+use Liberu\CRM\Core\Http\Controllers\ContactListController;
+use Liberu\CRM\Core\Http\Controllers\HomeController;
+use Liberu\CRM\Core\Http\Controllers\SamlLoginController;
+use Liberu\CRM\Core\Http\Controllers\SamlMetadataController;
+use Liberu\CRM\Core\Http\Controllers\SsoLoginController;
+use Liberu\CRM\EmailProductivity\Http\Controllers\EmailTrackingController;
+use Liberu\CRM\FormsAndSurveys\Http\Controllers\LeadFormController;
+use Liberu\CRM\Knowledge\Http\Controllers\KnowledgeBaseController;
+use Liberu\CRM\SaasPackaging\Http\Controllers\BillingController;
+use Liberu\CRM\ServiceAgent\Http\Controllers\QuoteRequestController;
+use Liberu\CRM\ServiceAgent\Http\Controllers\TicketController;
+use Liberu\CRM\Telephony\Http\Controllers\TwilioController;
+use Liberu\Foundation\Integrations\Http\Controllers\OAuthConfigurationController;
+use Liberu\Foundation\Organizations\Http\Controllers\TeamInvitationController;
 
 // Health check endpoints (for Kubernetes liveness/readiness probes)
 Route::get('/health', function () {

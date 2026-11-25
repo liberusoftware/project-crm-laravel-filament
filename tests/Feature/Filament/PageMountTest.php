@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Pages\EditProfile;
-use App\Filament\App\Pages\MailchimpIntegration;
-use App\Filament\App\Pages\PersonalAccessTokensPage;
-use App\Filament\App\Pages\ReportPage;
-use App\Filament\App\Pages\SetupWizard;
-use App\Filament\App\Pages\TwilioIntegration;
-use App\Filament\App\Pages\TwilioSettings;
-use App\Filament\App\Pages\VisualPipeline;
-use App\Models\OAuthConfiguration;
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Filament\App\Pages\EditProfile;
+use Liberu\CRM\Core\Filament\App\Pages\MailchimpIntegration;
+use Liberu\CRM\Core\Filament\App\Pages\PersonalAccessTokensPage;
+use Liberu\CRM\Core\Filament\App\Pages\ReportPage;
+use Liberu\CRM\Core\Filament\App\Pages\SetupWizard;
+use Liberu\CRM\Core\Filament\App\Pages\TwilioIntegration;
+use Liberu\CRM\Core\Filament\App\Pages\TwilioSettings;
+use Liberu\CRM\Core\Filament\App\Pages\VisualPipeline;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Liberu\Foundation\Organizations\Models\Team;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\OmnichannelService\Services;
 
-use App\Models\Team;
+use Liberu\Foundation\Organizations\Models\Team;
 
 final class OmnichannelPolicy
 {

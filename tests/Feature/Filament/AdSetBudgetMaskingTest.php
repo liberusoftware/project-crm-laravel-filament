@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\AdSetResource;
-use App\Filament\App\Resources\AdSetResource\Pages\EditAdSet;
-use App\Filament\App\Resources\AdSetResource\Pages\ListAdSets;
-use App\Models\AdSet;
-use App\Models\AdvertisingAccount;
-use App\Models\Campaign;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Advertising\Models\AdSet;
+use Liberu\CRM\Advertising\Models\AdvertisingAccount;
+use Liberu\CRM\Advertising\Models\Campaign;
+use Liberu\CRM\AdvertisingFilament\App\Resources\AdSetResource;
+use Liberu\CRM\AdvertisingFilament\Resources\AdSetResource\Pages\EditAdSet;
+use Liberu\CRM\AdvertisingFilament\Resources\AdSetResource\Pages\ListAdSets;
 use Livewire\Livewire;
 use Tests\TestCase;
 

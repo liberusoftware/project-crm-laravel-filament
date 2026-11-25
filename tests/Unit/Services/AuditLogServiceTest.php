@@ -3,8 +3,8 @@
 namespace Tests\Unit\Services;
 
 use App\Models\User;
-use App\Services\AuditLogService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Services\AuditLogService;
 use Tests\TestCase;
 
 class AuditLogServiceTest extends TestCase

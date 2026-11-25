@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Models\Deal;
-use App\Models\Pipeline;
-use App\Models\Stage;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Liberu\CRM\SalesPipelines\Models\Pipeline;
+use Liberu\CRM\SalesPipelines\Models\Stage;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Tests\TestCase;
 
 class OpportunityPipelineTest extends TestCase

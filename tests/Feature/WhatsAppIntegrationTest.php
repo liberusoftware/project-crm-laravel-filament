@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Jobs\FetchMessages;
-use App\Models\Ticket;
-use App\Services\MessageService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Queue;
+use Liberu\CRM\ChatAndBots\Jobs\FetchMessages;
+use Liberu\CRM\ServiceAgent\Models\Ticket;
+use Liberu\Foundation\Integrations\Services\MessageService;
 use Tests\TestCase;
 
 class WhatsAppIntegrationTest extends TestCase

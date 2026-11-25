@@ -2,14 +2,14 @@
 
 namespace Tests\Unit\Middleware;
 
-use App\Http\Middleware\TeamsPermission;
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Liberu\Foundation\Organizations\Http\Middleware\TeamsPermission;
+use Liberu\Foundation\Organizations\Models\Team;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;

@@ -3,7 +3,7 @@
   "name": "currency-context-api",
   "display_name": "Currency Context Api",
   "description": "Currency Context api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\CurrencyContextApi\\CurrencyContextApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

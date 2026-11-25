@@ -10,8 +10,7 @@ use App\Providers\FortifyServiceProvider;
 use App\Providers\HorizonServiceProvider;
 use App\Providers\JetstreamServiceProvider;
 use App\Providers\RouteServiceProvider;
-use App\Providers\SocialstreamServiceProvider;
-use App\Providers\TeamServiceProvider;
+use Liberu\Foundation\Identity\Socialstream\Providers\SocialstreamServiceProvider;
 
 return [
     AppServiceProvider::class,
@@ -25,5 +24,4 @@ return [
     JetstreamServiceProvider::class,
     RouteServiceProvider::class,
     SocialstreamServiceProvider::class,
-    TeamServiceProvider::class,
 ];

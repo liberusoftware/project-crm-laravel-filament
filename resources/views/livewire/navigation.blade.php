@@ -16,12 +16,12 @@
         <div class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
           <div class="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1">
             
-            {!! app(App\Services\MenuService::class)->buildMenu() !!}
+            {!! app(Liberu\CRM\WhiteLabel\Services\MenuService::class)->buildMenu() !!}
 
             <div class="relative flex flex-wrap items-center gap-x-1.5 md:ps-2.5 mt-1 md:mt-0 md:ms-1.5 before:block before:absolute before:top-1/2 before:-start-px before:w-px before:h-4 before:bg-white/30 before:-translate-y-1/2">
                 @if (auth()->check())
                     @php
-                        use App\Enums\Role;
+                        use Liberu\Foundation\RolesPermissions\Enums\Role;
                         $user = auth()->user();
                         $isAdmin = $user->hasRole(Role::Admin) || $user->hasRole(Role::SuperAdmin);
                         $dashboardUrl = $isAdmin ? '/admin' : '/app';

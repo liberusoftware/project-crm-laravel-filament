@@ -14,7 +14,7 @@ class AddTeamIdToStaffResourceTables extends Migration
         ];
 
         foreach ($tables as $table) {
-            if (! Schema::hasColumn($table, 'team_id')) {
+            if (Schema::hasTable($table) && ! Schema::hasColumn($table, 'team_id')) {
                 Schema::table($table, function (Blueprint $table): void {
                     $table->foreignId('team_id')->nullable()->constrained()->onDelete('cascade')->default(1);
                 });
@@ -31,7 +31,7 @@ class AddTeamIdToStaffResourceTables extends Migration
         ];
 
         foreach ($tables as $table) {
-            if (Schema::hasColumn($table, 'team_id')) {
+            if (Schema::hasTable($table) && Schema::hasColumn($table, 'team_id')) {
                 Schema::table($table, function (Blueprint $table): void {
                     $table->dropForeign(['team_id']);
                     $table->dropColumn('team_id');

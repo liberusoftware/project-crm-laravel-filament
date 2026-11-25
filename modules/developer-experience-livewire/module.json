@@ -3,7 +3,7 @@
   "name": "developer-experience-livewire",
   "display_name": "Developer Experience Livewire",
   "description": "Developer Experience livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\DeveloperExperienceLivewire\\DeveloperExperienceLivewireServiceProvider",
   "requires": {

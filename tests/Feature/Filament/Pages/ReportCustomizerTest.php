@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Filament\Pages;
 
-use App\Filament\Pages\ReportCustomizer;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\AnalyticsCoreFilament\Pages\ReportCustomizer;
 use Livewire\Livewire;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;

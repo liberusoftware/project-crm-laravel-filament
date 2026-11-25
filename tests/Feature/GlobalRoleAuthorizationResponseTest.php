@@ -1,11 +1,11 @@
 <?php
 
-use App\Filament\Admin\Resources\RoleResource;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Access\Gate as AuthorizationGate;
 use Illuminate\Support\Facades\Gate;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
 use Spatie\Permission\Models\Role;
 
 dataset('global role authorization actions', [

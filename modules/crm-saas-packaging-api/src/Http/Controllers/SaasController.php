@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\SaasPackagingApi\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Liberu\CRM\Core\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Liberu\CRM\SaasPackaging\Actions\ChangeSubscriptionStatus;
 use Liberu\CRM\SaasPackaging\Actions\ProvisionSubscription;

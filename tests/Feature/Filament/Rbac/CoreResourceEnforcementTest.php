@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament\Rbac;
 
-use App\Filament\App\Resources\ContactResource;
-use App\Filament\App\Resources\DealResource;
-use App\Models\Contact;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\SalesWorkspace\Filament\App\Resources\DealResource;
 use Tests\TestCase;
 
 class CoreResourceEnforcementTest extends TestCase

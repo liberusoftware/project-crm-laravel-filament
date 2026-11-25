@@ -3,7 +3,7 @@
   "name": "analytics-meta-livewire",
   "display_name": "Meta Server-Side Tracking Livewire",
   "description": "Meta Server-Side Tracking livewire presentation adapter.",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\AnalyticsMetaLivewire\\AnalyticsMetaLivewireServiceProvider",
   "requires": {

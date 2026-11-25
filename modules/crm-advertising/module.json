@@ -1,1 +1,21 @@
-{"name":"crm-advertising","display_name":"CRM Advertising","description":"Ad accounts, campaigns, lead ads, audiences, conversions, performance sync and attribution","version":"1.0.0","category":"capability","provider":"Liberu\\CRM\\Advertising\\AdvertisingServiceProvider","requires":{"packages":{}},"suggests":[],"default_enabled":true,"capabilities":["crm.advertising"],"features":["Ad accounts, campaigns, lead ads, audiences, conversions, performance sync and attribution"]}
+{
+    "name": "crm-advertising",
+    "display_name": "CRM Advertising",
+    "description": "Ad accounts, campaigns, lead ads, audiences, conversions, performance sync and attribution",
+    "version": "1.4.0",
+    "category": "capability",
+    "provider": "Liberu\\CRM\\Advertising\\AdvertisingServiceProvider",
+    "requires": {
+        "packages": {
+            "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+        }
+    },
+    "suggests": [],
+    "default_enabled": true,
+    "capabilities": [
+        "crm.advertising"
+    ],
+    "features": [
+        "Ad accounts, campaigns, lead ads, audiences, conversions, performance sync and attribution"
+    ]
+}

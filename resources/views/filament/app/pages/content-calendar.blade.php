@@ -13,7 +13,7 @@
                     <time datetime="{{ $day['date']->toDateString() }}" class="text-sm font-semibold">{{ $day['date']->format('j') }}</time>
                     <div class="mt-2 space-y-2">
                         @foreach($day['posts'] as $post)
-                            <a class="block rounded-lg border border-gray-200 p-2 text-xs hover:border-primary-500 dark:border-gray-700" href="{{ \App\Filament\App\Resources\SocialMediaPostResource::getUrl('view', ['record' => $post], panel: 'app') }}">
+                            <a class="block rounded-lg border border-gray-200 p-2 text-xs hover:border-primary-500 dark:border-gray-700" href="{{ \Liberu\CRM\MarketingResourcesFilament\App\Resources\SocialMediaPostResource::getUrl('view', ['record' => $post], panel: 'app') }}">
                                 <span class="font-medium">{{ $post->scheduled_at->copy()->timezone($timezone)->format('H:i') }} · {{ ucfirst(str_replace('_', ' ', $post->status)) }}</span>
                                 <p class="mt-1">{{ \Illuminate\Support\Str::limit($post->content, 85) }}</p>
                             </a>

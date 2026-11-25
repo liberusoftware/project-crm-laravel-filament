@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Tenancy;
 
-use App\Models\Opportunity;
-use App\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 class OpportunityMaskingTest extends TestCase

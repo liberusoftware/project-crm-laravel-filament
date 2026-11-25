@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Models\Team;
 use App\Models\User;
-use App\Services\TeamManagementService;
 use Exception;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Services\TeamManagementService;
 use Tests\TestCase;
 
 class TeamManagementServiceTest extends TestCase

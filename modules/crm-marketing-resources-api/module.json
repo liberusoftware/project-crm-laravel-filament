@@ -1,1 +1,24 @@
-{"name":"crm-marketing-resources-api","display_name":"CRM Marketing Resources API","description":"HTTP presentation for governed marketing resources","version":"1.0.0","category":"presentation","provider":"Liberu\\CRM\\MarketingResourcesApi\\Providers\\MarketingResourcesApiServiceProvider","requires":{"packages":{}},"suggests":[],"default_enabled":true,"capabilities":["crm.marketing-resources.api"],"features":["Resource lifecycle and approval event endpoints"]}
+{
+    "name": "crm-marketing-resources-api",
+    "display_name": "CRM Marketing Resources API",
+    "description": "HTTP presentation for governed marketing resources",
+    "version": "1.1.0",
+    "category": "presentation",
+    "provider": "Liberu\\CRM\\MarketingResourcesApi\\Providers\\MarketingResourcesApiServiceProvider",
+    "requires": {
+        "packages": {
+            "liberusoftware/module-crm-advertising": "^1.0.0",
+            "liberusoftware/module-crm-advertising-api": "^1.0.0",
+            "liberusoftware/module-crm-marketing-agent": "^1.0.0",
+            "liberusoftware/module-crm-marketing-resources": "^1.0.0"
+        }
+    },
+    "suggests": [],
+    "default_enabled": true,
+    "capabilities": [
+        "crm.marketing-resources.api"
+    ],
+    "features": [
+        "Resource lifecycle and approval event endpoints"
+    ]
+}

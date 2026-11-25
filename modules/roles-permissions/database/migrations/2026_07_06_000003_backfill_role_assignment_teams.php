@@ -1,7 +1,5 @@
 <?php
 
-use App\Enums\Role;
-use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -35,7 +33,7 @@ return new class() extends Migration
         $mhr = $names['model_has_roles'];
 
         $superAdminIds = DB::table($names['roles'])
-            ->where('name', Role::SuperAdmin->value)
+            ->where('name', 'super_admin')
             ->pluck('id')
             ->all();
 
@@ -44,7 +42,12 @@ return new class() extends Migration
             DB::table($mhr)->whereIn($roleKey, $superAdminIds)->update([$teamKey => null]);
         }
 
-        $userMorph = (new User())->getMorphClass();
+        $guard = config('auth.defaults.guard', 'web');
+        $provider = config("auth.guards.{$guard}.provider", 'users');
+        $userModel = config("auth.providers.{$provider}.model");
+        $actor = new $userModel();
+        $userMorph = $actor->getMorphClass();
+        $userTable = $actor->getTable();
 
         // Every other User assignment → the user's current team.
         DB::table($mhr)
@@ -53,8 +56,8 @@ return new class() extends Migration
             ->orderBy($morphKey)
             ->orderBy($roleKey)
             ->get()
-            ->each(function ($row) use ($mhr, $teamKey, $morphKey, $roleKey): void {
-                $currentTeamId = DB::table('users')->where('id', $row->{$morphKey})->value('current_team_id');
+            ->each(function ($row) use ($mhr, $teamKey, $morphKey, $roleKey, $userTable): void {
+                $currentTeamId = DB::table($userTable)->where('id', $row->{$morphKey})->value('current_team_id');
 
                 DB::table($mhr)
                     ->where('model_type', $row->model_type)

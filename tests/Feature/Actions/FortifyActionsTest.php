@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Actions;
 
-use App\Actions\Fortify\CreateNewUserWithTeams;
-use App\Actions\Fortify\ResetUserPassword;
-use App\Actions\Fortify\UpdateUserPassword;
-use App\Actions\Fortify\UpdateUserProfileInformation;
-use App\Enums\Role;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use Liberu\Foundation\JetstreamBridge\Actions\Fortify\CreateNewUser as CreateNewUserWithTeams;
+use Liberu\Foundation\JetstreamBridge\Actions\Fortify\ResetUserPassword;
+use Liberu\Foundation\JetstreamBridge\Actions\Fortify\UpdateUserPassword;
+use Liberu\Foundation\JetstreamBridge\Actions\Fortify\UpdateUserProfileInformation;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Tests\TestCase;
 
 class FortifyActionsTest extends TestCase

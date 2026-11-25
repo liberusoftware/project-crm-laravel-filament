@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\WebhookDeliveryResource;
-use App\Filament\App\Resources\WebhookDeliveryResource\Pages\ListWebhookDeliveries;
-use App\Models\Team;
 use App\Models\User;
-use App\Models\Webhook;
-use App\Models\WebhookDelivery;
-use App\Services\WebhookService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
+use Liberu\Foundation\Integrations\Filament\App\Resources\WebhookDeliveryResource;
+use Liberu\Foundation\Integrations\Filament\App\Resources\WebhookDeliveryResource\Pages\ListWebhookDeliveries;
+use Liberu\Foundation\Integrations\Models\Webhook;
+use Liberu\Foundation\Integrations\Models\WebhookDelivery;
+use Liberu\Foundation\Integrations\Services\WebhookService;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Livewire;
 use Tests\TestCase;
 

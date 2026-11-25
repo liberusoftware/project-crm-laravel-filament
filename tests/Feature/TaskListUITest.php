@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Livewire\TaskList;
-use App\Models\Lead;
-use App\Models\Task;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Activities\Livewire\TaskList;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use Livewire\Livewire;
 use Tests\TestCase;
 

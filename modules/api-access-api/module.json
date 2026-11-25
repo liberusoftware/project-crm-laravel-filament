@@ -3,7 +3,7 @@
   "name": "api-access-api",
   "display_name": "API Access Api",
   "description": "API Access api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ApiAccessApi\\ApiAccessApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

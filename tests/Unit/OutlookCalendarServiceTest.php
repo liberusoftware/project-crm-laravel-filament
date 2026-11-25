@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Models\Task;
-use App\Services\OutlookCalendarService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\Scheduling\Services\OutlookCalendarService;
 use Mockery;
 use Tests\TestCase;
 

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\DialerAndOutreach\Actions;
 
-use App\Models\Contact;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use App\Models\User;
-use App\Support\AccessContext;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Validator;

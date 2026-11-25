@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Support\PermissionCatalog;
 use Illuminate\Database\Migrations\Migration;
+use Liberu\Foundation\RolesPermissions\Support\PermissionCatalog;
 
 /**
  * No-lockout seed for F4 role enforcement: mints the permission catalog and
@@ -15,7 +15,10 @@ return new class() extends Migration
 {
     public function up(): void
     {
-        PermissionCatalog::sync();
+        $catalog = config('permission.catalog', PermissionCatalog::class);
+        if (is_string($catalog) && class_exists($catalog)) {
+            $catalog::sync();
+        }
     }
 
     public function down(): void

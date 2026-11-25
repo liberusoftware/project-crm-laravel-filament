@@ -2,13 +2,13 @@
 
 namespace Tests\Feature\Tenancy;
 
-use App\Models\Deal;
-use App\Models\Task;
-use App\Models\Team;
 use App\Models\User;
-use App\Support\AccessContext;
-use App\Support\TenantContext;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Support\AccessContext;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 

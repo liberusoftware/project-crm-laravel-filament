@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use App\Models\OAuthConfiguration;
-use App\Models\SocialMediaPost;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Tests\TestCase;
 
 class PublishScheduledPostsTest extends TestCase

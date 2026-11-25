@@ -1,8 +1,8 @@
 <?php
 
-use App\Filament\App\Resources\TeamRoleResource;
 use App\Models\User;
 use Filament\Facades\Filament;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\RolesPermissions\Models\Role;
 

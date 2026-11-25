@@ -3,7 +3,7 @@
   "name": "scheduler-queues-api",
   "display_name": "Scheduler and Queues Api",
   "description": "Scheduler and Queues api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\SchedulerQueuesApi\\SchedulerQueuesApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

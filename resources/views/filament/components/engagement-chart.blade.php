@@ -3,7 +3,7 @@
 <div class="p-4">
     <div class="text-lg font-bold mb-4">Engagement Metrics</div>
     
-    @if($getRecord() && $getRecord()->status === \App\Models\SocialMediaPost::STATUS_PUBLISHED)
+    @if($getRecord() && $getRecord()->status === \Liberu\CRM\MarketingResources\Models\SocialMediaPost::STATUS_PUBLISHED)
         <div class="space-y-4">
             <!-- Engagement Overview -->
             <div class="grid grid-cols-3 gap-4">

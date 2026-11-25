@@ -17,6 +17,10 @@ return [
 
     'fallback' => env('THEME_FALLBACK', 'default'),
 
+    'preference_aliases' => [
+        'default' => env('THEME_PORTAL', 'theme-crm'),
+    ],
+
     'surfaces' => [
         'public' => env('THEME_PUBLIC', 'clear-signal'),
         'portal' => env('THEME_PORTAL', 'theme-crm'),

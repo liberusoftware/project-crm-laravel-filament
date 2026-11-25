@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
@@ -9,6 +8,7 @@ use Liberu\CRM\Core\Actions\MergeRecords;
 use Liberu\CRM\Forecasting\Actions\AdjustForecast;
 use Liberu\CRM\Forecasting\Actions\CreateCategory;
 use Liberu\CRM\Forecasting\Actions\RecordForecast;
+use Liberu\Foundation\Organizations\Models\Team;
 
 it('rejects self, cross-team and incompatible record merges without deleting records', function () {
     $create = app(CreateRecord::class);

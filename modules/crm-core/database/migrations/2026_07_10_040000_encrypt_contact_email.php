@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Models\Contact;
-use App\Support\PiiEncryptionBackfill;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Support\PiiEncryptionBackfill;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Schema;
  * Encrypt Contact.email at rest. The plaintext unique index can't survive
  * encryption (random IV), so uniqueness + equality lookups move to a
  * deterministic email_hash blind index. Existing rows are encrypted + hashed
- * in place. See App\Support\PiiEncryptionBackfill + Contact::hashEmail.
+ * in place. See Liberu\CRM\Core\Support\PiiEncryptionBackfill + Contact::hashEmail.
  */
 return new class() extends Migration
 {

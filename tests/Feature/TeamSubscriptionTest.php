@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Models\Team;
-use App\Models\TeamSubscription;
-use App\Services\StripeService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Liberu\CRM\SaasPackaging\Services\StripeService;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Models\TeamSubscription;
 use Mockery;
 use Tests\TestCase;
 

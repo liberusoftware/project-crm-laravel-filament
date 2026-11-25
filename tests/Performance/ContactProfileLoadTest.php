@@ -2,12 +2,12 @@
 
 namespace Tests\Performance;
 
-use App\Models\Activity;
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Models\Note;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
+use Liberu\CRM\Activities\Models\CrmActivity as Activity;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Models\CrmNote as Note;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Tests\TestCase;
 
 class ContactProfileLoadTest extends TestCase

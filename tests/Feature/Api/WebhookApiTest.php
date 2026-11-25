@@ -3,9 +3,9 @@
 namespace Tests\Feature\Api;
 
 use App\Models\User;
-use App\Models\Webhook;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
+use Liberu\Foundation\Integrations\Models\Webhook;
 use Tests\TestCase;
 
 class WebhookApiTest extends TestCase

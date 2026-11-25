@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use App\Services\LanguageService;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use InvalidArgumentException;
+use Liberu\CRM\WhiteLabel\Services\LanguageService;
 use Tests\TestCase;
 
 // ponytail: no RefreshDatabase — the service only touches App locale + array session.

@@ -3,8 +3,8 @@
 namespace Tests\Unit\Notifications;
 
 use App\Models\User;
-use App\Notifications\CRMEventNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\Notifications\Notifications\CRMEventNotification;
 use Tests\TestCase;
 
 class CRMEventNotificationTest extends TestCase

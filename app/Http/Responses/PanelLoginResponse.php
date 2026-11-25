@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace App\Http\Responses;
 
-use App\Filament\Admin\Pages\SetupWizard;
-use App\Models\Team;
 use App\Models\User;
-use App\Services\Marketing\PlatformConfiguration;
-use App\Services\Marketing\WorkspaceAccess;
 use Filament\Auth\Http\Responses\LoginResponse;
 use Filament\Facades\Filament;
 use Illuminate\Http\RedirectResponse;
+use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as SetupWizard;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\WorkspaceAccess;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Features\SupportRedirects\Redirector;
 
 final class PanelLoginResponse extends LoginResponse
@@ -26,7 +26,7 @@ final class PanelLoginResponse extends LoginResponse
                 return redirect(SetupWizard::getUrl(['tenant' => $team], panel: 'admin'));
             }
             if ($panel === 'app' && $team instanceof Team && ! $team->getAttribute('setup_completed_at') && app(WorkspaceAccess::class)->canManage($user, $team)) {
-                return redirect(\App\Filament\App\Pages\SetupWizard::getUrl(['tenant' => $team], panel: 'app'));
+                return redirect(\Liberu\CRM\Core\Filament\App\Pages\SetupWizard::getUrl(['tenant' => $team], panel: 'app'));
             }
         }
 

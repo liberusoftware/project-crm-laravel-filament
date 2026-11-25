@@ -1,0 +1,40 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\Foundation\AnalyticsCoreFilament\App\Resources;
+
+use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\ViewAnalyticsDashboard;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Filament\Resources\Resource;
+
+class AnalyticsDashboardResource extends Resource
+{
+    protected static ?string $model = Contact::class;
+
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-presentation-chart-line';
+
+    protected static ?string $navigationLabel = 'Analytics Dashboard';
+
+    protected static string|\UnitEnum|null $navigationGroup = 'CRM';
+
+    protected static ?int $navigationSort = 7;
+
+    #[\Override]
+    public static function getWidgets(): array
+    {
+        return [
+            //            Widgets\ContactStatsOverview::class,
+            //            Widgets\SalesPipelineChart::class,
+            //            Widgets\CustomerEngagementChart::class,
+        ];
+    }
+
+    #[\Override]
+    public static function getPages(): array
+    {
+        return [
+            'index' => ViewAnalyticsDashboard::route('/'),
+        ];
+    }
+}

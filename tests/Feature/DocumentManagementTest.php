@@ -2,15 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Models\Contact;
-use App\Models\Deal;
-use App\Models\Document;
-use App\Models\Lead;
 use App\Models\User;
-use App\Services\DocumentService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Documents\Models\Document;
+use Liberu\CRM\Documents\Services\DocumentService;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Tests\TestCase;
 

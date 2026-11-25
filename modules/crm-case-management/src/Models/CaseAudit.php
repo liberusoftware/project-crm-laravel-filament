@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\CaseManagement\Models;
 
-use App\Traits\IsTenantModel;
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
 use Illuminate\Database\Eloquent\Model;
 
 /** @property int $team_id @property int $case_id @property string $event */

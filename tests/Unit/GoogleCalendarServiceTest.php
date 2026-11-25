@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Models\Task;
-use App\Services\GoogleCalendarService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\Scheduling\Services\GoogleCalendarService;
 use Mockery;
 use Tests\TestCase;
 

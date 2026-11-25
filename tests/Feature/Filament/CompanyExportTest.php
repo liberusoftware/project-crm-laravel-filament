@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\CompanyResource\Pages\ListCompanies;
-use App\Filament\Exports\CompanyExporter;
 use App\Models\User;
-use App\Support\AccessContext;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
+use Liberu\CRM\Core\Filament\App\Resources\CompanyResource\Pages\ListCompanies;
+use Liberu\Foundation\ImportExportFilament\Exports\CompanyExporter;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Livewire\Livewire;
 use Tests\TestCase;
 

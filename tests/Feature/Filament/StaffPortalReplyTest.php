@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Actions\Portal\ReplyToPortalTicket;
-use App\Filament\App\Resources\TicketResource\Pages\ListTickets;
-use App\Models\Ticket;
 use App\Models\User;
-use App\Notifications\TicketReplyNotification;
-use App\Services\UnifiedHelpDeskService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
+use Liberu\CRM\CustomerSelfService\Actions\Portal\ReplyToPortalTicket;
+use Liberu\CRM\ServiceAgent\Filament\App\Resources\TicketResource\Pages\ListTickets;
+use Liberu\CRM\ServiceAgent\Models\Ticket;
+use Liberu\CRM\ServiceAgent\Services\UnifiedHelpDeskService;
+use Liberu\Foundation\Notifications\Notifications\TicketReplyNotification;
 use Livewire\Livewire;
 use Tests\TestCase;
 

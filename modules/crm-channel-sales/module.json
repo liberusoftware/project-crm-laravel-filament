@@ -1,1 +1,19 @@
-{"name":"crm-channel-sales","display_name":"CRM Channel Sales","description":"Partner opportunities, pipelines, handoffs, commissions and forecasts","version":"1.0.0","category":"capability","provider":"Liberu\\CRM\\ChannelSales\\ChannelSalesServiceProvider","requires":{"packages":{}},"suggests":[],"default_enabled":true,"capabilities":["crm.channel-sales"],"features":["Partner opportunities, shared pipelines, referrals, pricing references, handoffs, commissions, forecasts and portal"]}
+{
+  "name": "crm-channel-sales",
+  "display_name": "CRM Channel Sales",
+  "description": "Partner opportunities, pipelines, handoffs, commissions and forecasts",
+  "version": "1.1.0",
+  "category": "capability",
+  "provider": "Liberu\\CRM\\ChannelSales\\ChannelSalesServiceProvider",
+  "requires": {
+    "packages": {}
+  },
+  "suggests": [],
+  "default_enabled": true,
+  "capabilities": [
+    "crm.channel-sales"
+  ],
+  "features": [
+    "Partner opportunities, shared pipelines, referrals, pricing references, handoffs, commissions, forecasts and portal"
+  ]
+}

@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use App\Models\Activity;
-use App\Models\Contact;
-use App\Models\Lead;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Activities\Models\CrmActivity as Activity;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use Tests\TestCase;
 
 class LeadTest extends TestCase

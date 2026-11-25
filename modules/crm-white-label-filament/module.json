@@ -3,13 +3,29 @@
   "name": "crm-white-label-filament",
   "display_name": "CRM White Label Filament",
   "description": "Filament presentation package for CRM White Label.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "category": "presentation",
   "provider": "Liberu\\CRM\\WhiteLabel\\Filament\\WhiteLabelFilamentServiceProvider",
-  "requires": { "php": "^8.5", "laravel": "^13.0", "packages": { "liberusoftware/module-crm-white-label": "^1.0" } },
+  "requires": {
+    "php": "^8.5",
+    "laravel": "^13.0",
+    "packages": {
+      "liberusoftware/module-crm-white-label": "^1.0"
+    }
+  },
   "suggests": [],
-  "capabilities": ["crm.white-label.filament"],
+  "capabilities": [
+    "crm.white-label.filament"
+  ],
   "default_enabled": true,
-  "features": ["White-label settings resource"],
-  "presentation": {"filament": {"app": ["Liberu\\CRM\\WhiteLabel\\Filament\\WhiteLabelFilamentPlugin"]}}
+  "features": [
+    "White-label settings resource"
+  ],
+  "presentation": {
+    "filament": {
+      "app": [
+        "Liberu\\CRM\\WhiteLabel\\Filament\\WhiteLabelFilamentPlugin"
+      ]
+    }
+  }
 }

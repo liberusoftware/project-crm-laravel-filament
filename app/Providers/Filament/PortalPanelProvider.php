@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers\Filament;
 
-use App\Filament\Portal\Widgets\PortalOverview;
-use App\Filament\Portal\Widgets\RecentTickets;
-use App\Support\PortalBranding;
+use App\Filament\ModulePlugins;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -21,6 +19,9 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Liberu\CRM\CustomerSelfService\Support\PortalBranding;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Widgets\PortalOverview;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Widgets\RecentTickets;
 
 /**
  * Customer-facing portal (G_5). External customers are Users holding the
@@ -71,9 +72,7 @@ class PortalPanelProvider extends PanelProvider
                 Authenticate::class,
             ]);
 
-        foreach (glob(base_path('modules/*/src/Legacy/Filament/Portal/Resources')) ?: [] as $path) {
-            $panel->discoverResources(in: $path, for: 'App\\Filament\\Portal\\Resources');
-        }
+        app(ModulePlugins::class)->discoverForPanel($panel, 'Portal');
 
         return $panel;
     }

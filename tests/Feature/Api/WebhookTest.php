@@ -2,14 +2,14 @@
 
 namespace Tests\Feature\Api;
 
-use App\Models\Team;
 use App\Models\User;
-use App\Models\Webhook;
-use App\Services\WebhookService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
 use Laravel\Sanctum\Sanctum;
+use Liberu\Foundation\Integrations\Models\Webhook;
+use Liberu\Foundation\Integrations\Services\WebhookService;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 class WebhookTest extends TestCase

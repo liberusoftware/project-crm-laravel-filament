@@ -3,7 +3,7 @@
   "name": "organizations-teams-api",
   "display_name": "Organizations and Teams Api",
   "description": "Organizations and Teams api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\OrganizationsTeamsApi\\OrganizationsTeamsApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

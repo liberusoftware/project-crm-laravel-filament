@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\AdSetResource;
-use App\Filament\App\Resources\AdSetResource\Pages\ListAdSets;
-use App\Filament\Exports\AdSetExporter;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
+use Liberu\CRM\AdvertisingFilament\App\Resources\AdSetResource;
+use Liberu\CRM\AdvertisingFilament\Resources\AdSetResource\Pages\ListAdSets;
+use Liberu\Foundation\ImportExportFilament\Exports\AdSetExporter;
 use Livewire\Livewire;
 use Tests\TestCase;
 

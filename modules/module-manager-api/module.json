@@ -3,7 +3,7 @@
   "name": "module-manager-api",
   "display_name": "Module Manager Api",
   "description": "Module Manager api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\ModuleManagerApi\\ModuleManagerApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

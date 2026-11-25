@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Models\OAuthConfiguration;
-use App\Services\OutlookService;
+use Liberu\CRM\EmailProductivity\Services\OutlookService;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Mockery;
 use Tests\TestCase;
 

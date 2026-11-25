@@ -1,0 +1,59 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\CRM\Advertising\Models;
+
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * @property int $team_id
+ * @property string $platform
+ * @property string $account_id
+ * @property string|null $access_token
+ * @property array|null $metadata
+ */
+class AdvertisingAccount extends Model
+{
+    use HasFactory;
+    use IsTenantModel;
+
+    protected $hidden = ['access_token', 'refresh_token'];
+
+    protected $fillable = [
+        'team_id',
+        'name',
+        'platform',
+        'account_id',
+        'access_token',
+        'refresh_token',
+        'status',
+        'last_sync',
+        'metadata',
+    ];
+
+    protected $casts = [
+        'access_token' => 'encrypted',
+        'refresh_token' => 'encrypted',
+        'status' => 'boolean',
+        'last_sync' => 'datetime',
+        'metadata' => 'array',
+    ];
+
+    public function campaigns()
+    {
+        return $this->hasMany(Campaign::class);
+    }
+
+    public function adSets()
+    {
+        return $this->hasMany(AdSet::class);
+    }
+
+    public function ads()
+    {
+        return $this->hasMany(Ad::class);
+    }
+}

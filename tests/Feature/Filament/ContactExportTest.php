@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\ContactResource\Pages\ListContacts;
-use App\Filament\Exports\ContactExporter;
 use App\Models\User;
-use App\Support\AccessContext;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\ListContacts;
+use Liberu\Foundation\ImportExportFilament\Exports\ContactExporter;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Livewire\Livewire;
 use Tests\TestCase;
 

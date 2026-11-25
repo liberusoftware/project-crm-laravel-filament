@@ -1,0 +1,28 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\CRM\WhiteLabel\Models;
+
+use Liberu\Foundation\Organizations\Traits\IsTenantModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * Represents the site settings for the real estate application.
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $currency
+ * @property string $default_language
+ * @property string $address
+ * @property string $country
+ * @property string $email
+ */
+class SiteSettings extends Model
+{
+    use HasFactory;
+    use IsTenantModel;
+
+    protected $fillable = ['*'];
+}

@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\AdResource;
-use App\Filament\App\Resources\AdSetResource;
-use App\Filament\App\Resources\AdvertisingAccountResource;
-use App\Filament\App\Resources\CampaignResource;
-use App\Filament\App\Resources\LandingPageResource;
-use App\Filament\App\Resources\MailchimpCampaignResource;
-use App\Filament\App\Resources\MarketingCampaignResource;
-use App\Filament\App\Resources\SocialMediaPostResource;
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\AdvertisingFilament\App\Resources\AdResource;
+use Liberu\CRM\AdvertisingFilament\App\Resources\AdSetResource;
+use Liberu\CRM\AdvertisingFilament\App\Resources\AdvertisingAccountResource;
+use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\LandingPageResource;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MailchimpCampaignResource;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MarketingCampaignResource;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\SocialMediaPostResource;
+use Liberu\Foundation\Organizations\Models\Team;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 

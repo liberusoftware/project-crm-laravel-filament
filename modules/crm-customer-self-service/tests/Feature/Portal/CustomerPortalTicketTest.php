@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Portal;
 
-use App\Filament\Portal\Resources\TicketResource\Pages\ListTickets;
-use App\Filament\Portal\Resources\TicketResource\Pages\ViewTicket;
-use App\Models\Team;
-use App\Models\Ticket;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\TicketResource\Pages\ListTickets;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\TicketResource\Pages\ViewTicket;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\ServiceAgent\Models\Ticket;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;

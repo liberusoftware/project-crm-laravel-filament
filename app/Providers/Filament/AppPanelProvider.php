@@ -4,16 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers\Filament;
 
-use App\Filament\App\Pages;
-use App\Filament\App\Pages\EditProfile;
 use App\Filament\CrmNavigation;
 use App\Filament\ModulePlugins;
-use App\Http\Middleware\EnsureSsoWhenRequired;
-use App\Http\Middleware\TeamsPermission;
-use App\Listeners\CreatePersonalTeam;
-use App\Listeners\SwitchTeam;
-use App\Models\Team;
-use App\Support\ThemeColors;
 use Filament\Events\Auth\Registered;
 use Filament\Events\TenantSet;
 use Filament\Facades\Filament;
@@ -36,7 +28,17 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 use Laravel\Jetstream\Features;
 use Laravel\Jetstream\Jetstream;
+use Liberu\CRM\Core\Filament\App\Pages;
+use Liberu\CRM\Core\Filament\App\Pages\EditProfile;
+use Liberu\CRM\Core\Http\Middleware\EnsureSsoWhenRequired;
+use Liberu\CRM\MarketingResourcesFilament\Pages\ContentCalendar;
+use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
+use Liberu\CRM\WhiteLabel\Support\ThemeColors;
 use Liberu\Foundation\Localization\Http\Middleware\SetLocale;
+use Liberu\Foundation\Organizations\Http\Middleware\TeamsPermission;
+use Liberu\Foundation\Organizations\Listeners\CreatePersonalTeam;
+use Liberu\Foundation\Organizations\Listeners\SwitchTeam;
+use Liberu\Foundation\Organizations\Models\Team;
 
 class AppPanelProvider extends PanelProvider
 {
@@ -75,8 +77,8 @@ class AppPanelProvider extends PanelProvider
             ->pages([
                 Dashboard::class,
                 EditProfile::class,
-                Pages\MarketingConnections::class,
-                Pages\ContentCalendar::class,
+                MarketingConnections::class,
+                ContentCalendar::class,
             ])
             ->widgets([
                 Widgets\AccountWidget::class,
@@ -127,13 +129,7 @@ class AppPanelProvider extends PanelProvider
                 ]);
         }
 
-        foreach (glob(base_path('modules/*/src/Legacy/Filament/App/Resources')) ?: [] as $path) {
-            $panel->discoverResources(in: $path, for: 'App\\Filament\\App\\Resources');
-        }
-
-        foreach (glob(base_path('modules/*/src/Legacy/Filament/App/Pages')) ?: [] as $path) {
-            $panel->discoverPages(in: $path, for: 'App\\Filament\\App\\Pages');
-        }
+        app(ModulePlugins::class)->discoverForPanel($panel, 'App');
 
         app(CrmNavigation::class)->configure($panel);
 

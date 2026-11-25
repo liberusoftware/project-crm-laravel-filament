@@ -3,7 +3,7 @@
   "name": "jetstream-bridge-api",
   "display_name": "Jetstream Bridge Api",
   "description": "Jetstream Bridge api presentation adapter.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\JetstreamBridgeApi\\JetstreamBridgeApiServiceProvider",
   "requires": {
@@ -24,4 +24,3 @@
     "Accessible loading, empty, denied, and failure states"
   ]
 }
-

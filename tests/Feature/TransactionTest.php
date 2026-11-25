@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Models\AccountingIntegration;
 use App\Models\User;
-use App\Services\AccountingService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\Integrations\Models\AccountingIntegration;
+use Liberu\Foundation\Integrations\Services\AccountingService;
 use Mockery;
 use Tests\TestCase;
 

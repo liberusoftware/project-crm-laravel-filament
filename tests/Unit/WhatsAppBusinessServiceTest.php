@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Services\WhatsAppBusinessService;
 use Illuminate\Support\Facades\Http;
+use Liberu\CRM\MobileMessaging\Services\WhatsAppBusinessService;
 use Tests\TestCase;
 
 class WhatsAppBusinessServiceTest extends TestCase

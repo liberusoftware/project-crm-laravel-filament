@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Livewire;
 
-use App\Livewire\CreateTeam;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Jetstream\Events\AddingTeam;
+use Liberu\Foundation\Organizations\Livewire\CreateTeam;
 use Livewire\Livewire;
 use Tests\TestCase;
 

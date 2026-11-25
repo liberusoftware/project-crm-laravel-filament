@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\CRM\MarketingResourcesFilament\App\Resources\SocialMediaPostResource\Pages;
+
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\SocialMediaPostResource;
+use Liberu\CRM\MarketingResources\Services\PostWorkflow;
+use Filament\Facades\Filament;
+use Filament\Resources\Pages\CreateRecord;
+
+class CreateSocialMediaPost extends CreateRecord
+{
+    protected static string $resource = SocialMediaPostResource::class;
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        return app(PostWorkflow::class)->prepare(
+            Filament::auth()->user(), Filament::getTenant(), array_replace($data, ['status' => 'draft']), 'create_social_media_post',
+        );
+    }
+}

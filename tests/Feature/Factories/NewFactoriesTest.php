@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Factories;
 
-use App\Models\Ad;
-use App\Models\AdSet;
-use App\Models\Campaign;
 use Database\Factories\ActivationFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Advertising\Models\Ad;
+use Liberu\CRM\Advertising\Models\AdSet;
+use Liberu\CRM\Advertising\Models\Campaign;
 use Tests\TestCase;
 
 class NewFactoriesTest extends TestCase
@@ -31,7 +31,7 @@ class NewFactoriesTest extends TestCase
     }
 
     /**
-     * App\Models\Activation lacks the HasFactory trait (its three siblings have
+     * Liberu\CRM\Core\Models\Activation lacks the HasFactory trait (its three siblings have
      * it), so Activation::factory() is undefined. Drive the factory class
      * directly — this still asserts a genuine persisted Activation row. Adding
      * `use HasFactory;` to the model would enable Activation::factory() and let

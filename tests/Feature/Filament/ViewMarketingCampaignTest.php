@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use App\Filament\App\Resources\MarketingCampaignResource\Pages\ViewMarketingCampaign;
-use App\Models\MarketingCampaign;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\MarketingResources\Models\MarketingCampaign;
+use Liberu\CRM\MarketingResourcesFilament\App\Resources\MarketingCampaignResource\Pages\ViewMarketingCampaign;
 use Livewire\Livewire;
 use Tests\TestCase;
 

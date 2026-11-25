@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Laravel\Jetstream\Mail\TeamInvitation;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 class TeamInvitationTest extends TestCase

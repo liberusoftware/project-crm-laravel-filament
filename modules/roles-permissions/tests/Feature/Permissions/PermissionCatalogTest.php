@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Feature\Permissions;
 
 use App\Models\User;
-use App\Support\PermissionCatalog;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Gate;
+use Liberu\Foundation\RolesPermissions\Support\PermissionCatalog;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role as SpatieRole;
 use Tests\TestCase;
@@ -15,6 +15,72 @@ use Tests\TestCase;
 class PermissionCatalogTest extends TestCase
 {
     use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        config(['permissions' => [
+            'actions' => ['view', 'create', 'update', 'delete'],
+            'groups' => [
+                'core' => [
+                    'contact', 'deal', 'lead', 'company', 'opportunity',
+                    'task', 'note', 'activation', 'message',
+                ],
+                'advertising' => [
+                    'advertising_account', 'campaign', 'ad_set', 'ad',
+                    'marketing_campaign', 'mailchimp_campaign', 'social_media_post',
+                    'landing_page', 'form_builder', 'workflow',
+                    'dashboard_widget', 'call_setting', 'whatsapp_number',
+                ],
+                'settings' => [
+                    'team_member', 'team_role', 'sso_connection', 'saml_connection',
+                    'oauth_configuration', 'webhook_delivery', 'portal_branding', 'territory',
+                ],
+                'logs' => [
+                    'audit_log', 'portal_access_log', 'team_role_log',
+                ],
+                'staff' => [
+                    'knowledge_base_article',
+                ],
+            ],
+            'matrix' => [
+                'admin' => [
+                    'groups' => [
+                        'core' => ['view', 'create', 'update', 'delete'],
+                        'advertising' => ['view', 'create', 'update', 'delete'],
+                        'settings' => ['view', 'create', 'update', 'delete'],
+                        'logs' => ['view'],
+                    ],
+                    'resources' => [
+                        'knowledge_base_article' => ['view', 'create', 'update', 'delete'],
+                    ],
+                ],
+                'manager' => [
+                    'groups' => [
+                        'core' => ['view', 'create', 'update', 'delete'],
+                        'advertising' => ['view', 'create', 'update', 'delete'],
+                    ],
+                    'resources' => [
+                        'territory' => ['view', 'create', 'update', 'delete'],
+                        'knowledge_base_article' => ['view', 'create', 'update', 'delete'],
+                        'portal_access_log' => ['view'],
+                    ],
+                ],
+                'sales_rep' => [
+                    'groups' => [
+                        'core' => ['view', 'create', 'update', 'delete'],
+                        'advertising' => ['view'],
+                    ],
+                ],
+                'free' => [
+                    'groups' => [
+                        'core' => ['view', 'create', 'update'],
+                    ],
+                ],
+            ],
+        ]]);
+    }
 
     private function role(string $name): SpatieRole
     {

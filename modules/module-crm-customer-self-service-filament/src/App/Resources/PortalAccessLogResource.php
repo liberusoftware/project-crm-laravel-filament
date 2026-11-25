@@ -1,0 +1,82 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Liberu\CRM\CustomerSelfServiceFilament\App\Resources;
+
+use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalAccessLogResource\Pages\ListPortalAccessLogs;
+use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
+use Liberu\CRM\Core\Models\AuditLog;
+use Filament\Resources\Resource;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Auth\Access\Response;
+use Illuminate\Database\Eloquent\Builder;
+
+/**
+ * Team-scoped, read-only view of portal access grants/revocations (the
+ * `portal.*` audit entries from #490). AuditLog is IsTenantModel, so on the
+ * team-scoped app panel this shows only the current team's history — letting a
+ * team's own managers see who invited or revoked their customers (the admin
+ * panel's AuditLogResource is super_admin/global).
+ */
+class PortalAccessLogResource extends Resource
+{
+    use EnforcesResourcePermissions;
+
+    public static function permissionResource(): string
+    {
+        return 'portal_access_log';
+    }
+
+    protected static ?string $model = AuditLog::class;
+
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-clipboard-document-list';
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Support';
+
+    protected static ?string $navigationLabel = 'Portal access log';
+
+    protected static ?string $slug = 'portal-access-log';
+
+    #[\Override]
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    #[\Override]
+    public static function getCreateAuthorizationResponse(): Response
+    {
+        return static::canCreate()
+            ? parent::getCreateAuthorizationResponse()
+            : Response::deny();
+    }
+
+    #[\Override]
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->where('action', 'like', 'portal.%');
+    }
+
+    #[\Override]
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('created_at')->dateTime()->sortable(),
+                TextColumn::make('user.name')->label('By')->searchable(),
+                TextColumn::make('action')->badge(),
+                TextColumn::make('description')->wrap()->searchable(),
+            ])
+            ->defaultSort('created_at', 'desc');
+    }
+
+    #[\Override]
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListPortalAccessLogs::route('/'),
+        ];
+    }
+}

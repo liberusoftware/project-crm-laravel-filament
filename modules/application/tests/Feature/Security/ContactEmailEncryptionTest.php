@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Security;
 
-use App\Models\Contact;
-use App\Models\Team;
-use App\Support\PiiEncryptionBackfill;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\CRM\Core\Support\PiiEncryptionBackfill;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Crypt;

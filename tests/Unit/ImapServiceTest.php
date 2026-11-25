@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Models\OAuthConfiguration;
-use App\Services\ImapService;
+use Liberu\CRM\EmailProductivity\Services\ImapService;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Tests\TestCase;
 
 class ImapServiceTest extends TestCase

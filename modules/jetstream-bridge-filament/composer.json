@@ -21,7 +21,7 @@
       "source": "https://github.com/liberusoftware/module-jetstream-bridge-filament"
     }
   },
-  "version": "1.0.1",
+  "version": "1.0.6",
   "autoload-dev": {
     "psr-4": {
       "Liberu\\Foundation\\JetstreamBridgeFilament\\Tests\\": "tests/"

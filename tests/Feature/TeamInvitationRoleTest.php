@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Support\Str;
+use Liberu\Foundation\Organizations\Models\Team;
 
 it('accepts assignable invitation roles without retaining a more privileged default role', function (string $role): void {
     $team = Team::factory()->create();

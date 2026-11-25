@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Livewire;
 
-use App\Livewire\DealCard;
-use App\Models\Deal;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\SalesWorkspace\Livewire\DealCard;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Livewire\Livewire;
 use Tests\TestCase;
 

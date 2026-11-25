@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
-use App\Models\Contact;
-use App\Models\CustomField;
-use App\Models\Lead;
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Models\CustomField;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 class CustomFieldsTest extends TestCase

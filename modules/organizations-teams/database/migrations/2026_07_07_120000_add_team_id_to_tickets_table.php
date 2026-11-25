@@ -15,7 +15,7 @@ return new class() extends Migration
      */
     public function up(): void
     {
-        if (Schema::hasColumn('tickets', 'team_id')) {
+        if (! Schema::hasTable('tickets') || Schema::hasColumn('tickets', 'team_id')) {
             return;
         }
 
@@ -31,7 +31,7 @@ return new class() extends Migration
 
     public function down(): void
     {
-        if (! Schema::hasColumn('tickets', 'team_id')) {
+        if (! Schema::hasTable('tickets') || ! Schema::hasColumn('tickets', 'team_id')) {
             return;
         }
 

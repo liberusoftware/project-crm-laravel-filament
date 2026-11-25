@@ -2,13 +2,13 @@
 
 namespace Tests\Unit;
 
-use App\Models\Deal;
-use App\Models\Pipeline;
-use App\Models\SalesForecast;
-use App\Models\Stage;
-use App\Services\SalesForecastingService;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\SalesPipelines\Models\Pipeline;
+use Liberu\CRM\SalesPipelines\Models\SalesForecast;
+use Liberu\CRM\SalesPipelines\Models\Stage;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\CRM\SalesWorkspace\Services\SalesForecastingService;
 use ReflectionMethod;
 use Tests\TestCase;
 

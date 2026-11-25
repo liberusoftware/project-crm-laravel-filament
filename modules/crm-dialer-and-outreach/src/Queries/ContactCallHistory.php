@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\DialerAndOutreach\Queries;
 
-use App\Models\Contact;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;

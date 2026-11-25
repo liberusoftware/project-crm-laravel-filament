@@ -3,10 +3,10 @@
 namespace Tests\Feature;
 
 use App\Models\User;
-use App\Notifications\CRMEventNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
+use Liberu\Foundation\Notifications\Notifications\CRMEventNotification;
 use Tests\TestCase;
 
 class NotificationTest extends TestCase
