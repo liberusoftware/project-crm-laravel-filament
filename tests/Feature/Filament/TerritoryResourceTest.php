@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource\Pages\CreateTerritory;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource\Pages\ListTerritories;
-use Liberu\Foundation\Organizations\Models\Team;
-use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource\Pages\CreateTerritory;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource\Pages\ListTerritories;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Livewire;
 use Tests\TestCase;
 

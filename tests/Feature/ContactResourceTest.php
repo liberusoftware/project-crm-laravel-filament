@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Tests\TestCase;
 
 class ContactResourceTest extends TestCase

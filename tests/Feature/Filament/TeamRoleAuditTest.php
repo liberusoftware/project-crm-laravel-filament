@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\Foundation\RolesPermissions\Enums\Role;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleLogResource;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleLogResource\Pages\ListTeamRoleLogs;
-use Liberu\CRM\Core\Models\AuditLog;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use Liberu\Foundation\Organizations\Services\TeamManagementService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\AuditLog;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleLogResource;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleLogResource\Pages\ListTeamRoleLogs;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Services\TeamManagementService;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Livewire\Livewire;
 use Tests\TestCase;
 

@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Activities\Models\Task;
 use Liberu\CRM\AutomationPack\Models\Workflow;
 use Liberu\CRM\AutomationPack\Models\WorkflowAction;
@@ -10,7 +10,7 @@ use Liberu\CRM\AutomationPack\Models\WorkflowCondition;
 use Liberu\CRM\AutomationPack\Models\WorkflowExecution;
 use Liberu\CRM\AutomationPack\Models\WorkflowTrigger;
 use Liberu\CRM\AutomationPack\Services\WorkflowAutomationService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Tests\TestCase;
 
 class WorkflowAutomationServiceTest extends TestCase

@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Tests\TestCase;
 
 class OAuthConfigurationTest extends TestCase

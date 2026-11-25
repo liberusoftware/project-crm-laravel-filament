@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Rbac;
 
-use Liberu\Foundation\RolesPermissions\Enums\Role;
-use Liberu\CRM\SalesWorkspace\Models\Deal;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use Liberu\Foundation\Organizations\Services\TeamManagementService;
-use Liberu\Foundation\Organizations\Support\TenantContext;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Jetstream\Events\TeamMemberAdded;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Services\TeamManagementService;
+use Liberu\Foundation\Organizations\Support\TenantContext;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Spatie\Permission\PermissionRegistrar;
 use Tests\TestCase;
 

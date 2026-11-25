@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\EditContact;
-use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\ListContacts;
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\EditContact;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\ListContacts;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
 use Livewire\Livewire;
 use Tests\TestCase;
 

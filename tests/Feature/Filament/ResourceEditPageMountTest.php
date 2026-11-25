@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
+use Liberu\Foundation\Organizations\Models\Team;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 

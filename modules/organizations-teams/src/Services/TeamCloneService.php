@@ -4,22 +4,22 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Organizations\Services;
 
-use App\Models\Chatbot;
-use App\Models\CustomField;
-use App\Models\EmailTemplate;
-use App\Models\KnowledgeBaseArticle;
-use App\Models\Menu;
-use App\Models\Pipeline;
-use App\Models\ReportBuilder;
-use App\Models\Stage;
-use App\Models\Tag;
 use App\Models\User;
-use App\Models\Workflow;
-use App\Models\WorkflowAction;
-use App\Models\WorkflowCondition;
-use App\Models\WorkflowTrigger;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Liberu\Analytics\Core\Models\ReportBuilder;
+use Liberu\CRM\AutomationPack\Models\Workflow;
+use Liberu\CRM\AutomationPack\Models\WorkflowAction;
+use Liberu\CRM\AutomationPack\Models\WorkflowCondition;
+use Liberu\CRM\AutomationPack\Models\WorkflowTrigger;
+use Liberu\CRM\ChatAndBots\Models\Chatbot;
+use Liberu\CRM\Core\Models\CustomField;
+use Liberu\CRM\Core\Models\Tag;
+use Liberu\CRM\EmailProductivity\Models\EmailTemplate;
+use Liberu\CRM\Knowledge\Models\KnowledgeBaseArticle;
+use Liberu\CRM\SalesPipelines\Models\Pipeline;
+use Liberu\CRM\SalesPipelines\Models\Stage;
+use Liberu\CRM\WhiteLabel\Models\Menu;
 use Liberu\Foundation\Organizations\Models\Team;
 
 /**

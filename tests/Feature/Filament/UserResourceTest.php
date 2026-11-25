@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Filament;
 
-use Liberu\Foundation\IdentityFilament\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\IdentityFilament\Resources\UserResource;
 use Tests\TestCase;
 
 class UserResourceTest extends TestCase

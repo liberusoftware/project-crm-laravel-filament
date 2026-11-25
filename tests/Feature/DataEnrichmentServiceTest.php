@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use Liberu\CRM\Core\Models\Company;
-use Liberu\CRM\Core\Services\DataEnrichmentService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
+use Liberu\CRM\Core\Models\Company;
+use Liberu\CRM\Core\Services\DataEnrichmentService;
 use Tests\TestCase;
 
 class DataEnrichmentServiceTest extends TestCase

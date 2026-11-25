@@ -1,7 +1,7 @@
 <?php
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
 use App\Models\User;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Liberu\Foundation\Organizations\Support\TenantContext;
 
 it('does not expose contact details to guests through browser listing routes', function () {

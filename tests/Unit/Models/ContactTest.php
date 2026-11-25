@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Models;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Core\Models\Company;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ContactTest extends TestCase

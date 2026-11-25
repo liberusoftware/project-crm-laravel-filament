@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Tenancy;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\Organizations\Support\TenantContext;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class TenantScopingTest extends TestCase

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\Core\Filament\App\Resources\NoteResource\Pages\ViewNote;
-use Liberu\CRM\Core\Models\CrmNote as Note;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Filament\App\Resources\NoteResource\Pages\ViewNote;
+use Liberu\CRM\Core\Models\CrmNote as Note;
 use Livewire\Livewire;
 use Tests\TestCase;
 

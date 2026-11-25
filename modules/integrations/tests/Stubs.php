@@ -182,6 +182,29 @@ namespace {
             {
                 $this->calls['accessToken'] = $token;
             }
+
+            public function addScope($scope): void
+            {
+                $this->calls['scope'] = $scope;
+            }
+
+            public function setRedirectUri(string $uri): void
+            {
+                $this->calls['redirectUri'] = $uri;
+            }
+
+            public function setState(string $state): void
+            {
+                $this->calls['state'] = $state;
+            }
+
+            public function createAuthUrl(): string
+            {
+                return 'https://accounts.google.com/o/oauth2/auth?'.http_build_query([
+                    'redirect_uri' => $this->calls['redirectUri'] ?? null,
+                    'state' => $this->calls['state'] ?? null,
+                ]);
+            }
         }
     }
 

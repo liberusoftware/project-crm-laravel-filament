@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Liberu\CRM\AutomationPack\Models\Workflow;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\AutomationPack\Models\Workflow;
 use Tests\TestCase;
 
 class WorkflowManagementTest extends TestCase

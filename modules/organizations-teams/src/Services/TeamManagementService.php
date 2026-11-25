@@ -2,14 +2,13 @@
 
 namespace Liberu\Foundation\Organizations\Services;
 
-use App\Models\Branch;
 use App\Models\User;
-use App\Services\AuditLogService;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use InvalidArgumentException;
+use Liberu\CRM\Core\Services\AuditLogService;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Liberu\Foundation\RolesPermissions\Services\RoleConfigurationService;

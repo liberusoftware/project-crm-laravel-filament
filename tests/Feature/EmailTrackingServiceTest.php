@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Liberu\CRM\EmailProductivity\Models\Email;
 use Liberu\CRM\EmailProductivity\Models\EmailTracking;
 use Liberu\CRM\EmailProductivity\Services\EmailTrackingService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class EmailTrackingServiceTest extends TestCase

@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Advertising\Models\Ad;
 use Liberu\CRM\Advertising\Models\AdSet;
 use Liberu\CRM\Advertising\Models\AdvertisingAccount;
 use Liberu\CRM\Advertising\Models\Campaign;
 use Liberu\Foundation\Organizations\Models\Team;
-use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class AdvertisingManagementTest extends TestCase

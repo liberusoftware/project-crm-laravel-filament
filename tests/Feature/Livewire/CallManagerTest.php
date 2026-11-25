@@ -2,11 +2,11 @@
 
 namespace Tests\Feature\Livewire;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Activities\Livewire\CallManager;
 use Liberu\CRM\Activities\Models\CallLog;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Liberu\CRM\Telephony\Services\TwilioService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use Tests\TestCase;
 

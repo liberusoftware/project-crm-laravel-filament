@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
-use App\Models\LiveChat;
+use Liberu\CRM\ChatAndBots\Models\LiveChat;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LiveChatFactory extends Factory

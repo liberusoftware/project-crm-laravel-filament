@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Http\Responses;
 
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Filament\Auth\Http\Responses\LoginResponse;
 use Filament\Facades\Filament;
@@ -12,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as SetupWizard;
 use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
 use Liberu\CRM\MarketingResources\Services\WorkspaceAccess;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Features\SupportRedirects\Redirector;
 
 final class PanelLoginResponse extends LoginResponse

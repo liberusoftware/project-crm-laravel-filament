@@ -2,13 +2,13 @@
 
 namespace Tests\Unit;
 
-use Liberu\CRM\EmailProductivity\Services\GmailService;
-use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use Google_Service_Gmail_Message;
 use Google_Service_Gmail_MessagePart;
 use Google_Service_Gmail_MessagePartHeader;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Log;
+use Liberu\CRM\EmailProductivity\Services\GmailService;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
 use Mockery;
 use Tests\TestCase;
 

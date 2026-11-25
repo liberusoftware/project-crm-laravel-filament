@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource as StaffResource;
-use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\CreateKnowledgeBaseArticle;
-use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\EditKnowledgeBaseArticle;
-use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\ListKnowledgeBaseArticles;
-use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\KnowledgeBaseArticleResource as PortalResource;
-use Liberu\CRM\Knowledge\Models\KnowledgeBaseArticle;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\KnowledgeBaseArticleResource as PortalResource;
+use Liberu\CRM\Knowledge\Models\KnowledgeBaseArticle;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource as StaffResource;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\CreateKnowledgeBaseArticle;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\EditKnowledgeBaseArticle;
+use Liberu\CRM\KnowledgeFilament\App\Resources\KnowledgeBaseArticleResource\Pages\ListKnowledgeBaseArticles;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Livewire;
 use Tests\TestCase;
 

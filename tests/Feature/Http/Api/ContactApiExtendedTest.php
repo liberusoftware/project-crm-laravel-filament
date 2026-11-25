@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Http\Api;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Tests\TestCase;
 
 class ContactApiExtendedTest extends TestCase

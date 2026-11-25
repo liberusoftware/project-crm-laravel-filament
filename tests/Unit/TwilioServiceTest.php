@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use Liberu\CRM\Telephony\Services\TwilioService;
 use Illuminate\Support\Facades\Log;
+use Liberu\CRM\Telephony\Services\TwilioService;
 use Mockery;
 use Tests\TestCase;
 use Twilio\Exceptions\TwilioException;

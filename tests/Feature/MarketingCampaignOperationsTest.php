@@ -1,10 +1,10 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Facades\Http;
 use Liberu\CRM\Advertising\Models\AdvertisingAccount;
 use Liberu\CRM\Advertising\Models\Campaign;
-use App\Models\User;
 use Liberu\CRM\Advertising\Services\AdvertisingManager;
-use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {
     $this->user = User::factory()->withPersonalTeam()->create();

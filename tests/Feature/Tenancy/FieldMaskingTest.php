@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Tenancy;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use Liberu\Foundation\Organizations\Support\AccessContext;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Tests\TestCase;
 
 class FieldMaskingTest extends TestCase

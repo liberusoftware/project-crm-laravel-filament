@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\SalesWorkspace\Filament\App\Resources\OpportunityResource\Pages\ViewOpportunity;
-use Liberu\CRM\SalesWorkspace\Models\Opportunity;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\SalesWorkspace\Filament\App\Resources\OpportunityResource\Pages\ViewOpportunity;
+use Liberu\CRM\SalesWorkspace\Models\Opportunity;
 use Livewire\Livewire;
 use Tests\TestCase;
 

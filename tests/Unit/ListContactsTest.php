@@ -2,14 +2,14 @@
 
 namespace Tests\Unit;
 
-use Liberu\CRM\Core\Http\Controllers\ContactListController;
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use Liberu\Foundation\Organizations\Support\TenantContext;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use Liberu\CRM\Core\Http\Controllers\ContactListController;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Support\TenantContext;
 use Tests\TestCase;
 
 class ListContactsTest extends TestCase

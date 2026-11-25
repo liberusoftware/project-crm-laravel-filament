@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Factories;
 
+use Database\Factories\ActivationFactory;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Advertising\Models\Ad;
 use Liberu\CRM\Advertising\Models\AdSet;
 use Liberu\CRM\Advertising\Models\Campaign;
-use Database\Factories\ActivationFactory;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class NewFactoriesTest extends TestCase

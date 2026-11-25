@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Factories;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Advertising\Models\CampaignRecipient;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Liberu\CRM\LeadCapture\Models\Lead;
 use Liberu\CRM\MarketingResources\Models\MarketingCampaign;
 use Liberu\Foundation\Organizations\Models\Team;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class CampaignRecipientFactoryTest extends TestCase

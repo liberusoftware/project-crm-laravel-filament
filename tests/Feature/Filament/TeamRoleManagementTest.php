@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\Foundation\RolesPermissions\Enums\Role;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TeamMemberResource;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TeamMemberResource\Pages\ListTeamMembers;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use Liberu\Foundation\Organizations\Services\TeamManagementService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Gate;
 use InvalidArgumentException;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamMemberResource;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamMemberResource\Pages\ListTeamMembers;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Services\TeamManagementService;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Livewire\Livewire;
 use Tests\TestCase;
 

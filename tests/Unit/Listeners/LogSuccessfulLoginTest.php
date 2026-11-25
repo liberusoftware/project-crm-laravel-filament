@@ -2,10 +2,10 @@
 
 namespace Tests\Unit\Listeners;
 
-use Liberu\CRM\Core\Listeners\LogSuccessfulLogin;
-use Liberu\CRM\Core\Services\AuditLogService;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Listeners\LogSuccessfulLogin;
+use Liberu\CRM\Core\Services\AuditLogService;
 use Mockery;
 use Tests\TestCase;
 

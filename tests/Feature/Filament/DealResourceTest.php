@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
+use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\SalesWorkspace\Filament\App\Resources\DealResource;
 use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Liberu\Foundation\Organizations\Models\Team;
-use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 

@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\Foundation\Organizations\Filament\Resources\TeamResource;
-use Liberu\Foundation\Organizations\Filament\Resources\TeamResource\Pages\ListTeams;
-use Liberu\CRM\SalesPipelines\Models\Pipeline;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\SalesPipelines\Models\Pipeline;
+use Liberu\Foundation\Organizations\Filament\Resources\TeamResource;
+use Liberu\Foundation\Organizations\Filament\Resources\TeamResource\Pages\ListTeams;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Livewire;
 use Tests\TestCase;
 

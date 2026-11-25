@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Tests\TestCase;
 
 class ContactSearchPerformanceTest extends TestCase

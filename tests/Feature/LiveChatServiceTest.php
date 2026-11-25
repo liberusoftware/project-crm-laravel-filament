@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use Liberu\CRM\ChatAndBots\Models\ChatMessage;
-use Liberu\CRM\ChatAndBots\Models\LiveChat;
 use App\Models\User;
-use Liberu\CRM\ChatAndBots\Services\LiveChatService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\ChatAndBots\Models\ChatMessage;
+use Liberu\CRM\ChatAndBots\Models\LiveChat;
+use Liberu\CRM\ChatAndBots\Services\LiveChatService;
 use Tests\TestCase;
 
 class LiveChatServiceTest extends TestCase

@@ -4,20 +4,6 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Liberu\CRM\Core\Events\ContactUpdated;
-use Liberu\Foundation\Organizations\Listeners\AssignDefaultTeamRole;
-use Liberu\CRM\Core\Listeners\BuildSamlLogoutRedirect;
-use Liberu\CRM\Core\Listeners\BuildSsoLogoutRedirect;
-use Liberu\CRM\Core\Listeners\LogFailedLogin;
-use Liberu\CRM\Core\Listeners\LogPasswordReset;
-use Liberu\CRM\Core\Listeners\LogSsoLogout;
-use Liberu\CRM\Core\Listeners\LogSuccessfulLogin;
-use Liberu\Foundation\Organizations\Listeners\NotifyTeamMembers;
-use Liberu\CRM\ChannelGateway\Listeners\ProvisionZernioProfile;
-use Liberu\Foundation\Notifications\Listeners\SendCRMEventNotification;
-use Liberu\CRM\Activities\Models\Task;
-use Liberu\CRM\Activities\Observers\TaskObserver;
-use Liberu\CRM\Core\Services\AuditLogService;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
@@ -28,6 +14,20 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Event;
 use Laravel\Jetstream\Events\TeamCreated;
 use Laravel\Jetstream\Events\TeamMemberAdded;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\Activities\Observers\TaskObserver;
+use Liberu\CRM\ChannelGateway\Listeners\ProvisionZernioProfile;
+use Liberu\CRM\Core\Events\ContactUpdated;
+use Liberu\CRM\Core\Listeners\BuildSamlLogoutRedirect;
+use Liberu\CRM\Core\Listeners\BuildSsoLogoutRedirect;
+use Liberu\CRM\Core\Listeners\LogFailedLogin;
+use Liberu\CRM\Core\Listeners\LogPasswordReset;
+use Liberu\CRM\Core\Listeners\LogSsoLogout;
+use Liberu\CRM\Core\Listeners\LogSuccessfulLogin;
+use Liberu\CRM\Core\Services\AuditLogService;
+use Liberu\Foundation\Notifications\Listeners\SendCRMEventNotification;
+use Liberu\Foundation\Organizations\Listeners\AssignDefaultTeamRole;
+use Liberu\Foundation\Organizations\Listeners\NotifyTeamMembers;
 
 class EventServiceProvider extends ServiceProvider
 {

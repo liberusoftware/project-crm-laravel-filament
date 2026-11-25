@@ -1,7 +1,7 @@
 <?php
 
-use Liberu\CRM\WhiteLabel\Support\ThemeColors;
 use Filament\Support\Colors\Color;
+use Liberu\CRM\WhiteLabel\Support\ThemeColors;
 use Liberu\Foundation\Theme\Services\ThemeManager;
 
 it('discovers the clear-signal theme', function () {

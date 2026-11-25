@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Liberu\CRM\EmailProductivity\Services\Pop3Service;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Mockery;
 use Tests\TestCase;
 

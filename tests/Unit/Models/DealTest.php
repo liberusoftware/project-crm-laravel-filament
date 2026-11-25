@@ -2,11 +2,11 @@
 
 namespace Tests\Unit\Models;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\SalesWorkspace\Models\Deal;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Carbon;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\SalesWorkspace\Models\Deal;
 use Tests\TestCase;
 
 class DealTest extends TestCase

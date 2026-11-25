@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Organizations\Filament\App\Resources;
 
-use App\Filament\Concerns\EnforcesResourcePermissions;
+use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
 use App\Models\User;
 use Filament\Actions\Action;
 use Filament\Actions\BulkAction;

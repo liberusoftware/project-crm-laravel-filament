@@ -4,14 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers\Filament;
 
-use Liberu\Foundation\SettingsFilament\Admin\Pages\ManageGeneralSettings;
-use Liberu\CRM\Core\Filament\App\Pages;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource;
 use App\Filament\ModulePlugins;
-use Liberu\Foundation\AnalyticsCoreFilament\Pages\ReportCustomizer;
-use Liberu\Foundation\Organizations\Filament\Resources\TeamBackupResource;
-use Liberu\Foundation\Organizations\Filament\Resources\TeamResource;
-use Liberu\CRM\WhiteLabel\Support\ThemeColors;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Facades\Filament;
 use Filament\Http\Middleware\Authenticate;
@@ -31,11 +24,18 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Jetstream\Jetstream;
 use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as SetupWizard;
+use Liberu\CRM\Core\Filament\App\Pages;
+use Liberu\CRM\WhiteLabel\Support\ThemeColors;
+use Liberu\Foundation\AnalyticsCoreFilament\Pages\ReportCustomizer;
 use Liberu\Foundation\IdentityFilament\Resources\UserResource as FoundationUserResource;
 use Liberu\Foundation\Localization\Http\Middleware\SetLocale;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TeamRoleResource;
+use Liberu\Foundation\Organizations\Filament\Resources\TeamBackupResource;
+use Liberu\Foundation\Organizations\Filament\Resources\TeamResource;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\OrganizationsFilament\Resources\TeamResource as FoundationTeamResource;
 use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
+use Liberu\Foundation\SettingsFilament\Admin\Pages\ManageGeneralSettings;
 use Liberu\Foundation\SettingsFilament\SettingsFilamentPlugin;
 
 class AdminPanelProvider extends PanelProvider

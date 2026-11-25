@@ -4,16 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers\Filament;
 
-use Liberu\CRM\Core\Filament\App\Pages;
-use Liberu\CRM\Core\Filament\App\Pages\EditProfile;
 use App\Filament\CrmNavigation;
 use App\Filament\ModulePlugins;
-use Liberu\CRM\Core\Http\Middleware\EnsureSsoWhenRequired;
-use Liberu\Foundation\Organizations\Http\Middleware\TeamsPermission;
-use Liberu\Foundation\Organizations\Listeners\CreatePersonalTeam;
-use Liberu\Foundation\Organizations\Listeners\SwitchTeam;
-use Liberu\Foundation\Organizations\Models\Team;
-use Liberu\CRM\WhiteLabel\Support\ThemeColors;
 use Filament\Events\Auth\Registered;
 use Filament\Events\TenantSet;
 use Filament\Facades\Filament;
@@ -36,9 +28,17 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 use Laravel\Jetstream\Features;
 use Laravel\Jetstream\Jetstream;
+use Liberu\CRM\Core\Filament\App\Pages;
+use Liberu\CRM\Core\Filament\App\Pages\EditProfile;
+use Liberu\CRM\Core\Http\Middleware\EnsureSsoWhenRequired;
 use Liberu\CRM\MarketingResourcesFilament\Pages\ContentCalendar;
 use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
+use Liberu\CRM\WhiteLabel\Support\ThemeColors;
 use Liberu\Foundation\Localization\Http\Middleware\SetLocale;
+use Liberu\Foundation\Organizations\Http\Middleware\TeamsPermission;
+use Liberu\Foundation\Organizations\Listeners\CreatePersonalTeam;
+use Liberu\Foundation\Organizations\Listeners\SwitchTeam;
+use Liberu\Foundation\Organizations\Models\Team;
 
 class AppPanelProvider extends PanelProvider
 {

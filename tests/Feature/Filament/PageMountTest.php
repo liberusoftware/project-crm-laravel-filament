@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
+use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Core\Filament\App\Pages\EditProfile;
 use Liberu\CRM\Core\Filament\App\Pages\MailchimpIntegration;
 use Liberu\CRM\Core\Filament\App\Pages\PersonalAccessTokensPage;
@@ -14,8 +16,6 @@ use Liberu\CRM\Core\Filament\App\Pages\TwilioSettings;
 use Liberu\CRM\Core\Filament\App\Pages\VisualPipeline;
 use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Liberu\Foundation\Organizations\Models\Team;
-use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 

@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\LeadCapture\Models\Lead;
-use Liberu\CRM\Core\Services\LeadScoringService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\Core\Services\LeadScoringService;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use Tests\TestCase;
 
 class LeadScoringServiceTest extends TestCase

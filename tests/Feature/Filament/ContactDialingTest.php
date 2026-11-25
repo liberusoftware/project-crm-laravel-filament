@@ -4,22 +4,22 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\ListContacts;
-use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ListLeads;
-use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ViewLead;
-use Liberu\CRM\Activities\Models\CallLog;
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\LeadCapture\Models\Lead;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Http;
+use Liberu\CRM\Activities\Models\CallLog;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\ListContacts;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Liberu\CRM\DialerAndOutreach\Actions\QueueDialerCall;
 use Liberu\CRM\DialerAndOutreach\Actions\StartContactDialing;
 use Liberu\CRM\DialerAndOutreach\Models\DialerList;
 use Liberu\CRM\DialerAndOutreach\Queries\ContactCallHistory;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ListLeads;
+use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ViewLead;
 use Liberu\CRM\Telephony\Models\TelephonySettings;
 use Livewire\Livewire;
 use Symfony\Component\HttpKernel\Exception\HttpException;

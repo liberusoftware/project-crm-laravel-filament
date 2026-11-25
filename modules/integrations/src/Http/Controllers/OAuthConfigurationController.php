@@ -2,8 +2,8 @@
 
 namespace Liberu\Foundation\Integrations\Http\Controllers;
 
-use App\Services\Marketing\PlatformConfiguration;
-use App\Services\Marketing\WorkspaceAccess;
+use Liberu\CRM\MarketingResources\Services\PlatformConfiguration;
+use Liberu\CRM\MarketingResources\Services\WorkspaceAccess;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Organizations\Listeners;
 
-use App\Events\ContactUpdated;
+use Liberu\CRM\Core\Events\ContactUpdated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class NotifyTeamMembers implements ShouldQueue

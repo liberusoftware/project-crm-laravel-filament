@@ -3,6 +3,7 @@
 namespace Liberu\CRM\Scheduling\Services;
 
 
+use Illuminate\Database\Eloquent\Model;
 use Liberu\Foundation\Integrations\Services\CalendarService;
 use Liberu\CRM\Activities\Models\Task;
 
@@ -29,7 +30,7 @@ class GoogleCalendarService implements CalendarService
         return $this->service;
     }
 
-    public function createEvent(Task $task): void
+    public function createEvent(Model $task): void
     {
         $event = new \Google_Service_Calendar_Event([
             'summary' => $task->name,
@@ -44,7 +45,7 @@ class GoogleCalendarService implements CalendarService
         $task->save();
     }
 
-    public function updateEvent(Task $task): void
+    public function updateEvent(Model $task): void
     {
         $event = $this->getService()->events->get('primary', $task->google_event_id);
 
@@ -56,7 +57,7 @@ class GoogleCalendarService implements CalendarService
         $this->getService()->events->update('primary', $task->google_event_id, $event);
     }
 
-    public function deleteEvent(Task $task): void
+    public function deleteEvent(Model $task): void
     {
         $this->getService()->events->delete('primary', $task->google_event_id);
         $task->google_event_id = null;

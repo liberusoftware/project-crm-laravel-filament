@@ -3,6 +3,7 @@
 namespace Liberu\CRM\Scheduling\Services;
 
 
+use Illuminate\Database\Eloquent\Model;
 use Liberu\Foundation\Integrations\Services\CalendarService;
 use Liberu\CRM\Activities\Models\Task;
 use DateTime;
@@ -36,7 +37,7 @@ class OutlookCalendarService implements CalendarService
         return config('services.microsoft.access_token', '');
     }
 
-    public function createEvent(Task $task): void
+    public function createEvent(Model $task): void
     {
         $event = new Event();
         $event->setSubject($task->name);
@@ -60,7 +61,7 @@ class OutlookCalendarService implements CalendarService
         $task->save();
     }
 
-    public function updateEvent(Task $task): void
+    public function updateEvent(Model $task): void
     {
         $event = new Event();
         $event->setSubject($task->name);
@@ -80,7 +81,7 @@ class OutlookCalendarService implements CalendarService
             ->execute();
     }
 
-    public function deleteEvent(Task $task): void
+    public function deleteEvent(Model $task): void
     {
         $this->getGraph()
             ->createRequest('DELETE', '/me/events/'.$task->outlook_event_id)

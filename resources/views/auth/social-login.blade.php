@@ -1,5 +1,5 @@
 @php
-    $providers = \App\Models\OAuthConfiguration::all();
+    $providers = \Liberu\Foundation\Integrations\Models\OAuthConfiguration::all();
 @endphp
 
 <div class="social-login">

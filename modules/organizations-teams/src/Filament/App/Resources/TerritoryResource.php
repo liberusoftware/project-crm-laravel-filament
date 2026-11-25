@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Organizations\Filament\App\Resources;
 
-use App\Filament\Concerns\EnforcesResourcePermissions;
-use App\Models\Territory;
+use Liberu\CRM\Core\Filament\Concerns\EnforcesResourcePermissions;
+use Liberu\CRM\TerritoriesAndOwnership\Models\Territory;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;

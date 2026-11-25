@@ -1,15 +1,15 @@
 <?php
 
-use Liberu\CRM\MarketingResourcesFilament\Pages\ContentCalendar;
-use Liberu\CRM\MarketingResources\Models\MarketingPlatformSettings;
-use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
 use App\Models\User;
-use Liberu\CRM\MarketingAgent\Services\ContentAssistant;
 use Filament\Auth\Http\Responses\Contracts\LoginResponse;
 use Filament\Facades\Filament;
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Liberu\CRM\MarketingAgent\Services\ContentAssistant;
+use Liberu\CRM\MarketingResources\Models\MarketingPlatformSettings;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\CRM\MarketingResourcesFilament\Pages\ContentCalendar;
 use Livewire\Livewire;
 
 beforeEach(function () {

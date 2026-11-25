@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Liberu\Foundation\Organizations\Actions\Jetstream\AddTeamMember;
-use Liberu\Foundation\Organizations\Actions\Jetstream\CreateTeam;
-use Liberu\Foundation\Organizations\Actions\Jetstream\DeleteTeam;
-use Liberu\Foundation\JetstreamBridge\Actions\Jetstream\DeleteUser as DeleteUserWithTeams;
-use Liberu\Foundation\Organizations\Actions\Jetstream\InviteTeamMember;
-use Liberu\Foundation\Organizations\Actions\Jetstream\RemoveTeamMember;
-use Liberu\Foundation\Organizations\Actions\Jetstream\UpdateTeamName;
-use Liberu\Foundation\Organizations\Listeners\CreatePersonalTeam;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
+use Liberu\Foundation\JetstreamBridge\Actions\Jetstream\DeleteUser as DeleteUserWithTeams;
+use Liberu\Foundation\Organizations\Actions\Jetstream\AddTeamMember;
+use Liberu\Foundation\Organizations\Actions\Jetstream\CreateTeam;
+use Liberu\Foundation\Organizations\Actions\Jetstream\DeleteTeam;
+use Liberu\Foundation\Organizations\Actions\Jetstream\InviteTeamMember;
+use Liberu\Foundation\Organizations\Actions\Jetstream\RemoveTeamMember;
+use Liberu\Foundation\Organizations\Actions\Jetstream\UpdateTeamName;
+use Liberu\Foundation\Organizations\Listeners\CreatePersonalTeam;
 
 class JetstreamServiceProvider extends ServiceProvider
 {

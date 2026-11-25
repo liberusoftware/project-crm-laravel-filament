@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
-use Liberu\Foundation\Organizations\Models\Team;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Http;
 use Liberu\CRM\Advertising\Services\ZernioAdvertisingService;
 use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioClient;
 use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioException;
 use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioPublisher;
 use Liberu\CRM\ChannelGateway\Services\Zernio\ZernioTenantService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Http;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 final class ZernioClientTest extends TestCase

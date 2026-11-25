@@ -1,9 +1,9 @@
 <?php
 
-use Liberu\CRM\Core\Models\SamlConnection;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Liberu\CRM\Core\Models\SamlConnection;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\Feature\Saml\SignsSamlResponses;
 
 uses(SignsSamlResponses::class);

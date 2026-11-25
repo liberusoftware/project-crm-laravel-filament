@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Services;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\WhiteLabel\Models\Menu;
 use Liberu\CRM\WhiteLabel\Services\MenuService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class MenuServiceTest extends TestCase

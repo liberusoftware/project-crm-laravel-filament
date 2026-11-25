@@ -2,11 +2,11 @@
 
 namespace Tests\Feature\Tenancy;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Schema;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\Organizations\Support\TenantContext;
 use Liberu\Foundation\Organizations\Support\TenantModels;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Schema;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
@@ -81,8 +81,7 @@ class CrossTenantLeakageTest extends TestCase
         $teamB = Team::factory()->create();
         $covered = [];
 
-        foreach (array_keys(self::tenantModels()) as $basename) {
-            $class = 'App\\Models\\'.$basename;
+        foreach (self::tenantModels() as $basename => [$class]) {
 
             try {
                 $a = $class::factory()->create(['team_id' => $teamA->id]);

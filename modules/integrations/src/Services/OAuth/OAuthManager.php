@@ -2,7 +2,7 @@
 
 namespace Liberu\Foundation\Integrations\Services\OAuth;
 
-use App\Models\ConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;

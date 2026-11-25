@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Policies;
 
-use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 /**

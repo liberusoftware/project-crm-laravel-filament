@@ -2,7 +2,7 @@
 
 namespace Liberu\Foundation\Integrations\Http\Controllers;
 
-use App\Models\ConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
 use Carbon\Carbon;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;

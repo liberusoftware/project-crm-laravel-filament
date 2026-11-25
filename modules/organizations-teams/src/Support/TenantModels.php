@@ -27,7 +27,7 @@ class TenantModels
     {
         $container = Container::getInstance();
         $hostRoot = $container->bound('path.base') ? $container->make('path.base') : null;
-        $projectRoot = is_string($hostRoot) && $hostRoot !== '' ? $hostRoot : dirname(__DIR__, 5);
+        $projectRoot = is_string($hostRoot) && $hostRoot !== '' ? $hostRoot : dirname(__DIR__, 4);
         $files = glob($projectRoot.'/app/Models/*.php') ?: [];
 
         foreach (glob($projectRoot.'/modules/*/src/Models/*.php') ?: [] as $file) {

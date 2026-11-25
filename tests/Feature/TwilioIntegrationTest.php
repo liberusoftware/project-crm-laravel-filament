@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\Activities\Models\CallLog;
 use Liberu\CRM\Core\Models\CrmContact as Contact;
 use Liberu\CRM\Telephony\Services\TwilioService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use Tests\TestCase;
 

@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Actions;
 
-use Liberu\Foundation\Identity\Socialstream\Actions\CreateConnectedAccount;
-use Liberu\Foundation\Identity\Socialstream\Actions\CreateUserFromProvider as CreateUserWithTeamsFromProvider;
-use Liberu\Foundation\Identity\Socialstream\Actions\HandleInvalidState;
-use Liberu\Foundation\Identity\Socialstream\Actions\SetUserPassword;
-use Liberu\Foundation\Identity\Socialstream\Actions\UpdateConnectedAccount;
-use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
@@ -20,6 +14,12 @@ use JoelButcher\Socialstream\Events\ConnectedAccountCreated;
 use JoelButcher\Socialstream\Socialstream;
 use Laravel\Socialite\Contracts\User as ProviderUser;
 use Laravel\Socialite\Two\InvalidStateException;
+use Liberu\Foundation\Identity\Socialstream\Actions\CreateConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Actions\CreateUserFromProvider as CreateUserWithTeamsFromProvider;
+use Liberu\Foundation\Identity\Socialstream\Actions\HandleInvalidState;
+use Liberu\Foundation\Identity\Socialstream\Actions\SetUserPassword;
+use Liberu\Foundation\Identity\Socialstream\Actions\UpdateConnectedAccount;
+use Liberu\Foundation\Identity\Socialstream\Models\ConnectedAccount;
 use Mockery;
 use Tests\TestCase;
 

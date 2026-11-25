@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-use Liberu\CRM\AIReceptionAndConversation\Http\Controllers\AIReceptionTwilioController;
-use Liberu\CRM\SaasPackaging\Http\Controllers\BillingController;
-use Liberu\CRM\Core\Http\Controllers\ContactListController;
-use Liberu\CRM\EmailProductivity\Http\Controllers\EmailTrackingController;
-use Liberu\CRM\Core\Http\Controllers\HomeController;
-use Liberu\CRM\Knowledge\Http\Controllers\KnowledgeBaseController;
-use Liberu\CRM\FormsAndSurveys\Http\Controllers\LeadFormController;
-use Liberu\Foundation\Integrations\Http\Controllers\OAuthConfigurationController;
-use Liberu\CRM\ServiceAgent\Http\Controllers\QuoteRequestController;
-use Liberu\CRM\Core\Http\Controllers\SamlLoginController;
-use Liberu\CRM\Core\Http\Controllers\SamlMetadataController;
-use Liberu\CRM\Core\Http\Controllers\SsoLoginController;
-use Liberu\Foundation\Organizations\Http\Controllers\TeamInvitationController;
-use Liberu\CRM\ServiceAgent\Http\Controllers\TicketController;
-use Liberu\CRM\Telephony\Http\Controllers\TwilioController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\TeamInvitationController as JetstreamTeamInvitationController;
+use Liberu\CRM\AIReceptionAndConversation\Http\Controllers\AIReceptionTwilioController;
+use Liberu\CRM\Core\Http\Controllers\ContactListController;
+use Liberu\CRM\Core\Http\Controllers\HomeController;
+use Liberu\CRM\Core\Http\Controllers\SamlLoginController;
+use Liberu\CRM\Core\Http\Controllers\SamlMetadataController;
+use Liberu\CRM\Core\Http\Controllers\SsoLoginController;
+use Liberu\CRM\EmailProductivity\Http\Controllers\EmailTrackingController;
+use Liberu\CRM\FormsAndSurveys\Http\Controllers\LeadFormController;
+use Liberu\CRM\Knowledge\Http\Controllers\KnowledgeBaseController;
+use Liberu\CRM\SaasPackaging\Http\Controllers\BillingController;
+use Liberu\CRM\ServiceAgent\Http\Controllers\QuoteRequestController;
+use Liberu\CRM\ServiceAgent\Http\Controllers\TicketController;
+use Liberu\CRM\Telephony\Http\Controllers\TwilioController;
+use Liberu\Foundation\Integrations\Http\Controllers\OAuthConfigurationController;
+use Liberu\Foundation\Organizations\Http\Controllers\TeamInvitationController;
 
 // Health check endpoints (for Kubernetes liveness/readiness probes)
 Route::get('/health', function () {

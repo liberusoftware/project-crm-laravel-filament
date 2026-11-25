@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use Liberu\CRM\Scheduling\Http\Controllers\GoogleCalendarController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Liberu\CRM\Scheduling\Http\Controllers\GoogleCalendarController;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Tests\TestCase;
 

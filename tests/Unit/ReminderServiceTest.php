@@ -2,15 +2,15 @@
 
 namespace Tests\Unit;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\LeadCapture\Models\Lead;
-use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
-use Liberu\Foundation\Notifications\Notifications\TaskReminderNotification;
-use Liberu\CRM\Activities\Services\ReminderService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\Activities\Services\ReminderService;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\Foundation\Notifications\Notifications\TaskReminderNotification;
 use Tests\TestCase;
 
 class ReminderServiceTest extends TestCase

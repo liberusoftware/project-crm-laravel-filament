@@ -1,14 +1,14 @@
 <?php
 
-use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as AdminSetupWizard;
-use Liberu\CRM\Core\Filament\App\Pages\SetupWizard as AppSetupWizard;
 use App\Http\Responses\PanelLoginResponse;
-use Liberu\CRM\Core\Http\Responses\RegisterResponse;
-use Liberu\CRM\MarketingResources\Models\MarketingPlatformSettings;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Request;
+use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as AdminSetupWizard;
+use Liberu\CRM\Core\Filament\App\Pages\SetupWizard as AppSetupWizard;
+use Liberu\CRM\Core\Http\Responses\RegisterResponse;
+use Liberu\CRM\MarketingResources\Models\MarketingPlatformSettings;
 use Liberu\Foundation\Organizations\Models\Team;
 use Liberu\Foundation\RolesPermissions\Models\Role;
 

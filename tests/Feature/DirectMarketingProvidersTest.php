@@ -1,11 +1,11 @@
 <?php
 
-use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
-use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
 use App\Models\User;
-use Liberu\CRM\MarketingResources\Services\DirectPostPublisher;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
+use Liberu\CRM\MarketingResources\Models\SocialMediaPost;
+use Liberu\CRM\MarketingResources\Services\DirectPostPublisher;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 
 function standaloneMarketingConnection(User $user, string $platform, array $overrides = []): OAuthConfiguration
 {

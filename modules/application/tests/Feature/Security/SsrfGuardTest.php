@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Security;
 
-use Liberu\CRM\Core\Exceptions\SsoException;
+use InvalidArgumentException;
 use Liberu\Foundation\Integrations\Support\SsrfGuard;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
@@ -36,7 +36,7 @@ class SsrfGuardTest extends TestCase
     #[DataProvider('blockedUrls')]
     public function test_rejects_non_public_or_non_https_urls(string $url): void
     {
-        $this->expectException(SsoException::class);
+        $this->expectException(InvalidArgumentException::class);
         SsrfGuard::assertPublicHttps($url);
     }
 }

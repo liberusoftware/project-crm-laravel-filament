@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\MarketingResources\Models\LandingPage;
-use Liberu\CRM\FormsAndSurveys\Models\LeadForm;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\FormsAndSurveys\Models\LeadForm;
+use Liberu\CRM\MarketingResources\Models\LandingPage;
 use Tests\TestCase;
 
 class LeadFormControllerTest extends TestCase

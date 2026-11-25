@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource;
-use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource\Pages\ViewCampaign;
-use Liberu\CRM\Advertising\Models\Campaign;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Advertising\Models\Campaign;
+use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource;
+use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource\Pages\ViewCampaign;
 use Livewire\Livewire;
 use Tests\TestCase;
 

@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Liberu\CRM\EmailProductivity\Models\EmailTracking;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Uri;
+use Liberu\CRM\EmailProductivity\Models\EmailTracking;
 use Tests\TestCase;
 
 class EmailTrackingLinkTest extends TestCase

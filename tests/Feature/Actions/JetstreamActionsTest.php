@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Actions;
 
-use Liberu\Foundation\Organizations\Actions\Jetstream\AddTeamMember;
-use Liberu\Foundation\JetstreamBridge\Actions\Jetstream\DeleteUser as DeleteUserWithTeams;
-use Liberu\Foundation\Organizations\Actions\Jetstream\InviteTeamMember;
-use Liberu\Foundation\Organizations\Actions\Jetstream\RemoveTeamMember;
-use Liberu\Foundation\RolesPermissions\Enums\Role;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Mail;
 use Laravel\Jetstream\Mail\TeamInvitation as TeamInvitationMail;
+use Liberu\Foundation\JetstreamBridge\Actions\Jetstream\DeleteUser as DeleteUserWithTeams;
+use Liberu\Foundation\Organizations\Actions\Jetstream\AddTeamMember;
+use Liberu\Foundation\Organizations\Actions\Jetstream\InviteTeamMember;
+use Liberu\Foundation\Organizations\Actions\Jetstream\RemoveTeamMember;
+use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\RolesPermissions\Enums\Role;
 use Spatie\Permission\PermissionRegistrar;
 use Tests\TestCase;
 

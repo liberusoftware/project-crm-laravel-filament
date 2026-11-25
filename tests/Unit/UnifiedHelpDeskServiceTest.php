@@ -2,18 +2,18 @@
 
 namespace Tests\Unit;
 
-use Liberu\CRM\ServiceAgent\Events\MessageReplySent;
-use Liberu\CRM\ServiceAgent\Events\NewMessageReceived;
-use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Collection;
 use Liberu\CRM\ChannelGateway\Services\Social\FacebookMessengerService;
 use Liberu\CRM\EmailProductivity\Services\GmailService;
 use Liberu\CRM\EmailProductivity\Services\ImapService;
 use Liberu\CRM\EmailProductivity\Services\OutlookService;
 use Liberu\CRM\EmailProductivity\Services\Pop3Service;
-use Liberu\CRM\ServiceAgent\Services\UnifiedHelpDeskService;
 use Liberu\CRM\MobileMessaging\Services\WhatsAppBusinessService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Collection;
+use Liberu\CRM\ServiceAgent\Events\MessageReplySent;
+use Liberu\CRM\ServiceAgent\Events\NewMessageReceived;
+use Liberu\CRM\ServiceAgent\Services\UnifiedHelpDeskService;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Mockery;
 use ReflectionMethod;
 use Tests\TestCase;

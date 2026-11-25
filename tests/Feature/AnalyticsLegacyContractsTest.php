@@ -1,29 +1,29 @@
 <?php
 
-use Liberu\Foundation\AnalyticsCoreFilament\App\Resources\AnalyticsDashboardResource;
-use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\EditAnalyticsDashboard;
-use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\ListAnalyticsDashboards;
-use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\ViewAnalyticsDashboard;
-use Liberu\Foundation\AnalyticsCoreFilament\App\Widgets\SocialLinksWidget;
-use Liberu\Foundation\AnalyticsCoreFilament\Widgets\AdPerformanceWidget;
-use Liberu\Analytics\Core\Http\Controllers\ReportController;
-use Liberu\Foundation\AnalyticsCoreLivewire\Dashboard;
-use Liberu\Foundation\AnalyticsCoreLivewire\ReportCustomizer;
-use Liberu\Foundation\AnalyticsCoreLivewire\Widgets\Stats;
-use Liberu\Foundation\AnalyticsCoreLivewire\Widgets\Tasks;
-use Liberu\CRM\Advertising\Models\AdvertisingAccount;
-use Liberu\Analytics\Core\Models\DashboardWidget;
-use Liberu\Analytics\Core\Models\ReportBuilder;
 use App\Models\User;
-use Liberu\CRM\EmailProductivity\Services\MailChimpService;
-use Liberu\CRM\SalesWorkspace\Services\ReportingService;
-use Liberu\CRM\WhiteLabel\Settings\GeneralSettings;
 use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use Liberu\Analytics\Core\Http\Controllers\ReportController;
+use Liberu\Analytics\Core\Models\DashboardWidget;
+use Liberu\Analytics\Core\Models\ReportBuilder;
+use Liberu\CRM\Advertising\Models\AdvertisingAccount;
+use Liberu\CRM\EmailProductivity\Services\MailChimpService;
+use Liberu\CRM\SalesWorkspace\Services\ReportingService;
+use Liberu\CRM\WhiteLabel\Settings\GeneralSettings;
+use Liberu\Foundation\AnalyticsCoreFilament\App\Resources\AnalyticsDashboardResource;
+use Liberu\Foundation\AnalyticsCoreFilament\App\Widgets\SocialLinksWidget;
+use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\EditAnalyticsDashboard;
+use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\ListAnalyticsDashboards;
+use Liberu\Foundation\AnalyticsCoreFilament\Resources\AnalyticsDashboardResource\Pages\ViewAnalyticsDashboard;
+use Liberu\Foundation\AnalyticsCoreFilament\Widgets\AdPerformanceWidget;
+use Liberu\Foundation\AnalyticsCoreLivewire\Dashboard;
+use Liberu\Foundation\AnalyticsCoreLivewire\ReportCustomizer;
+use Liberu\Foundation\AnalyticsCoreLivewire\Widgets\Stats;
+use Liberu\Foundation\AnalyticsCoreLivewire\Widgets\Tasks;
 
 it('passes report request filters and campaign identities to the owning service', function (string $method, string $serviceMethod, string $template, bool $campaign): void {
     $filters = ['start_date' => '2026-01-01', 'end_date' => '2026-01-31', 'campaign_id' => 'campaign-123'];

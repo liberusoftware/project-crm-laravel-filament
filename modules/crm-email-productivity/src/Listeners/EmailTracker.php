@@ -2,7 +2,7 @@
 
 namespace Liberu\CRM\EmailProductivity\Listeners;
 
-use App\Models\EmailCampaign;
+use Liberu\CRM\EmailMarketing\Models\EmailCampaign;
 use Liberu\CRM\LeadCapture\Models\Lead;
 use Illuminate\Mail\Events\MessageSent;
 

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Actions;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Liberu\CRM\ServiceAgent\Actions\Helpdesk\CreateTicketFromEmail;
 use Liberu\CRM\ServiceAgent\Actions\Helpdesk\CreateTicketFromWhatsApp;
 use Liberu\CRM\ServiceAgent\Models\Ticket;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class HelpdeskNullIdTest extends TestCase

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Policies;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\Foundation\Organizations\Models\Team;
 use Tests\TestCase;
 
 /**

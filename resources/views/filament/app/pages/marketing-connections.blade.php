@@ -6,7 +6,7 @@
             <label class="block text-sm font-medium">
                 Platform
                 <select wire:model="platform" class="mt-2 block rounded-lg border-gray-300 dark:bg-gray-900">
-                    @foreach($provider === 'zernio' ? \App\Services\Zernio\ZernioTenantService::PLATFORMS : \Liberu\CRM\MarketingResources\Services\DirectPostPublisher::PLATFORMS as $channel)
+                    @foreach($provider === 'zernio' ? \Liberu\CRM\ChannelGateway\Services\Zernio\ZernioTenantService::PLATFORMS : \Liberu\CRM\MarketingResources\Services\DirectPostPublisher::PLATFORMS as $channel)
                         <option value="{{ $channel }}">{{ ucfirst($channel) }}</option>
                     @endforeach
                 </select>

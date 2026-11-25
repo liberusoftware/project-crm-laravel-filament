@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\LeadCapture\Models\Lead;
-use Liberu\CRM\Activities\Models\Task;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\Activities\Models\Task;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\LeadCapture\Models\Lead;
 use Tests\TestCase;
 
 class TaskManagementTest extends TestCase

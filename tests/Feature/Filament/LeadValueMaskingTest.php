@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\EditLead;
-use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ListLeads;
-use Liberu\CRM\LeadCapture\Models\Lead;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\LeadCapture\Models\Lead;
+use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\EditLead;
+use Liberu\CRM\LeadCaptureFilament\App\Resources\LeadResource\Pages\ListLeads;
 use Livewire\Livewire;
 use Tests\TestCase;
 

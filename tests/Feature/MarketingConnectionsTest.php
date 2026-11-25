@@ -1,10 +1,10 @@
 <?php
 
-use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
-use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Http;
+use Liberu\CRM\MarketingResourcesFilament\Pages\MarketingConnections;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Livewire\Livewire;
 
 beforeEach(function () {

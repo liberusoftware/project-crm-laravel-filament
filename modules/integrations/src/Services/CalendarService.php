@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Integrations\Services;
 
-use App\Models\Task;
+use Illuminate\Database\Eloquent\Model;
 
 interface CalendarService
 {
-    public function createEvent(Task $task);
+    public function createEvent(Model $task);
 
-    public function updateEvent(Task $task);
+    public function updateEvent(Model $task);
 
-    public function deleteEvent(Task $task);
+    public function deleteEvent(Model $task);
 
     public function fetchEvents(array $params = []);
 

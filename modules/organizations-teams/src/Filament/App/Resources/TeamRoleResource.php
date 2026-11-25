@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Organizations\Filament\App\Resources;
 
-use App\Filament\Forms\RolePermissionBuilder;
+use Liberu\Foundation\RolesPermissionsFilament\Forms\RolePermissionBuilder;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;

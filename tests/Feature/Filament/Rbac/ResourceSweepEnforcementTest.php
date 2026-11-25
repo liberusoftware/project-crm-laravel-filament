@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament\Rbac;
 
-use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource;
-use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource;
-use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalAccessLogResource;
-use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource;
-use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Liberu\CRM\AdvertisingFilament\App\Resources\CampaignResource;
+use Liberu\CRM\Core\Filament\App\Resources\SsoConnectionResource;
+use Liberu\CRM\CustomerSelfServiceFilament\App\Resources\PortalAccessLogResource;
+use Liberu\Foundation\AuditFilament\App\Resources\AuditLogResource;
+use Liberu\Foundation\Organizations\Filament\App\Resources\TerritoryResource;
 use Spatie\Permission\Models\Role as SpatieRole;
 use Tests\TestCase;
 

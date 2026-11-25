@@ -1,15 +1,15 @@
 <?php
 
-use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as SetupWizard;
-use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
-use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\CreateRole;
-use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\EditRole;
-use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\ListRoles;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Filament\Actions\DeleteAction;
 use Filament\Facades\Filament;
 use Illuminate\Support\Facades\DB;
+use Liberu\CRM\ClientOnboardingFilament\Pages\PlatformSetupWizard as SetupWizard;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\CreateRole;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\EditRole;
+use Liberu\Foundation\RolesPermissionsFilament\Resources\RoleResource\Pages\ListRoles;
 use Livewire\Livewire;
 use Spatie\Permission\Models\Role;
 

@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\CustomerSelfService\Actions\Portal\ShareDocumentWithContact;
-use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\EditContact;
-use Liberu\CRM\Core\Filament\App\Resources\ContactResource\RelationManagers\DocumentsRelationManager;
-use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\DocumentResource as PortalDocumentResource;
-use Liberu\CRM\Core\Models\CrmContact as Contact;
-use Liberu\CRM\Documents\Models\Document;
-use Liberu\Foundation\Organizations\Models\Team;
 use App\Models\User;
-use Liberu\CRM\Documents\Services\DocumentService;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\Pages\EditContact;
+use Liberu\CRM\Core\Filament\App\Resources\ContactResource\RelationManagers\DocumentsRelationManager;
+use Liberu\CRM\Core\Models\CrmContact as Contact;
+use Liberu\CRM\CustomerSelfService\Actions\Portal\ShareDocumentWithContact;
+use Liberu\CRM\CustomerSelfServiceFilament\Portal\Resources\DocumentResource as PortalDocumentResource;
+use Liberu\CRM\Documents\Models\Document;
+use Liberu\CRM\Documents\Services\DocumentService;
+use Liberu\Foundation\Organizations\Models\Team;
 use Livewire\Livewire;
 use Tests\TestCase;
 

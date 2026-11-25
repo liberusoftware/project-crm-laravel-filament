@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Filament;
 
-use Liberu\CRM\SalesWorkspace\Filament\App\Resources\DealResource\Pages\ListDeals;
-use Liberu\Foundation\ImportExportFilament\Exports\DealExporter;
 use App\Models\User;
-use Liberu\Foundation\Organizations\Support\AccessContext;
 use Database\Seeders\RolesSeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
+use Liberu\CRM\SalesWorkspace\Filament\App\Resources\DealResource\Pages\ListDeals;
+use Liberu\Foundation\ImportExportFilament\Exports\DealExporter;
+use Liberu\Foundation\Organizations\Support\AccessContext;
 use Livewire\Livewire;
 use Tests\TestCase;
 

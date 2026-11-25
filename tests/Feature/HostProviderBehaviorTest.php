@@ -2,14 +2,10 @@
 
 use App\Console\Kernel;
 use App\Exceptions\Handler;
-use Liberu\CRM\Core\Filament\App\Resources\ContactResource;
 use App\Filament\CrmNavigation;
-use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use App\Models\User;
-use App\Providers\BroadcastServiceProvider;
 use App\Providers\Filament\AppPanelProvider;
-use App\Providers\FilamentServiceProvider;
-use Liberu\Foundation\Identity\Socialstream\Providers\SocialstreamServiceProvider;
+use App\Providers\SocialstreamServiceProvider as AppSocialstreamServiceProvider;
 use Filament\Facades\Filament;
 use Filament\Panel;
 use Illuminate\Auth\Events\Logout;
@@ -20,6 +16,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\RateLimiter;
 use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\Two\AbstractProvider;
+use Liberu\Foundation\Integrations\Models\OAuthConfiguration;
 use Tests\Fixtures\HostNavigation\Neutral;
 use Tests\Fixtures\HostNavigation\Search;
 use Tests\Fixtures\HostNavigation\Ticket;
@@ -58,15 +55,6 @@ it('reports application exceptions through its registered callback', function ()
     File::delete($path);
 });
 
-it('registers broadcast authorization and the legacy application panel', function () {
-    (new BroadcastServiceProvider($this->app))->boot();
-    $route = $this->app['router']->getRoutes()->match(Request::create('/broadcasting/auth', 'POST'));
-    expect($route->uri())->toBe('broadcasting/auth');
-    $panel = (new FilamentServiceProvider($this->app))->panel(Panel::make());
-    expect($panel->getId())->toBe('app')->and($panel->getPath())->toBe('app')
-        ->and($panel->getResources())->toContain(ContactResource::class);
-});
-
 it('groups support, intelligence and uncategorized resources without overriding existing groups', function () {
     $panel = Panel::make()->id('host-navigation')->resources([stdClass::class, Ticket::class, Search::class, Neutral::class]);
     (new CrmNavigation())->configure($panel);
@@ -97,13 +85,14 @@ it('constructs configured OAuth drivers, preserves posting scopes and requests o
         OAuthConfiguration::query()->create(['user_id' => $user->id, 'service_name' => $service, 'client_id' => 'id-'.$service, 'client_secret' => 'secret-'.$service, 'is_active' => true]);
     }
     Socialite::forgetDrivers();
-    $provider = new class($this->app) extends SocialstreamServiceProvider
+    $provider = new class($this->app) extends AppSocialstreamServiceProvider
     {
         public function providerClass(string $name): string
         {
             return $this->getSocialiteProviderClass($name);
         }
     };
+    $provider->register();
     $provider->boot();
     foreach (['facebook', 'google', 'youtube', 'linkedin', 'twitter', 'instagram', 'twilio'] as $service) {
         $driver = Socialite::driver($service);
