@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4277ffc7298ae796ef9691170b30a63a",
+    "content-hash": "e3d2f67ec6aa35286efed4302739764f",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -15146,16 +15146,16 @@
         },
         {
             "name": "liberusoftware/module-crm-email-productivity",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liberusoftware/module-crm-email-productivity.git",
-                "reference": "d758c92a05f164ddd4cba6fa8321b9561d9fcaa7"
+                "reference": "0698d69829186f381eec01cd189d78cfccac6dc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liberusoftware/module-crm-email-productivity/zipball/d758c92a05f164ddd4cba6fa8321b9561d9fcaa7",
-                "reference": "d758c92a05f164ddd4cba6fa8321b9561d9fcaa7",
+                "url": "https://api.github.com/repos/liberusoftware/module-crm-email-productivity/zipball/0698d69829186f381eec01cd189d78cfccac6dc1",
+                "reference": "0698d69829186f381eec01cd189d78cfccac6dc1",
                 "shasum": ""
             },
             "type": "liberu-module",
@@ -15181,9 +15181,9 @@
             "description": "Mailbox sync, templates, tracking and shared inbox productivity",
             "support": {
                 "issues": "https://github.com/liberusoftware/module-crm-email-productivity/issues",
-                "source": "https://github.com/liberusoftware/module-crm-email-productivity/tree/v1.0.0"
+                "source": "https://github.com/liberusoftware/module-crm-email-productivity/tree/v1.0.1"
             },
-            "time": "2026-11-02T14:59:29+00:00"
+            "time": "2026-11-25T13:33:29+00:00"
         },
         {
             "name": "liberusoftware/module-crm-email-productivity-api",
