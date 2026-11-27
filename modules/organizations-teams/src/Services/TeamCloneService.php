@@ -4,78 +4,35 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Organizations\Services;
 
-use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Liberu\Analytics\Core\Models\ReportBuilder;
-use Liberu\CRM\AutomationPack\Models\Workflow;
-use Liberu\CRM\AutomationPack\Models\WorkflowAction;
-use Liberu\CRM\AutomationPack\Models\WorkflowCondition;
-use Liberu\CRM\AutomationPack\Models\WorkflowTrigger;
-use Liberu\CRM\ChatAndBots\Models\Chatbot;
-use Liberu\CRM\Core\Models\CustomField;
-use Liberu\CRM\Core\Models\Tag;
-use Liberu\CRM\EmailProductivity\Models\EmailTemplate;
-use Liberu\CRM\Knowledge\Models\KnowledgeBaseArticle;
-use Liberu\CRM\SalesPipelines\Models\Pipeline;
-use Liberu\CRM\SalesPipelines\Models\Stage;
-use Liberu\CRM\WhiteLabel\Models\Menu;
 use Liberu\Foundation\Organizations\Models\Team;
 
 /**
- * Clones a team's CONFIGURATION into a brand-new team (a template). Copies the
- * structural models below with fresh PKs and remaps their intra-config foreign
- * keys; does NOT copy transactional data (contacts/leads/deals/tasks/…) or
- * members.
+ * Clones a team's configured structural models into a brand-new team (template).
+ * Copies registered models with fresh PKs and remaps their intra-config foreign
+ * keys without copying transactional data or members.
  */
 class TeamCloneService
 {
-    /** Config models to copy, in a stable order. */
-    private const CLONEABLE_MODELS = [
-        Pipeline::class,
-        Stage::class,
-        Workflow::class,
-        WorkflowAction::class,
-        WorkflowCondition::class,
-        WorkflowTrigger::class,
-        EmailTemplate::class,
-        CustomField::class,
-        Tag::class,
-        KnowledgeBaseArticle::class,
-        Chatbot::class,
-        ReportBuilder::class,
-        Menu::class,
-    ];
-
     /**
-     * Cross-model FK columns to remap: model => [column => referenced model].
-     * Verified against the live schema — Pipeline.stage_id is a model-declared
-     * relation with no column (drift), so it is not here; the hasColumn guard
-     * in patchForeignKeys also skips any edge whose column is absent.
-     *
-     * @var array<class-string, array<string, class-string>>
+     * @param  list<class-string>|null  $cloneableModels
+     * @param  array<class-string, array<string, class-string>>|null  $fkEdges
      */
-    private const FK_EDGES = [
-        Stage::class => ['pipeline_id' => Pipeline::class],
-        WorkflowAction::class => ['workflow_id' => Workflow::class],
-        WorkflowCondition::class => ['workflow_action_id' => WorkflowAction::class],
-        WorkflowTrigger::class => ['workflow_id' => Workflow::class],
-        Menu::class => ['parent_id' => Menu::class],
-    ];
+    public function __construct(
+        private readonly ?array $cloneableModels = null,
+        private readonly ?array $fkEdges = null,
+    ) {}
 
-    public function clone(Team $source, string $name, User $owner): Team
+    public function clone(Team $source, string $name, Model $owner): Team
     {
         $team = new Team();
         $team->name = $name;
-        $team->user_id = $owner->id;
+        $team->user_id = $owner->getKey();
         $team->personal_team = false;
         $team->save();
 
-        // FK checks OFF must wrap (not nest inside) the transaction — sqlite
-        // ignores PRAGMA foreign_keys once a transaction is open. With FKs off
-        // we can insert rows keeping their old cross-refs, then patch to the
-        // new ids; this needs no dependency ordering and handles the
-        // self-referential Menu (parent may be inserted after child).
         Schema::withoutForeignKeyConstraints(function () use ($source, $team): void {
             DB::transaction(function () use ($source, $team): void {
                 $idMap = $this->copyRows($source, $team);
@@ -87,13 +44,33 @@ class TeamCloneService
     }
 
     /**
+     * @return list<class-string>
+     */
+    private function resolveCloneableModels(): array
+    {
+        $models = $this->cloneableModels ?? config('organizations-teams.cloneable_models', []);
+
+        return array_values(array_filter($models, fn (mixed $class): bool => is_string($class) && class_exists($class)));
+    }
+
+    /**
+     * @return array<class-string, array<string, class-string>>
+     */
+    private function resolveFkEdges(): array
+    {
+        $edges = $this->fkEdges ?? config('organizations-teams.clone_fk_edges', []);
+
+        return is_array($edges) ? $edges : [];
+    }
+
+    /**
      * @return array<class-string, array<int, int>> per model: old id => new id
      */
     private function copyRows(Team $source, Team $team): array
     {
         $idMap = [];
 
-        foreach (self::CLONEABLE_MODELS as $class) {
+        foreach ($this->resolveCloneableModels() as $class) {
             $table = (new $class())->getTable();
             if (! Schema::hasTable($table)) {
                 continue;
@@ -105,7 +82,6 @@ class TeamCloneService
                 $oldId = (int) $data['id'];
                 unset($data['id']);
                 $data['team_id'] = $team->id;
-                // Edge FK columns keep their old values here; patched in pass 2.
                 $map[$oldId] = (int) DB::table($table)->insertGetId($data);
             }
 
@@ -120,13 +96,13 @@ class TeamCloneService
      */
     private function patchForeignKeys(Team $team, array $idMap): void
     {
-        foreach (self::FK_EDGES as $class => $edges) {
-            $table = (new $class())->getTable();
-            if (! Schema::hasTable($table) || empty($idMap[$class])) {
+        foreach ($this->resolveFkEdges() as $class => $edges) {
+            if (! is_string($class) || ! class_exists($class) || empty($idMap[$class])) {
                 continue;
             }
 
-            // Drift guard: skip an edge whose column the table does not have.
+            $table = (new $class())->getTable();
+
             $edges = array_filter(
                 $edges,
                 fn (string $column): bool => Schema::hasColumn($table, $column),
@@ -143,7 +119,6 @@ class TeamCloneService
                     if ($old === null) {
                         continue;
                     }
-                    // Unmapped ref -> null rather than dangle to the source team.
                     $updates[$column] = $idMap[$referenced][(int) $old] ?? null;
                 }
 

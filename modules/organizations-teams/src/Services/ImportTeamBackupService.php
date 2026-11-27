@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Liberu\Foundation\Organizations\Services;
 
-use App\Models\User;
-use App\Support\SchemaGraph;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Liberu\Foundation\Organizations\Exceptions\TeamImportException;
 use Liberu\Foundation\Organizations\Models\Team;
+use Liberu\Foundation\Organizations\Support\SchemaGraph;
 use Liberu\Foundation\Organizations\Support\TenantModels;
 use ZipArchive;
 
@@ -28,7 +28,7 @@ class ImportTeamBackupService
     /** Columns that reference users but may lack a declared FK constraint. */
     private const USER_REF_COLUMNS = ['assigned_to', 'created_by', 'updated_by', 'user_id', 'owner_id'];
 
-    public function import(string $localZipPath, ?string $name, User $importer): Team
+    public function import(string $localZipPath, ?string $name, Model $importer): Team
     {
         $zip = new ZipArchive();
         if ($zip->open($localZipPath) !== true) {
@@ -43,20 +43,16 @@ class ImportTeamBackupService
 
             $teamName = $name ?: (string) ($manifest['team']['name'] ?? 'Imported team');
 
-            // FK checks OFF must wrap (not nest inside) the transaction — sqlite
-            // ignores PRAGMA foreign_keys once a transaction is open. The team is
-            // created INSIDE the transaction so a failed import (e.g. a unique
-            // collision on the target env) rolls it back — no orphan team.
             return Schema::withoutForeignKeyConstraints(
                 fn (): Team => DB::transaction(function () use ($zip, $teamName, $importer): Team {
                     $team = new Team();
                     $team->name = $teamName;
-                    $team->user_id = $importer->id;
+                    $team->user_id = $importer->getKey();
                     $team->personal_team = false;
                     $team->save();
 
                     $idMap = $this->insertAll($zip, $team);
-                    $this->remapForeignKeys($team, $idMap, $importer->id);
+                    $this->remapForeignKeys($team, $idMap, (int) $importer->getKey());
 
                     return $team;
                 }),
